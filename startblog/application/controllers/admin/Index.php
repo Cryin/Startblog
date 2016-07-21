@@ -1,0 +1,86 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Index extends Controller {
+     public $user_info;
+	 public function __construct() {
+	  parent::__construct ();
+      
+	  $this->load->helper(array('form', 'url'));
+	  $this->load->library('session');
+      
+	 }
+     public function index(){
+        $data['cur_title'] = array('active','','','','');
+        $this->load->view('header');
+        $this->load->view('admin/menu',$data);
+        $this->load->view('admin/index');
+        $this->load->view('footer');
+     }
+	 public  function login()
+	 {
+	  $this->load->helper('form');
+	  $this->load->library('form_validation');
+      $this->load->database();
+      $username = trim($this->input->post('username'));
+      $this->db->where('username', $username);
+      $this->user_info = $this->db->get('user')->result_array();
+	  $this->form_validation->set_rules('username', 'Username', 'trim|callback_username_check');
+	  $this->form_validation->set_rules('password', 'Password', 'md5|callback_password_check');
+	  $this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
+
+	  if ($this->form_validation->run() == FALSE)
+	  {
+	   $this->load->view('admin/index_login');
+	  }
+	  else
+	  {
+	  	//当前标题（首页，文章，分类，标签，功能）
+		$userdata= array(
+            'username' => $username,
+            'passowrd' => $passowrd
+            );
+
+        $this->session->set_userdata($userdata);
+        redirect('admin/Index/index');
+	  
+	 }
+
+	}
+
+	public function logout(){
+        session_destroy();
+        redirect(site_url('Articles/index'));
+    }
+
+
+    public function username_check($str)
+    {
+        if ($str == '')
+        {
+            $this->form_validation->set_message('username_check', '用户名不能为空');
+            return FALSE;
+        }
+        elseif( $this->user_info == null ){
+            $this->form_validation->set_message('username_check', '用户不存在');
+            return FALSE;
+        }
+        else
+        {   
+            return TRUE;
+        }
+    }
+
+public function password_check($str)
+    {
+        $password = isset($this->user_info[0]['password'])?$this->user_info[0]['password']:0;
+        if(md5($str) != $password){
+            $this->form_validation->set_message('password_check', '密码错误');
+            return FALSE;
+        }
+        else
+        {   
+            return TRUE;
+        }
+    }
+}
