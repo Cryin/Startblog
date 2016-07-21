@@ -27,8 +27,12 @@ Author: [Cryin']
 
 ###使用说明:
 
-*根据站点目录设置application\config\config.php文件$config['base_url']项，
+*根据站点目录设置application\config\config.php文件$config['base_url']项
+
 *设置数据库配置信息：application\config\database.php文件
+
 *创建数据库startblog，并导入sql文件，路径data\db\startblog.sql
+
 *管理默认用户名、密码均为startblog
+
 
