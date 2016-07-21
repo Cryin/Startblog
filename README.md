@@ -35,4 +35,8 @@ Author: [Cryin']
 
 *管理默认用户名、密码均为startblog
 
+###更新说明:
 
+*2016/7/21 完成基本功能！version：startblog v1.0
+
+*...
