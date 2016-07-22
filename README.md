@@ -37,6 +37,8 @@ Author: [Cryin']
 
 ###更新说明:
 
-*2016/7/21 完成基本功能！version：startblog v1.0
+*2016/7/12 完成基本功能！version：startblog v1.0
+
+*2016/7/22 初始化sql文件，修复xss问题及标签显示bug！version：startblog v1.1
 
 *...
