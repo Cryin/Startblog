@@ -16,7 +16,7 @@
     <div class="panel panel-default">
    <div class="panel-body">
       <form class="form-signin">
-        <h2 class="form-signin-heading">Startblog</h2>
+        <h2 class="form-signin-heading">Startblog v1.1</h2>
         <label for="username" class="sr-only">用户名</label>
         <input type="text" id="username" class="form-control" name="username" value="<?php echo set_value('username'); ?>" placeholder="用户名" autofocus>
         <p class="text-danger"><?php echo form_error('username'); ?></p>

@@ -18,7 +18,7 @@ class Tag_model extends CI_Model {
 	}
 	public function getTagInfo(){
 		$this->load->database();
-		$sql="select b.tag_name, a.tag_id, count(a.article_id) as article_num, b.tag_button_type from article_tag as a join tag as b where a.tag_id = b.id group by b.tag_name";
+		$sql="select tag.tag_name, article.tag_id, count(article.article_id) as article_num, tag.tag_button_type from article_tag as article join tag as tag where article.tag_id = tag.id group by tag.tag_name";
 		$data=$this->db->query($sql)->result_array();
 		return $data;
 	}

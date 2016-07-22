@@ -25,8 +25,8 @@ class Tag extends CI_Controller {
 		foreach ($tag_info as $key => $value) {
 			if($value['article_num']<=1){
 				$button_size = 'btn-xs';
-			}elseif($value['article_num']<=2){
-				$button_size = '';
+			}elseif($value['article_num']<=10){
+				$button_size = 'btn-sm';
 			}else{
 				$button_size = 'btn-lg';
 			}

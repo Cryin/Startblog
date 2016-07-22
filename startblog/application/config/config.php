@@ -25,6 +25,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/startblog';
 
+
+$config['startblog_ver'] = '1.1';
+
 /*
 |--------------------------------------------------------------------------
 | Index File

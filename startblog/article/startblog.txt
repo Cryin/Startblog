@@ -1,0 +1,29 @@
+##Startblog是什么?
+
+startblog是一个基于codeigniter 3.x开发的简单，易用，Markdown博客系统
+
+##startblog有哪些功能？
+
+* 博文撰写、修改、删除功能
+* markdown语法支持
+* 数据备份功能
+* 文章搜索功能
+* 标签功能
+
+##有问题反馈
+在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+
+* QQ: 416049355
+* weibo: [@Cryin1985](http://weibo.com/justear)
+* github:(https://github.com/Cryin/Startblog)
+
+##捐助开发者
+基于对php的兴趣，学习写一个`免费`的东西，希望你喜欢我的作品，同时也能支持一下。
+
+##关于作者
+
+```python
+print "Auth: Cryin"
+print "github : https://github.com/Cryin/Startblog"
+  }
+```

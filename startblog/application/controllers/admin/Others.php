@@ -31,7 +31,7 @@ class Others extends CI_Controller {
 
         $this->load->model('articles_model');
         $data['data'] = $this->articles_model->getArticlesDuring($row, $config['per_page']);
-        $data['path'] = dirname(dirname(dirname(dirname(__FILE__)))).'\\article_backup\\';
+        $data['path'] = dirname(dirname(dirname(dirname(__FILE__)))).'\\article\\';
         $data['cur_title'] = array('','','','','active');
         $this->load->view('header');
         $this->load->view('admin/menu', $data);
@@ -43,7 +43,7 @@ class Others extends CI_Controller {
 
         $this->load->model('siteinfo_model');
         $data['data']= $this->siteinfo_model->getSiteInfo();
-        
+
         $data['cur_title'] = array('','','','','active');
         $this->load->view('header');
         $this->load->view('admin/menu', $data);

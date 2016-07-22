@@ -1,0 +1,44 @@
+PHP Markdown
+============
+
+PHP Markdown Lib 1.6.0 - 23 Dec 2015
+
+by Michel Fortin  
+<https://michelf.ca/>
+
+based on Markdown by John Gruber  
+<https://daringfireball.net/>
+
+
+Introduction
+------------
+
+This is a library package that includes the PHP Markdown parser and its 
+sibling PHP Markdown Extra with additional features.
+
+Markdown is a text-to-HTML conversion tool for web writers. Markdown
+allows you to write using an easy-to-read, easy-to-write plain text
+format, then convert it to structurally valid XHTML (or HTML).
+
+"Markdown" is actually two things: a plain text markup syntax, and a 
+software tool, originally written in Perl, that converts the plain text 
+markup to HTML. PHP Markdown is a port to PHP of the original Markdown 
+program by John Gruber.
+
+*	[Full documentation of the Markdown syntax](<https://daringfireball.net/projects/markdown/>)  
+	¡ª Daring Fireball (John Gruber)
+*	[Markdown Extra syntax additions](<https://michelf.ca/projects/php-markdown/extra/>)  
+	¡ª Michel Fortin
+
+
+Requirement
+-----------
+
+This library package requires PHP 5.3 or later.
+
+Note: The older plugin/library hybrid package for PHP Markdown and
+PHP Markdown Extra is still maintained and will work with PHP 4.0.5 and later.
+
+Before PHP 5.3.7, pcre.backtrack_limit defaults to 100?000, which is too small
+in many situations. You might need to set it to higher values. Later PHP 
+releases defaults to 1?000?000, which is usually fine.
