@@ -16,10 +16,10 @@ class Articles extends Controller {
         $data['data'] = $this->articles_model->getArticlesDuring($row, $config['per_page']);
 
         $data['cur_title'] = array('','active','','','');
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/articles_index', $data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
     }
 
 	public  function edit($id=0){
@@ -38,10 +38,10 @@ class Articles extends Controller {
             $this->load->model('articles_model');    
             $data['article'] = $this->articles_model->getArticle($id); 
         }
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/articles_edit', $data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
         
 	}
 

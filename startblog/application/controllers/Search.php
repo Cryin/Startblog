@@ -46,14 +46,16 @@ class Search extends CI_Controller {
 		$data['cur_title'] = array('active','','','');
 		$this->load->model('category_model');
 		$data['all_category'] =  $this->category_model->getAllCategory();
+		$this->load->model('siteinfo_model');
+        $data['siteinfo']= $this->siteinfo_model->getSiteInfo();
 
         if (!empty($data['show_arr'])) {
-            $this->load->view('header');
+            $this->load->view('header',$data);
             $this->load->view('menu',$data);
             $this->load->view('search_show', $data);
             $this->load->view('footer');
         }else{
-            $this->load->view('header');
+            $this->load->view('header',$data);
             $this->load->view('menu',$data);
             $this->load->view('search_failed', $data);
             $this->load->view('footer');

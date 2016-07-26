@@ -17,10 +17,10 @@ class Category extends Controller {
         $data['data'] = $this->category_model->getCategoryDuring($row, $config['per_page']);
 
         $data['cur_title'] = array('','','active','','');
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/category_index', $data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
     }
 
     public  function add(){

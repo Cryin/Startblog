@@ -33,10 +33,10 @@ class Others extends CI_Controller {
         $data['data'] = $this->articles_model->getArticlesDuring($row, $config['per_page']);
         $data['path'] = dirname(dirname(dirname(dirname(__FILE__)))).'\\article\\';
         $data['cur_title'] = array('','','','','active');
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_backup', $data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
 	}
 	public function show_siteinfo()
 	{
@@ -45,10 +45,10 @@ class Others extends CI_Controller {
         $data['data']= $this->siteinfo_model->getSiteInfo();
 
         $data['cur_title'] = array('','','','','active');
-        $this->load->view('header');
+        $this->load->view('admin/header',$data);
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_setinfo', $data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
 	}
 	public  function set_siteinfo(){
         $this->load->helper('url');
@@ -57,10 +57,10 @@ class Others extends CI_Controller {
 
         $data['cur_title'] = array('','','','','active');
 
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_setsiteinfo_success', $data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
       
     }
 	public function backup()
@@ -83,10 +83,10 @@ class Others extends CI_Controller {
 			
 		}
         $data['cur_title'] = array('','','','','active');
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_backup_success', $data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
 	}
 
 	public function change_password()
@@ -111,10 +111,10 @@ class Others extends CI_Controller {
 		$data['cur_title'] = array('','','','','active');
 	  if ($this->form_validation->run() == FALSE)
 	  {
-	   	$this->load->view('header');
+	   	$this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_change_password');
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
 	  }
 	  else
 	  {
@@ -123,10 +123,10 @@ class Others extends CI_Controller {
 		$this->db->where('username', $_SESSION['username']);
 		$this->db->update('user', $new_password);
 
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_change_password_success');
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
 	  
 	 }
 	}

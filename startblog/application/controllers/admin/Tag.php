@@ -16,10 +16,10 @@ class Tag extends Controller {
         $this->load->model('tag_model');
         $data['data'] = $this->tag_model->getTagDuring($row, $config['per_page']);
         $data['cur_title'] = array('','','','active','');
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/tag_index', $data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
     }
 
     public  function add(){
@@ -46,10 +46,10 @@ class Tag extends Controller {
         $data['all_category'] =  $this->category_model->getAllCategory();
         //当前标题（首页，分类，标签，关于我）
         $data['cur_title'] = array('','','','active','');
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu',$data);
         $this->load->view('admin/tag_edit',$data);
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
     }
 
     public function check($tag_id){
@@ -71,11 +71,11 @@ class Tag extends Controller {
             $this->load->model('tag_model');
             $data['data'] = $this->tag_model->getTagDuring($row, $config['per_page']);
             $data['cur_title'] = array('','','','active','');
-            $this->load->view('header');
+            $this->load->view('admin/header');
             $this->load->view('admin/menu', $data);
             $this->load->view('admin/tag_index', $data);
             $this->load->view('admin/tag_check');
-            $this->load->view('footer');
+            $this->load->view('admin/footer');
         }
     }
     public  function delete($id){

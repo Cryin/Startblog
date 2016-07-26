@@ -67,6 +67,9 @@ class Articles extends CI_Controller {
 			foreach ($value as $value1) {
 				$data['article']['0']['id'] = $value1['id'];
 				$data['article']['0']['title'] = $value1['title'];
+				$data['article']['0']['keyword'] = $value1['keyword'];
+				$data['article']['0']['description'] = $value1['description'];
+
 				$data['article']['0']['content'] = $value1['content'];
 				$data['article']['0']['category'] = $value1['category'];
 				$data['article']['0']['pv'] = $value1['pv'];
@@ -93,7 +96,8 @@ class Articles extends CI_Controller {
 		$data['all_category'] =  $this->category_model->getAllCategory();
 		//当前标题（首页，分类，标签，关于我）
 		$data['cur_title'] = array('active','','','');
-		$this->load->view('header');
+
+		$this->load->view('articles_header',$data);
 		$this->load->view('menu',$data);
 		$this->load->view('articles_article', $data);
 		$this->load->view('footer');

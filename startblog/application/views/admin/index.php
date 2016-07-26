@@ -1,11 +1,13 @@
-<div class="col-sm-8 col-sm-offset-2">
-<center>
+<div class="col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-1" style="background-color: #FFF;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD,-5px -5px 8px #DDDDDD;">
+<div class="article" style="padding-top:20px;padding-bottom:15px;">      
+
 	<div >
 <h1 class="text-center">
 	welcome!Here is startblog~
 </h1>
 <div class="sys-home-mod">
 	<ul class="server-list">
+
 			<h3>环境配置信息:</h3>
 			<p><b>Startblog版本:</b><?php echo "Startblog v1.1";?></p>
             <p><b>PHP版本:</b><?php echo PHP_VERSION;?></p>
@@ -19,5 +21,5 @@
 </div>
 </div>
 
-</center>
+</div>
 </div>

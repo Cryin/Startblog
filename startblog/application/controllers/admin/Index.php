@@ -12,10 +12,10 @@ class Index extends Controller {
 	 }
      public function index(){
         $data['cur_title'] = array('active','','','','');
-        $this->load->view('header');
+        $this->load->view('admin/header');
         $this->load->view('admin/menu',$data);
         $this->load->view('admin/index');
-        $this->load->view('footer');
+        $this->load->view('admin/footer');
      }
 	 public  function login()
 	 {

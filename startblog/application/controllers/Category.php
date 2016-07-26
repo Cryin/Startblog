@@ -27,7 +27,10 @@ class Category extends CI_Controller {
 		//当前标题（首页，分类，标签，关于我）
 		$data['cur_title'] = array('','active','','');
 
-		$this->load->view('header');
+		$this->load->model('siteinfo_model');
+        $data['siteinfo']= $this->siteinfo_model->getSiteInfo();
+
+		$this->load->view('header',$data);
 		$this->load->view('menu',$data);
 		$this->load->view('category_show', $data);
 		$this->load->view('footer');

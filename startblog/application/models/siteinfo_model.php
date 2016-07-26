@@ -19,9 +19,12 @@ class Siteinfo_model extends CI_Model {
 	public function updateSiteInfo($id=1){
 		$this->load->database();
 		$data = array(
+			    'url'=>$this->security->xss_clean($this->input->post('url')),
+			    'email'=>$this->input->post('email',TRUE),
                 'title'=>$this->security->xss_clean($this->input->post('title')),
 			    'keywords'=>$this->security->xss_clean($this->input->post('keywords')),
 				'description'=>$this->input->post('description',TRUE),
+				'statistic'=>$this->input->post('statistic',TRUE),
 		);
 		$this->db->where('id', $id);
 		$this->db->update('siteinfo', $data);

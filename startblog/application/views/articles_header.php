@@ -4,10 +4,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php if(isset($siteinfo))foreach ($siteinfo as $key => $value);?>
-  <title><?php if(isset($value['title'])) echo $value['title'];?> - powered by startblog</title>
-  <meta name="keywords" content="<?php if(isset($value['keywords']))echo $value['keywords'];?>" />
-  <meta name="description" content="<?php if(isset($value['description']))echo $value['description'];?>" />
+  <title><?php echo $article[0]['title'];?> - powered by startblog</title>
+  <meta name="keywords" content="<?php if(isset($article[0]['keyword']))echo $article[0]['keyword'];?>" />
+  <meta name="description" content="<?php if(isset($article[0]['description']))echo $article[0]['description'];?>" />
   <meta name="generator" content="startblog v1.1" />
   <meta name="author" content="https://github.com/cryin/startblog" />
 
