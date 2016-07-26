@@ -16,13 +16,17 @@
     <div class="panel panel-default">
    <div class="panel-body">
       <form class="form-signin">
-        <h2 class="form-signin-heading">Startblog v1.1</h2>
+        <div class="text-center">
+        <img src="<?php echo base_url('/static/img/logo.png')?>" class="img-rounded" alt="Startblog v1.1" width="200" height="130"> 
+        </div>
+        <div>
         <label for="username" class="sr-only">用户名</label>
         <input type="text" id="username" class="form-control" name="username" value="<?php echo set_value('username'); ?>" placeholder="用户名" autofocus>
         <p class="text-danger"><?php echo form_error('username'); ?></p>
         <label for="inputPassword" class="sr-only">密码</label>
         <input type="password" id="inputPassword" class="form-control" name="password" value="<?php echo set_value('password'); ?>" placeholder="密码">
         <p class="text-danger"><?php echo form_error('password'); ?></p>
+        </div>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me">
@@ -32,9 +36,10 @@
       </form>
    </div>
 </div>
-      
+<p class="pull-right" style="">Powered by startblog &copy; 2016 version 1.1</p>
     </div>
   </div>
+
 </div>
 </body>
 
