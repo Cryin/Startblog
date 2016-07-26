@@ -1,8 +1,8 @@
 # Startblog
 
-startblog是一个基于codeigniter 3.x开发的简单、易用、适合技术从业者使用的Markdown博客系统！
+>startblog是一个基于codeigniter 3.x开发的简单、易用、适合技术从业者使用的Markdown博客系统！
 
-Author: [Cryin']
+>Author: [Cryin']
 
 ###程序功能：
 
@@ -37,12 +37,12 @@ Author: [Cryin']
 
 ###更新说明:
 
-*2016/7/12 完成基本功能！version：startblog v1.0
+>2016/7/12 完成基本功能！version：startblog v1.0
 
-*2016/7/22 初始化sql文件，修复xss问题及标签显示bug！
+>2016/7/22 初始化sql文件，修复xss问题及标签显示bug！
 
-*2016/7/25 修改登录页面及标签页面！
+>2016/7/25 修改登录页面及标签页面！
 
-*2016/7/26 完成站点SEO功能，增加url rewrite，完成文章页面seo功能，添加登录logo！version：startblog v1.1
+>2016/7/26 完成站点SEO功能，增加url rewrite，完成文章页面seo功能，添加登录logo！version：startblog v1.1
 
-*...
+>...
