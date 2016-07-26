@@ -41,4 +41,6 @@ Author: [Cryin']
 
 *2016/7/22 初始化sql文件，修复xss问题及标签显示bug！version：startblog v1.1
 
+*2016/7/26 修改登录页面及标签页面！
+
 *...
