@@ -23,6 +23,7 @@ class Index extends Controller {
 	  $this->load->library('form_validation');
       $this->load->database();
       $username = trim($this->input->post('username'));
+      $passowrd = trim($this->input->post('passowrd'));
       $this->db->where('username', $username);
       $this->user_info = $this->db->get('user')->result_array();
 	  $this->form_validation->set_rules('username', 'Username', 'trim|callback_username_check');
