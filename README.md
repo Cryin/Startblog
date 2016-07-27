@@ -43,6 +43,6 @@
 
 >2016/7/25 修改登录页面及标签页面！
 
->2016/7/26 完成站点SEO功能，增加url rewrite，完成文章页面seo功能，添加登录logo！version：startblog v1.1
+>2016/7/27 完成站点SEO功能，增加url rewrite，完成文章页面seo功能，添加登录logo！version：startblog v1.1
 
 >...
