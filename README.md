@@ -37,6 +37,8 @@
 
 >管理默认用户名、密码均为startblog
 
+>>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
+
 ###更新说明:
 
 >2016/7/12 完成基本功能！version：startblog v1.0
