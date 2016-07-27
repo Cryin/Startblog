@@ -8,9 +8,10 @@
         <input type="text" class="form-control" id="name" name="title"
            placeholder="请输入标题" value="<?php if(isset($article['0']['title'])) echo $article['0']['title'];?>" required>
       </div>
+
       <div class="form-group">
         <label for="content">内容</label>
-        <textarea class="form-control" rows="20" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']);?></textarea>
+        <textarea class="form-control" rows="21" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']);?></textarea>
       </div>
 
 
@@ -39,6 +40,15 @@
         <input type="text" class="form-control" id="name" name="tag"
            placeholder="请输入标签" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" required>
         <span class="help-block">标签请用英文“,”分离</span>
+      </div>
+      <div class="form-group">
+        <label for="tag">SEO关键词</label>
+        <input type="text" class="form-control" id="name" name="keyword"
+           placeholder="多个关键词用;分割" value="<?php if(isset($article['0']['keyword'])) echo $article['0']['keyword']?>" required>
+      </div>
+      <div class="form-group">
+        <label for="tag">SEO描述</label>
+        <textarea class="form-control" rows="3" name="description" placeholder="请输入SEO描述内容" required><?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?></textarea>
       </div>
       <div class="form-group">
         <label for="tag">MarkDown在线编辑器</label>

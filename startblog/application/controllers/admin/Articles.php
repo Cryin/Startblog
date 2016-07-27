@@ -52,6 +52,8 @@ class Articles extends Controller {
         $data['data'] = array(
                 'id' => $_POST['id'],
                 'title' => $_POST['title'],
+                'keyword' => $_POST['keyword'],
+                'description' => $_POST['description'],
                 'content' => $_POST['content'],
                 'published_at' => $_POST['published_at'],
                 'category' => $_POST['category'],
