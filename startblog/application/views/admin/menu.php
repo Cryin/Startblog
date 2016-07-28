@@ -21,8 +21,9 @@
               </a>
              <ul class="dropdown-menu dropdown-menu-right">
               <li ><?php echo anchor("admin/Others/show_siteinfo","站点设置","")?></li>
-              <li ><?php echo anchor("admin/Others/back_up","数据备份","")?></li>
+              <li ><?php echo anchor("admin/Others/back_up","文章备份","")?></li>
               <li ><?php echo anchor("admin/Others/change_password","修改密码","")?></li>
+              <li ><?php echo anchor("admin/Others/about","关于","")?></li>
 
              </ul>
              </li>

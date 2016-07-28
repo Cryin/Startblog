@@ -8,7 +8,7 @@
                         Made with <span class="fa fa-heart fa-2x animated pulse"></span> in Startblog
                     </p>
                     <p class="copyright">
-                        © 2016 Cryin' | Images: <a href="https://startblog.cc/">Startblog</a> & <a href="https://github.com/Cryin/Startblog">Github</a>
+                        © 2016 Cryin' | Images: <a href="https://startblog.com/">Startblog</a> & <a href="https://github.com/Cryin/Startblog">Github</a>
           </p>
 
       </h5>

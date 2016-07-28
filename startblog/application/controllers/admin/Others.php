@@ -50,6 +50,32 @@ class Others extends CI_Controller {
         $this->load->view('admin/others_setinfo', $data);
         $this->load->view('admin/footer');
 	}
+	public function about()
+	{
+
+        $this->load->model('about_model');
+        $data['data']= $this->about_model->getAboutInfo();
+
+        $data['cur_title'] = array('','','','','active');
+        $this->load->view('admin/header',$data);
+        $this->load->view('admin/menu', $data);
+        $this->load->view('admin/others_about', $data);
+        $this->load->view('admin/footer');
+	}
+
+	public function edit_about()
+	{
+
+        $this->load->model('about_model');
+        $data['data']= $this->about_model->updateAboutInfo();
+
+        $data['cur_title'] = array('','','','','active');
+        $this->load->view('admin/header',$data);
+        $this->load->view('admin/menu', $data);
+        $this->load->view('admin/others_about_success', $data);
+        $this->load->view('admin/footer');
+	}
+
 	public  function set_siteinfo(){
         $this->load->helper('url');
         $this->load->model('siteinfo_model');
