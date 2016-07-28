@@ -49,4 +49,6 @@
 
 >2016/7/27 完成站点SEO功能，增加url rewrite，完成文章页面seo功能，添加登录logo！version：startblog v1.1
 
+>2016/7/27 增加about编辑功能，添加评论共呢个！version：startblog v1.2
+
 >...
