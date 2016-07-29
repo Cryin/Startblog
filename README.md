@@ -6,9 +6,9 @@
 
 ###程序功能：
 
-*markdown博文撰写、修改、删除功能;
+*markdown博文撰写、修改、删除功能,采用使用simplemde编辑器;
 
-*markdown语法解析支持;
+*markdown语法解析支持，使用parsedown解析;
 
 *文章搜索、备份功能;
 
@@ -40,8 +40,9 @@
 >>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
 
 ###Screenshot
-
+文章编辑:
 ![](http://i4.piimg.com/567571/2593ba39f83e00d1.png)
+文章页面：
 ![](http://i4.piimg.com/567571/b7bbb6b8128d8a47.png)
 
 ###更新说明:
@@ -56,6 +57,6 @@
 
 >2016/7/27 增加about编辑功能，添加评论功能！version：startblog v1.2
 
->2016/7/29 更换markdown解析器，使用parsedown解析;添加markdown编辑器，使用simplemd！version：startblog v1.3
+>2016/7/29 更换markdown解析器，使用parsedown解析;添加markdown编辑器，使用simplemde！version：startblog v1.3
 
 >...
