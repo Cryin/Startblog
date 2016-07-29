@@ -41,8 +41,11 @@
 
 ###Screenshot
 文章编辑:
+
 ![](http://i4.piimg.com/567571/2593ba39f83e00d1.png)
+
 文章页面：
+
 ![](http://i4.piimg.com/567571/b7bbb6b8128d8a47.png)
 
 ###更新说明:
