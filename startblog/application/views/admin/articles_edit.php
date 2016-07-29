@@ -1,4 +1,5 @@
-
+<link rel="stylesheet" href="<?php echo base_url('/static/css/simplemde.min.css')?>">
+<script src="<?php echo base_url('/static/js/simplemde.min.js')?>"></script>
   <form role="form" method="post" action="<?php echo site_url('admin/Articles/update')?>">
     <div class="col-sm-6  col-sm-offset-2">
       <div class="form-group">
@@ -11,7 +12,7 @@
 
       <div class="form-group">
         <label for="content">内容</label>
-        <textarea class="form-control" rows="21" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']);?></textarea>
+        <textarea class="form-control" rows="21" id="textcontent" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#hello startblog")?></textarea>
       </div>
 
 
@@ -50,13 +51,13 @@
         <label for="tag">SEO描述</label>
         <textarea class="form-control" rows="3" name="description" placeholder="请输入SEO描述内容" required><?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?></textarea>
       </div>
-      <div class="form-group">
+   <!--   <div class="form-group">
         <label for="tag">MarkDown在线编辑器</label>
         <span class="help-block"><a href="http://mahua.jser.me/" target="_blank">MaHua</a> </span>
-      </div>
+      </div>-->
       <div class="form-group">
       <div class="pull-left">
-        <button type="submit" class="btn btn-primary">提交</button>
+        <button type="submit" class="btn btn-primary btn-block">提交</button>
       </div>
       </div>
 
@@ -64,6 +65,12 @@
 
           
   </form>
+<script type="text/javascript">
+    var simplemde = new SimpleMDE({
+    autofocus: true,
+    element: document.getElementById("textcontent"),
+});    
+            </script>
 <script type="text/javascript" src="<?php echo base_url('/static/js/bootstrap-datetimepicker.min.js')?>"></script>
 <script type="text/javascript">
     $(function () {

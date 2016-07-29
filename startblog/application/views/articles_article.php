@@ -4,11 +4,13 @@ spl_autoload_register(function($class){
 });
 
 # Get Markdown class
-use \Michelf\MarkdownExtra;
-
+#use \Michelf\MarkdownExtra;
+#require_once __DIR__ . '/Michelf/Parsedown.php';
 # Read file and pass content through the Markdown parser
-$html = MarkdownExtra::defaultTransform($article[0]['content']);
+#$html = MarkdownExtra::defaultTransform($article[0]['content']);
 
+$Parsedown = new Parsedown();
+$html = $Parsedown->text($article[0]['content']);
 
 ?>
   <div class="col-sm-8 col-sm-offset-2"  style="background-color: #FFF;margin-top:20px;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD,-5px -5px 8px #DDDDDD;">

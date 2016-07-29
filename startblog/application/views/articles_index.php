@@ -4,11 +4,11 @@ spl_autoload_register(function($class){
 });
 
 # Get Markdown class
-use \Michelf\MarkdownExtra;
+$Parsedown = new Parsedown();
 
 # Read file and pass content through the Markdown parser
 foreach ($data as $key => $value) {
-  $data[$key]['content'] = MarkdownExtra::defaultTransform(substr($value['content'], 0, 500));
+  $data[$key]['content'] = substr($Parsedown->text($value['content']), 0, 450);
 }
 
 

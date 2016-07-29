@@ -4,10 +4,10 @@ spl_autoload_register(function($class){
 });
 
 # Get Markdown class
-use \Michelf\MarkdownExtra;
+$Parsedown = new Parsedown();
+$html = $Parsedown->text($about[0]['content']);
 
 # Read file and pass content through the Markdown parser
-$html = MarkdownExtra::defaultTransform($about[0]['content']);
 
 
 ?>
