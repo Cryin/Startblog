@@ -12,7 +12,7 @@
 
       <div class="form-group">
         <label for="content">内容</label>
-        <textarea class="form-control" rows="21" id="textcontent" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#hello startblog")?></textarea>
+        <textarea class="form-control" rows="23" id="textcontent" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#hello startblog")?></textarea>
       </div>
 
 
@@ -49,7 +49,7 @@
       </div>
       <div class="form-group">
         <label for="tag">SEO描述</label>
-        <textarea class="form-control" rows="3" name="description" placeholder="请输入SEO描述内容" required><?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?></textarea>
+        <textarea class="form-control" rows="6" name="description" placeholder="请输入SEO描述内容" required><?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?></textarea>
       </div>
    <!--   <div class="form-group">
         <label for="tag">MarkDown在线编辑器</label>
