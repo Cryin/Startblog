@@ -6,13 +6,13 @@
 
 ###程序功能：
 
-*基本的博文撰写、修改、删除功能;
+*markdown博文撰写、修改、删除功能;
 
-*markdown语法支持;
+*markdown语法解析支持;
 
 *文章搜索、备份功能;
 
-*站点SEO信息设置;
+*站点、博文SEO信息设置;
 
 ###运行环境:
 * php 5.x + mysql
@@ -38,6 +38,11 @@
 >管理默认用户名、密码均为startblog
 
 >>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
+
+###Screenshot
+
+![](http://i4.piimg.com/567571/2593ba39f83e00d1.png)
+![](http://i4.piimg.com/567571/b7bbb6b8128d8a47.png)
 
 ###更新说明:
 
