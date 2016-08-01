@@ -60,6 +60,6 @@
 
 >2016/7/27 增加about编辑功能，添加评论功能！version：startblog v1.2
 
->2016/7/29 更换markdown解析器，使用parsedown解析;添加markdown编辑器，使用simplemde！version：startblog v1.3
+>2016/8/1  增加rss订阅功能！version：startblog v1.3
 
 >...
