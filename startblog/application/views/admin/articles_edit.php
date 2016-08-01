@@ -12,7 +12,7 @@
 
       <div class="form-group">
         <label for="content">内容</label>
-        <textarea class="form-control" rows="23" id="textcontent" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#hello startblog")?></textarea>
+        <textarea class="form-control" rows="21" id="textcontent" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#hello startblog")?></textarea>
       </div>
 
 
@@ -65,12 +65,9 @@
 
           
   </form>
-<script type="text/javascript">
-    var simplemde = new SimpleMDE({
-    autofocus: true,
-    element: document.getElementById("textcontent"),
-});    
-            </script>
+<script>
+var simplemde = new SimpleMDE({ element: document.getElementById("textcontent") });
+</script>
 <script type="text/javascript" src="<?php echo base_url('/static/js/bootstrap-datetimepicker.min.js')?>"></script>
 <script type="text/javascript">
     $(function () {

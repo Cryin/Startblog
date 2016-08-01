@@ -3,6 +3,7 @@
       <div class="row">
           <div class="col-xs-13">
             <ul class="nav nav-pills">
+              <li class="logo"/><img src="<?php echo base_url('/static/img/title.png')?>" width=170 height="40" alt="image" class="fl"> </li>
              <li class="<?php echo $cur_title[0];?>"><?php echo anchor("admin/index","主页","")?></li>
              <li class="dropdown <?php echo $cur_title[1];?>">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">

@@ -9,7 +9,7 @@
                     </p>
                     <p class="copyright">
                         © 2016 Cryin' | Images: <a href="https://startblog.cc/">Startblog</a> & <a href="https://github.com/Cryin/Startblog">Github</a>
-          </p>
+          <a href="<?php echo base_url('/feed')?>"><img src="<?php echo base_url('/static/img/rss.png')?>"> </a></li>
 
       </h5>
     </div>     
