@@ -64,4 +64,6 @@
 
 >2016/8/1  增加rss订阅功能！version：startblog v1.3
 
+>2016/8/4  修改rss订阅不能识别地址的bug！version：startblog v1.3
+
 >...
