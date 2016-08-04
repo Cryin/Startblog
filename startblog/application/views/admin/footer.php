@@ -5,10 +5,10 @@
       <hr style="border: none;height: 1px;background-color: #bbb;background-image: -webkit-linear-gradient(0deg, #CDE6ED, #000, #CDE6ED);">
       <h5 class="text-center" style="margin-bottom:50px">
         <p class="heart">
-                        Made with in Startblog v1.3
+                       Made with Codeigniter 3 in Startblog v1.3 
                     </p>
                     <p class="copyright">
-                        © 2016 Cryin' | Images: <a href="https://startblog.cc/">Startblog</a> & <a href="https://github.com/Cryin/Startblog">Github</a>
+                        © 2014-2016 Cryin' | Images: <a href="https://startblog.cc/">Startblog</a> & <a href="https://github.com/Cryin/Startblog">Github</a>
           </p>
 
       </h5>
