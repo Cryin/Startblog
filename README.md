@@ -51,6 +51,9 @@
 ![](http://i4.piimg.com/567571/259bca5d799ea672.png)
 
 ###更新说明:
+>2016/2/10 构思markdown博客框架，开始学习codeigniter！
+
+>2016/3/5  完成demo！
 
 >2016/7/12 完成基本功能！version：startblog v1.0
 
