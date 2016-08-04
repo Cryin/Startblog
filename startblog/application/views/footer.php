@@ -1,7 +1,7 @@
 
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2 col-xs-10">
+    <div class="col-sm-8 col-sm-offset-2">
       <hr style="border: none;height: 1px;background-color: #bbb;background-image: -webkit-linear-gradient(0deg, #CDE6ED, #000, #CDE6ED);">
       <h5 class="text-center" style="margin-bottom:50px">
         <p class="heart" style="color:black">
