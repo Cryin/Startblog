@@ -17,7 +17,7 @@
 *rss订阅功能;
 
 ###运行环境:
-* php 5.x + mysql
+* php 5.2+  mysql
 
 ###反馈:
 
@@ -25,7 +25,7 @@
 
 ###关于作者
 
-* github https://github.com/Cryin/Startblog
+* github [https://github.com/Cryin/Startblog](https://github.com/Cryin/Startblog)
 
 ###使用说明:
 
