@@ -1,10 +1,10 @@
 <div class="menu">
-    <div class="col-sm-8 col-sm-offset-2 "style="padding-top:0.5%;">
+    <div class="col-sm-8 col-sm-offset-2 "style="padding-top:15px;">
 
       <div class="row">
           <div class="col-sm-9">
-            <ul class="nav nav-pills">
-             <li class="logo"/><img src="<?php echo base_url('/static/img/title.png')?>" width=170 height="40" alt="image" class="fl"> </li>
+            <ul class="nav nav-pills" style="line-height: 25px;">
+             <li class="logo"/><a href="<?php echo base_url()?>"><img src="<?php echo base_url('/static/img/title.png')?>" width=170 height="25"> </a></li>
              <li class="<?php echo $cur_title[0];?>"><?php echo anchor("Articles/index","Home","")?></li>
              <li class="dropdown <?php echo $cur_title[1];?>">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -18,7 +18,7 @@
              </li>
              <li class="<?php echo $cur_title[2];?>"><?php echo anchor("Tag/index","标签","")?></li>
              <li class="<?php echo $cur_title[3];?>"><?php echo anchor("About/index","关于","")?></li>
-             <?php echo anchor("admin/Index/index",'<span class="glyphicon glyphicon-user" style="margin-top:12px;margin-left:5px"></span>',"")?>
+             <?php echo anchor("admin/Index/index",'<span class="glyphicon glyphicon-user" style="margin-top:15px;margin-left:15px"></span>',"")?>
              </ul>
 
           </div>
