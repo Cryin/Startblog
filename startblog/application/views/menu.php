@@ -1,5 +1,5 @@
 <div class="menu">
-    <div class="col-sm-8 col-sm-offset-2 "style="padding-top:15px;">
+    <div class="col-sm-8 col-sm-offset-2 col-xs-12"style="padding-top:15px;">
 
       <div class="row">
           <div class="col-sm-9">

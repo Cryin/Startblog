@@ -19,6 +19,12 @@ class Articles extends CI_Controller {
 	 */
 	public function index()
 	{
+		//判断是否安装
+		$file=FCPATH.'install.lock';
+		if (!is_file($file)){
+			redirect(site_url('install'));
+		}
+		$this->load->database();
 		//加载分页类库
 		$this->load->library('pagination');
 		//获取分页类配置

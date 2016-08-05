@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>安装向导 | Powered By Startblog</title>
+  <meta name="generator" content="startblog v1.4" />
+  <meta name="author" content="https://github.com/cryin/startblog" />
+
+  <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap.min.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('/static/css/github-markdown.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap-datetimepicker.min.css')?>">
+  <link rel="stylesheet" href="<?php echo base_url('static/css/style.css');?>" media="screen" rel="stylesheet" type="text/css" />
+  <script src="<?php echo base_url('/static/js/jquery.min.js')?>"></script>
+  <script src="<?php echo base_url('/static/js/bootstrap.min.js')?>"></script>
+  <script type="text/javascript" src="<?php echo base_url('/static/js/moment.min.js')?>"></script>
+  <script type="text/javascript">
+  var baseurl='<?php echo base_url()?>';
+  var siteurl='<?php echo site_url()?>';
+  var sitedomain='<?php echo $_SERVER['HTTP_HOST'];?>';
+  </script>
+   <style>
+    .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0px;
+    }
+   </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">StartBlog 安装向导 >> 检测环境</div>
+                    <div class="panel-body table-responsive">
+                        <h3 style="margin: 10px 0;"><b>环境检测</b></h3>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>检测项目</th>
+                                    <th>推荐配置</th>
+                                    <th>最低要求</th>
+                                    <th>当前状态</th>
+                                    <th> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($environment as $item) : ?>
+                                <tr>
+                                    <td><?php echo $item['name'];?></td>
+                                    <td><?php echo $item['recommend'];?></td>
+                                    <td><?php echo $item['lowest'];?></td>
+                                    <td><?php echo mb_strimwidth($item['current'], 0, 30, '...')?></td>
+                                    <td>
+                                        <?php
+                                        if ($item['isok']) {
+                                            echo '<font color="green">ok<span class="glyphicon glyphicon-ok"></span></font>';
+                                        } else {
+                                            echo '<font color="red">No<span class="glyphicon glyphicon-remove"></span></font>';
+                                        }
+                                        ?>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                        <h3 style="margin: 10px 0;"><b>目录、文件权限检查</b></h3>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>检测项目</th>
+                                    <th>安装需求</th>
+                                    <th>当前状态</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($filemod as $item) : ?>
+                                <tr>
+                                    <td><?php echo $item['name'];?></td>
+                                    <td><?php echo $item['needmod'];?></td>
+                                    <td>
+                                        <?php
+                                        if ($item['mod']) {
+                                            echo '<font color="green">可写 <span class="glyphicon glyphicon-ok"></span></font>';
+                                        } else {
+                                            echo '<font color="red">不可写 <span class="glyphicon glyphicon-remove"></span></font>';
+                                        }
+                                        ?>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                        <center>
+                            <?php if ($do_next) : ?>
+                            <a class="btn btn-primary btn-block" href="<?php echo site_url('install/process');?>" role="button">下一步</a>
+                            <?php else : ?>
+                            <div class="col-md-6"><a class="btn btn-primary btn-block" href="<?php echo site_url('install/check');?>" role="button">重新检测</a></div>
+                            <div class="col-md-6"><a class="btn btn-danger btn-block" href="<?php echo site_url('install/process');?>" role="button">强制安装</a></div>
+                            <?php endif; ?>
+                        </center>
+                    </div>
+                    <center class="panel-footer">
+                         <?php $this->load->view ( 'footer' ); ?>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

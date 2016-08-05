@@ -29,4 +29,9 @@ class Siteinfo_model extends CI_Model {
 		$this->db->where('id', $id);
 		$this->db->update('siteinfo', $data);
 	}
+	public function updateadmin($data){
+		$this->load->database();
+		$this->db->where('id', $data['id']);
+		$this->db->update('user', $data);
+	}
 }

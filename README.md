@@ -1,6 +1,6 @@
 # Startblog
 
->startblog是一个基于codeigniter 3.x开发的简单、易用、适合技术从业者使用的Markdown博客系统！
+>startblog是一个基于codeigniter 3.x开发的简洁、易用的Markdown博客系统！
 
 >Author: [Cryin']
 
@@ -17,7 +17,7 @@
 *rss订阅功能;
 
 ###运行环境:
-* php 5.2+  mysql
+* php 5.x + mysql
 
 ###反馈:
 
@@ -25,9 +25,20 @@
 
 ###关于作者
 
-* github [https://github.com/Cryin/Startblog](https://github.com/Cryin/Startblog)
+* github https://github.com/Cryin/Startblog
 
-###使用说明:
+###安装方法:
+
+>将程序上传至站点根目录,输入http://www.yoursite.cc/install进行安装即可
+
+>>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
+>>如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，并修改application\config\config.php文件，添加目录字段：
+
+'php
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
+'
+
+###手动安装说明:
 
 >根据站点目录设置application\config\config.php文件$config['base_url']项
 
@@ -51,9 +62,6 @@
 ![](http://i4.piimg.com/567571/259bca5d799ea672.png)
 
 ###更新说明:
->2016/2/10 构思markdown博客框架，开始学习codeigniter！
-
->2016/3/5  完成demo！
 
 >2016/7/12 完成基本功能！version：startblog v1.0
 
@@ -67,6 +75,6 @@
 
 >2016/8/1  增加rss订阅功能！version：startblog v1.3
 
->2016/8/4  修改rss订阅不能识别地址的bug！version：startblog v1.3
+>2016/8/5  增加安装install功能！version：startblog v1.4
 
 >...

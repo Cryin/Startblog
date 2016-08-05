@@ -36,7 +36,7 @@
       </form>
    </div>
 </div>
-<p class="pull-right" style="">Powered by startblog &copy; 2016 version 1.1</p>
+<p class="pull-right" style="">Powered by startblog &copy; 2016 version 1.4</p>
     </div>
   </div>
 

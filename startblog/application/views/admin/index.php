@@ -5,12 +5,12 @@
         
 	<div>
 <h1 class="text-center">
-	start your blog with markdown ~
+	Start your blog with Markdown ~
 </h1>
 	<ul class="server-list">
 
 			<h3></h3>
-			<p><b>Startblog version:</b><?php echo "Startblog v1.2";?></p>
+			<p><b>Startblog version:</b><?php echo "Startblog v1.4";?></p>
             <p><b>PHP version:</b><?php echo PHP_VERSION;?></p>
             <p><b>OS type：</b> <?PHP echo PHP_OS; ?></p>
             <p><b>Web server：</b> <?php echo $_SERVER['SERVER_SOFTWARE'];?></p>
