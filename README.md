@@ -33,8 +33,7 @@
 
 >>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
 >>如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，并修改application\config\config.php文件，添加目录字段：
-
-'php
+'
 $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
 '
 
