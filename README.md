@@ -27,7 +27,7 @@
 
 ###安装方法:
 
->将程序上传至站点根目录,输入http://www.yoursite.com/install,按照提示进行安装即可！
+>将程序上传至站点根目录,输入http://www.yoursite.com/install,  按照提示完成安装即可！
 
 * 有些环境下可能会出现找不到model的问题，这种情况把application\models\ 目录下所有文件首字母改成大写即可
 * 如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，并修改application\config\config.php文件，添加目录字段：
@@ -73,7 +73,7 @@
 
 >2016/8/5  增加安装install功能！version：startblog v1.4
 
->2016/8/18 修改再linux下无法找到install.php问题，修复标签显示问题！
+>2016/8/18 修改在linux下无法找到install.php问题，修复标签显示问题！
 
 >...
 
