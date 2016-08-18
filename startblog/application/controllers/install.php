@@ -5,6 +5,7 @@
 #	Startblog Markdown blog
 #	author :Cryin
 #	Copyright (c) 2014 http://www.startblog.cc All rights reserved.
+#   update: 文件名修改为大写，否则linux系统无法找到该文件
 #/doc
 
 class Install extends CI_Controller
