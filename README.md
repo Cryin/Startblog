@@ -73,7 +73,9 @@
 
 >2016/8/5  增加安装install功能！version：startblog v1.4
 
->2016/8/18 修改在linux下无法找到install.php问题，修复标签显示问题！
+>2016/8/17 修改在linux下无法找到install.php问题，修复标签显示问题！
+
+>2016/8/18 增加站点logo文件favicon.ico，修改rewrite规则！
 
 >...
 
