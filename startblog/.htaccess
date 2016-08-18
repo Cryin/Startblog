@@ -1,3 +1,3 @@
 RewriteEngine on  
-RewriteCond $1 !^(index\.php|static|robots\.txt)  
-RewriteRule ^(.*)$ /index.php/$1 [L]
+RewriteCond $1 !^(index\.php|static|favicon\.ico|robots\.txt)  
+RewriteRule ^(.*)$ /startblog/index.php/$1 [L]
