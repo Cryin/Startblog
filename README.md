@@ -1,27 +1,24 @@
 # Startblog
 
->startblog是一个基于codeigniter 3.x开发的简洁、易用的Markdown博客系统！
+------
 
+>startblog是一个基于codeigniter 3.x开发的简洁、易用的Markdown博客系统！
 >Author: [Cryin']
 
 ###程序功能：
 
-*markdown博文撰写、修改、删除功能,采用使用simplemde编辑器;
-
-*markdown语法解析支持，使用parsedown解析;
-
-*文章搜索、备份功能;
-
-*站点、博文SEO信息设置;
-
-*rss订阅功能;
+* markdown博文撰写、修改、删除功能,采用使用simplemde编辑器;
+* markdown语法解析支持，使用parsedown解析;
+* 文章搜索、备份功能;
+* 站点、博文SEO信息设置;
+* RSS订阅功能;
 
 ###运行环境:
-* php 5.x + mysql
+> php 5.x + mysql
 
-###反馈:
+###BUG反馈:
 
-基于对php的兴趣，学习写一个blog自己使用，有问题可以和我交流。
+>基于对php的兴趣，学习写一个blog自己使用，有问题可以和我交流QQ：416049355#qq.com
 
 ###关于作者
 
@@ -29,26 +26,26 @@
 
 ###安装方法:
 
->将程序上传至站点根目录,输入http://www.yoursite.cc/install进行安装即可
+>将程序上传至站点根目录,输入http://www.yoursite.com/install,按照提示进行安装即可！
 
->>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
->>如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，并修改application\config\config.php文件，添加目录字段：
->>$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
+* 有些环境下可能会出现找不到model的问题，这种情况把application\models\ 目录下所有文件首字母改成大写即可
+* 如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，并修改application\config\config.php文件，添加目录字段：
+\$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/目录名称';
 
 
 ###手动安装说明:
 
->根据站点目录设置application\config\config.php文件$config['base_url']项
+> * 根据站点目录设置application\config\config.php文件$config['base_url']项
 
->根据站点目录修改.htaccess文件Rewrite规则
+> * 根据站点目录修改.htaccess文件Rewrite规则
 
->设置数据库配置信息：application\config\database.php文件
+> * 设置数据库配置信息：application\config\database.php文件
 
->创建数据库startblog，并导入sql文件，路径data\db\startblog.sql
+> * 创建数据库startblog，并导入sql文件，路径data\db\startblog.sql
 
->管理默认用户名、密码均为startblog
+> * 管理默认用户名、密码均为startblog
 
->>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
+> * 有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
 
 ###Screenshot
 文章编辑:
@@ -75,4 +72,7 @@
 
 >2016/8/5  增加安装install功能！version：startblog v1.4
 
+>2016/8/18 修改再linux下无法找到install.php问题，修复标签显示问题！
+
 >...
+
