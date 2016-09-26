@@ -26,4 +26,4 @@
     }
    </style>
 </head>
-<body style="background-color: #FFFFF">
+<body style="background-image: url(<?php echo base_url('/static/img/body.jpg')?>); background-color: #050a10;">
