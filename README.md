@@ -77,5 +77,7 @@
 
 >2016/8/18 增加站点logo文件favicon.ico，修改rewrite规则！
 
+>2016/10/24 修复markdown编辑器加载缓慢、不稳定问题，修复若干post提交bug！version：startblog v1.5
+
 >...
 
