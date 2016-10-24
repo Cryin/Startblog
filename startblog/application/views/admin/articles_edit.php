@@ -12,7 +12,7 @@
 
       <div class="form-group">
         <label for="content">内容</label>
-        <textarea class="form-control" rows="21" id="textcontent" name="content" placeholder="请输入内容" required><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#hello startblog")?></textarea>
+        <textarea class="form-control" id="textcontent" name="content" rows="21" ><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#Type here...")?></textarea>
       </div>
 
 
@@ -72,7 +72,7 @@ var simplemde = new SimpleMDE({ element: document.getElementById("textcontent") 
 <script type="text/javascript">
     $(function () {
         $('#datetimepicker1').datetimepicker({
-          format: 'YYYY-MM-DD HH:mm:ss',
+          format: 'YYYY-MM-DD HH:mm',
           useStrict: true,
           defaultDate: 'moment',
         });

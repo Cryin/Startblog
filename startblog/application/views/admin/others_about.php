@@ -18,7 +18,7 @@
   </div>
   <div class="form-group">
     <label class="col-sm-2 control-label">页面内容 :</label>
-    <div class="col-sm-8">
+    <div class="col-sm-10">
           <textarea class="form-control" name="content" rows="20"><?php echo htmlspecialchars($value['content']);?></textarea>
     </div>
 

@@ -7,7 +7,7 @@
   <title><?php echo $article[0]['title'];?> - powered by startblog</title>
   <meta name="keywords" content="<?php if(isset($article[0]['keyword']))echo $article[0]['keyword'];?>" />
   <meta name="description" content="<?php if(isset($article[0]['description']))echo $article[0]['description'];?>" />
-  <meta name="generator" content="startblog v1.1" />
+  <meta name="generator" content="startblog v1.5" />
   <meta name="author" content="https://github.com/cryin/startblog" />
 
   <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap.min.css')?>">
@@ -26,4 +26,4 @@
     }
    </style>
 </head>
-<body style="background-image: url(<?php echo base_url('/static/img/body.jpg')?>); background-color: #050a10;">
+<body style="background-color: #FFFFF;">
