@@ -16,7 +16,7 @@ class Category extends Controller {
         $this->load->model('category_model');
         $data['data'] = $this->category_model->getCategoryDuring($row, $config['per_page']);
 
-        $data['cur_title'] = array('','','active','','');
+        $data['cur_title'] = array('','','','active','','','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/category_index', $data);
@@ -52,7 +52,7 @@ class Category extends Controller {
 
         $config['base_url'] = site_url('admin/Category/index');
         $config['total_rows'] = $this->db->count_all('category');
-        $config['per_page'] = '5';
+        $config['per_page'] = '10';
         $config['num_links'] = 3 ;
         $config['last_link'] = '末页';
         $config['first_link'] = '首页';

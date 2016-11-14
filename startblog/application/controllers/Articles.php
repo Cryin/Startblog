@@ -40,6 +40,13 @@ class Articles extends CI_Controller {
 		$this->load->model('category_model');
 		$data['all_category'] =  $this->category_model->getAllCategory();
 
+		$this->load->model('tag_model');
+		$data['all_tag'] = $this->tag_model->getAllTags();
+
+		$this->load->model('friendship_model');
+		$data['friendship'] = $this->friendship_model->getAllFriend();
+		
+
 		$this->load->model('siteinfo_model');
         $data['siteinfo']= $this->siteinfo_model->getSiteInfo();
 
@@ -47,8 +54,19 @@ class Articles extends CI_Controller {
 
 		$this->load->view('header',$data);
 		$this->load->view('menu', $data);
+		$this->load->view('banner', $data);
 		$this->load->view('articles_index', $data);
 		$this->load->view('footer');
+	}
+	public function timeline()
+	{
+
+        $data['cur_title'] = array('','','active','');
+        $this->load->view('header',$data);
+        $this->load->view('menu',$data);
+        $this->load->view('timeline');
+
+        $this->load->view('footer');
 	}
 	public function article($id)
 	{	

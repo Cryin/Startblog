@@ -15,7 +15,10 @@ class Articles extends Controller {
         $this->load->model('articles_model');
         $data['data'] = $this->articles_model->getArticlesDuring($row, $config['per_page']);
 
-        $data['cur_title'] = array('','active','','','');
+        $this->load->model('category_model');
+        $data['all_category'] =  $this->category_model->getAllCategory();
+
+        $data['cur_title'] = array('','','active','','','','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/articles_index', $data);
@@ -24,7 +27,7 @@ class Articles extends Controller {
 
 	public  function edit($id=0){
 
-        $data['cur_title'] = array('','active','','','');
+        $data['cur_title'] = array('','','active','','','','');
 
         $this->load->model('category_model');
         $data['all_category'] =  $this->category_model->getAllCategory();
@@ -44,21 +47,35 @@ class Articles extends Controller {
         $this->load->view('admin/footer');
         
 	}
+    public  function add(){
 
-    public  function update(){
+        $data['cur_title'] = array('','','active','','','','');
+
+        $this->load->model('category_model');
+        $data['all_category'] =  $this->category_model->getAllCategory();
+
+        $this->load->view('admin/header');
+        $this->load->view('admin/menu', $data);
+        $this->load->view('admin/articles_add', $data);
+        $this->load->view('admin/footer');
+        
+    }
+
+    public  function update($id=0){
         $this->load->database();
 
         $data['cur_title'] = array('','active','','','');
         $data['data'] = array(
-                'id' => $_POST['id'],
+                'id' => $id,
                 'title' => $_POST['title'],
                 'keyword' => $_POST['keyword'],
                 'description' => $_POST['description'],
+                'imagelink' => $_POST['imagelink'],
                 'content' => $_POST['content'],
                 'published_at' => $_POST['published_at'],
                 'category' => $_POST['category'],
                 'tag' => $_POST['tag'],  
-                'pv' => $_POST['pv']              
+                'pv' => '1'             
             );
         //获取表中该文章相关的标签
         $this->load->model('tag_model');

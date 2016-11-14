@@ -8,47 +8,73 @@ $Parsedown = new Parsedown();
 
 # Read file and pass content through the Markdown parser
 foreach ($data as $key => $value) {
-  $data[$key]['content'] = substr($Parsedown->text($value['content']), 0, 450);
+  $data[$key]['description'] = substr($Parsedown->text($value['description']), 0, 100);
 }
 
 
 ?>
-    
-      <?php foreach ($data as $key => $value): ?>
-        <div class="col-sm-8 col-sm-offset-2" style="background-color: #FFF;margin-top:5px;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD,-5px -5px 8px #DDDDDD;">
-        <div class="article" style="padding-top:20px;">
-          <h2 class="text-center">
-            <?php echo anchor("/Articles/article/{$value['id']}","{$value['title']}","")?>
-          </h2>
-          <center>
-            <p>
-              <small class="text-muted">
-
-                <?php $category_id = $value['category'];$category_name = $all_category["$category_id"]['category'];?>
-                分类&nbsp<?php echo anchor("Category/show/{$category_id}","$category_name","")?> &nbsp&nbsp|&nbsp&nbsp<?php echo date('Y年m月d日',strtotime($value['published_at']));?>&nbsp&nbsp|&nbsp&nbsp阅读：<?php echo $value['pv'];?>次
-              </small>
-            </p>
-            <div class="row">
-              <hr style="border: none;height: 1px;background-color: #bbb;background-image: -webkit-linear-gradient(0deg, #ddd, #bbb, #ddd);max-width: 80%;">
+<div class="am-g am-g-fixed blog-fixed">
+    <div class="am-u-md-8 am-u-sm-12">
+         <?php foreach ($data as $key => $value): ?>
+        <article class="am-g blog-entry-article">
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+                <img src="<?php echo $value['imagelink']?>" alt="" class="am-u-sm-12">
             </div>
-          </center>
-          <article class="markdown-body">
-            <?php echo $value['content']; ?>
-          </article>
-          <hr>
-          <center style="margin-bottom:30px;margin-top:20px">
-            <a href="<?php echo site_url("/articles/article/{$value['id']}")?>">
-              <button type="button" class="btn btn-success" style="margin-bottom:30px">阅读全文</button>
-            </a>
-          </center>
+            <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+
+                <span><?php $category_id = $value['category'];$category_name = $all_category["$category_id"]['category'];?>
+                <?php echo anchor("Category/show/{$category_id}","$category_name","")?>&nbsp;</span>
+                <span><?php echo date('Y年m月d日',strtotime($value['published_at']));?>&nbsp;</span>
+
+                <span>阅读：<?php echo $value['pv'];?>次 &nbsp;</span>
+                <h1><?php echo anchor("/Articles/article/{$value['id']}","{$value['title']}","")?></h1>
+                <p><?php echo $value['description']; ?>
+                </p>
+                <p><a href="<?php echo site_url("/articles/article/{$value['id']}")?>" class="am-btn am-btn-default">阅读全文</a></p>
+            </div>
+        </article>
+        <?php endforeach ?>
+
+        
+
+        <ul class="am-pagination">
+   <?php echo $this->pagination->create_links(); ?>
+</ul>
+    </div>
+
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
+            <img src="<?php echo base_url('/static/img/favicon.png')?>" alt="about me" class="blog-entry-img" >
+            <p>StartBlog</p>
+            <p>一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.</p>
         </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-text-center blog-title"><span>Contact ME</span></h2>
+            <p>
+                <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+                <a href=""><span class="am-icon-github am-icon-fw blog-icon"></span></a>
+                <a href=""><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+                <a href=""><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
+                <a href=""><span class="am-icon-rss am-icon-fw blog-icon"></span></a>
+            </p>
         </div>
-      <?php endforeach ?>
-      <div class="col-sm-8 col-sm-offset-2">
-      <center>
-        <ul class="pagination">
-          <?php echo $this->pagination->create_links(); ?>
-        </ul>
-      </center>
-      </div>
-    
+        <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">
+            <h2 class="blog-title"><span>TAG cloud</span></h2>
+            <div class="am-u-sm-12 blog-clear-padding">
+
+            <?php foreach ($all_tag as $key => $value): ?>
+            <?php echo anchor("/Tag/show/{$value['id']}","{$value['tag_name']}",array('class' => 'blog-tag'));?>
+            <?php endforeach ;?>
+            </div>
+        </div>
+        <div class="blog-sidebar-widget blog-bor">
+            <h2 class="blog-title"><span>友情链接</span></h2>
+            <ul class="am-list">
+              <?php foreach ($friendship as $key => $value): ?>
+                <li><a href="<?php echo $value['link']?>" target="_blank"><?php echo $value['link_name']?></a></li>
+                <?php endforeach ;?>
+            </ul>
+        </div>
+    </div>
+</div>  

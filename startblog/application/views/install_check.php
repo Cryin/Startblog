@@ -104,9 +104,7 @@
                             <?php endif; ?>
                         </center>
                     </div>
-                    <center class="panel-footer">
-                         <?php $this->load->view ( 'footer' ); ?>
-                    </center>
+                   
                 </div>
             </div>
         </div>

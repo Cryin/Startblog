@@ -11,7 +11,7 @@ class Index extends Controller {
       
 	 }
      public function index(){
-        $data['cur_title'] = array('active','','','','');
+        $data['cur_title'] = array('active','','','','','','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu',$data);
         $this->load->view('admin/index');

@@ -1,81 +1,113 @@
-<link rel="stylesheet" href="<?php echo base_url('/static/css/simplemde.min.css')?>">
-<script src="<?php echo base_url('/static/js/simplemde.min.js')?>"></script>
-  <form role="form" method="post" action="<?php echo site_url('admin/Articles/update')?>">
-    <div class="col-sm-6  col-sm-offset-2">
-      <div class="form-group">
-        <label for="name">标题</label>
-        <input class="sr-only" name="id" value="<?php echo isset($article['0']['id'])?$article['0']['id']:0?>">
-        <input class="sr-only" name="pv" value="<?php echo isset($article['0']['pv'])?$article['0']['pv']:1?>">
-        <input type="text" class="form-control" id="name" name="title"
-           placeholder="请输入标题" value="<?php if(isset($article['0']['title'])) echo $article['0']['title'];?>" required>
-      </div>
 
-      <div class="form-group">
-        <label for="content">内容</label>
-        <textarea class="form-control" id="textcontent" name="content" rows="21" ><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']); else echo("#Type here...")?></textarea>
-      </div>
+<link rel="stylesheet" href="<?php echo base_url('/static/admin/css/simplemde.min.css')?>">
+<script src="<?php echo base_url('/static/admin/js/simplemde.min.js')?>"></script>
+<!-- 内容区域 -->
+        <div class="tpl-content-wrapper">
 
+ 
+                <div class="row">
+                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
+                        <div class="page-header-heading"><span class="am-icon-clone page-header-heading-icon"></span> 编辑文章 <small>Edit Article </small></div>
+                        
+                    </div>
+                </div>
 
+<div class="row">
+
+<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                        <div class="widget am-cf">
+                            
+                            <div class="widget-body am-cf">
+
+                                <form class="am-form tpl-form-line-form" method="post" action="<?php echo site_url("admin/Articles/update/{$article['0']['id']}")?>">
+                                                                                              
+                                  
+                                    <div class="am-form-group">
+                                        <label for="user-name" class="am-u-sm-2 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
+                                        <div class="am-u-sm-10">
+                                            <input type="text" class="tpl-form-input" name="title" value="<?php if(isset($article['0']['title'])) echo $article['0']['title'];?>" placeholder="请输入标题文字" required>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <label for="published_at" class="am-u-sm-2 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
+                                        <div class="am-u-sm-10">
+                                            <input type="text" class="am-form-field" name="published_at" value="<?php if(isset($article['0']['published_at'])) echo $article['0']['published_at']?>" placeholder="发布时间" data-am-datepicker="" readonly>
+                                            <small>发布时间为必填</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <label for="user-phone" class="am-u-sm-2 am-form-label">类别选择 <span class="tpl-form-line-small-title">Category</span></label>
+                                        <div class="am-u-sm-10">
+                                            <select data-am-selected="{btnSize: 'sm'}" name="category">
+                                              <?php foreach ($all_category as $key => $value): ?>
+                                              <option  <?php if(isset($article['0']['category'])) echo $value['id']==$article['0']['category']?'selected':'' ?> value="<?php echo $value['id']?>"><?php echo $value['category']?></option>
+                                              <?php endforeach; ?>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <label class="am-u-sm-2 am-form-label">标签 <span class="tpl-form-line-small-title">Tag</span></label>
+                                        <div class="am-u-sm-10">
+                                            <input type="text" id="name" name="tag" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" placeholder="多个标签请用英文","分离">
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <label class="am-u-sm-2 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">Keyword</span></label>
+                                        <div class="am-u-sm-10">
+                                            
+                                            <input type="text" id="name" name="keyword" value="<?php if(isset($article['0']['keyword'])) echo $article['0']['keyword']?>" placeholder="多个关键词用,分割">
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">站点描述 <span class="tpl-form-line-small-title">Description</span></label>
+                                        <div class="am-u-sm-10">
+                                            <input name="description" type="text" value="<?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?>" placeholder="请输入SEO描述内容">
+                                            <div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="am-form-group">
+                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
+                                        <div class="am-u-sm-10">
+                                            <input name="imagelink" type="text" value="<?php if(isset($article['0']['imagelink'])) echo $article['0']['imagelink']?>" placeholder="请输入图片链接地址如:http://www.xxx.com/img/pic.jpg">
+                                            <div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <label for="user-intro" class="am-u-sm-2 am-form-label">文章内容 <span class="tpl-form-line-small-title">Content</span></label>
+                                        <div class="am-u-sm-10">
+                                            <textarea id="textcontent" name="content" rows="21"><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']);?></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <div class="am-u-sm-10 am-u-sm-push-2">
+                                            <button type="submit" name='subimit' value="subimit" class="am-btn am-btn-primary am-btn-block tpl-btn-bg-color-success tpl-login-btn">发布</button>
+                                        </div>
+                                    </div>
+
+                                    
+    
+                                </form>
+                                <script>
+                                          
+                                          var simplemde = new SimpleMDE({element: document.getElementById("textcontent")});
+                                    </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+        </div>
     </div>
-
-    <div class="col-sm-2">
-      <div class="form-group">
-          <label for="published_at">发布日期</label>
-          <div class='input-group date'>
-              <input type='text' class="form-control" name="published_at" id='datetimepicker1' value="<?php if(isset($article['0']['published_at'])) echo $article['0']['published_at']?>"/>
-              <span class="input-group-addon">
-                  <span class="glyphicon glyphicon-calendar"></span>
-              </span>
-          </div>
-      </div>
-      <div class="form-group">
-        <label for="category">分类</label>
-        <select class="form-control" name="category">
-          <?php foreach ($all_category as $key => $value): ?>
-            <option  <?php if(isset($article['0']['category'])) echo $value['id']==$article['0']['category']?'selected':'' ?> value="<?php echo $value['id']?>"><?php echo $value['category']?></option>
-          <?php endforeach ?>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="tag">标签</label>
-        <input type="text" class="form-control" id="name" name="tag"
-           placeholder="请输入标签" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" required>
-        <span class="help-block">标签请用英文“,”分离</span>
-      </div>
-      <div class="form-group">
-        <label for="tag">SEO关键词</label>
-        <input type="text" class="form-control" id="name" name="keyword"
-           placeholder="多个关键词用;分割" value="<?php if(isset($article['0']['keyword'])) echo $article['0']['keyword']?>" required>
-      </div>
-      <div class="form-group">
-        <label for="tag">SEO描述</label>
-        <textarea class="form-control" rows="6" name="description" placeholder="请输入SEO描述内容" required><?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?></textarea>
-      </div>
-   <!--   <div class="form-group">
-        <label for="tag">MarkDown在线编辑器</label>
-        <span class="help-block"><a href="http://mahua.jser.me/" target="_blank">MaHua</a> </span>
-      </div>-->
-      <div class="form-group">
-      <div class="pull-left">
-        <button type="submit" class="btn btn-primary btn-block">提交</button>
-      </div>
-      </div>
-
     </div>
-
-          
-  </form>
-<script>
-var simplemde = new SimpleMDE({ element: document.getElementById("textcontent") });
-</script>
-<script type="text/javascript" src="<?php echo base_url('/static/js/bootstrap-datetimepicker.min.js')?>"></script>
-<script type="text/javascript">
-    $(function () {
-        $('#datetimepicker1').datetimepicker({
-          format: 'YYYY-MM-DD HH:mm',
-          useStrict: true,
-          defaultDate: 'moment',
-        });
-    });
-</script>
-

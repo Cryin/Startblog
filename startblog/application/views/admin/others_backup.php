@@ -1,39 +1,40 @@
-<div class="col-sm-8  col-sm-offset-2 col-xs-10 col-xs-offset-1" style="background-color: #FFF;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD,-5px -5px 8px #DDDDDD;">
-<form class="form-inline" role="form" method="post" action="<?php echo site_url('admin/Others/backup')?>">
-   <table class="table table-hover" style="margin-top:20px;margin-bottom:-15px">
-      <thead >
-         <tr>
-            <th class="text-center">#</th>
-            <th>文章</th>
-            <th class="text-center"> </th>
-         </tr>
-      </thead>
-      <tbody>
-         <?php foreach ($data as $key => $value): ?>
+<!-- 内容区域 -->
+        <div class="tpl-content-wrapper">
 
-            <tr>
-               <th class="text-center col-sm-1"><?php echo $value['id']?></th>
-               <td class="col-sm-5"><?php echo $value['title']?></td>
-               <td class="text-center col-sm-2"><input type="checkbox" name="backup_article[<?php echo $value['id']?>]"value="<?php echo $value['title']?>" checked></td>
-            </tr>
-         <?php endforeach ?>
-      </tbody>
-   </table>
-   <center style="margin-top: 40px;">
-           <div class="form-group">
-              <label for="name">备份路径</label>
-              <input type="text" class="form-control" id="name" name="backup_path"value="<?php echo $path;?>" 
-                 placeholder="请输入备份路径">
-           </div>
-           <button type="submit" class="btn btn-primary btn-md">备份文章</button>
-           </center>
-        </form>
-        
-      
-         <center>
-        <ul class="pagination">
-          <?php echo $this->pagination->create_links(); ?>
-        </ul>
-      </center>
+            <div class="container-fluid am-cf">
+                <div class="row">
+                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
+                        <div class="page-header-heading"><span class="am-icon-cog page-header-heading-icon"></span> 文章备份 <small>Backup</small></div>
+                        <p class="page-header-description">文章本地备份</p>
+                    </div>
+                </div>
+
+            </div>
+<div class="row">
+
+                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                        <div class="widget am-cf">
+                            
+                            <div class="widget-body am-fr">
+                                <form class="am-form tpl-form-border-form tpl-form-border-br"  method="post" action="<?php echo site_url('admin/Others/backup')?>">
+                                    <div class="am-form-group">
+                                        <label for="user-name" class="am-u-sm-3 am-form-label">备份路径 <span class="tpl-form-line-small-title">Path</span></label>
+                                        <div class="am-u-sm-9">
+                                            <input class="tpl-form-input" name="backup_path" type="text" placeholder="请输入备份路径" value="<?php echo $path;?>">
+                                            <small>请选择文章备份路径,备份为markdown格式TXT文件</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="am-form-group">
+                                        <div class="am-u-sm-9 am-u-sm-push-3">
+                                            <button type="submit" name='subimit' class="am-btn am-btn-primary tpl-btn-bg-color-success tpl-login-btn">备份文章</button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </div>
-
+        </div>

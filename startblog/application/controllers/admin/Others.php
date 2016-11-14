@@ -29,10 +29,8 @@ class Others extends CI_Controller {
         $row = $this->uri->segment(4);
         $row = isset($row) ? $row : 0;
 
-        $this->load->model('articles_model');
-        $data['data'] = $this->articles_model->getArticlesDuring($row, $config['per_page']);
         $data['path'] = dirname(dirname(dirname(dirname(__FILE__)))).'\\article\\';
-        $data['cur_title'] = array('','','','','active');
+        $data['cur_title'] = array('','','','','','active','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_backup', $data);
@@ -44,7 +42,7 @@ class Others extends CI_Controller {
         $this->load->model('siteinfo_model');
         $data['data']= $this->siteinfo_model->getSiteInfo();
 
-        $data['cur_title'] = array('','','','','active');
+       $data['cur_title'] = array('','active','','','','','');
         $this->load->view('admin/header',$data);
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_setinfo', $data);
@@ -56,10 +54,19 @@ class Others extends CI_Controller {
         $this->load->model('about_model');
         $data['data']= $this->about_model->getAboutInfo();
 
-        $data['cur_title'] = array('','','','','active');
+        $data['cur_title'] = array('','','','','','active','');
         $this->load->view('admin/header',$data);
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_about', $data);
+        $this->load->view('admin/footer');
+	}
+	public function feedback()
+	{
+
+        $data['cur_title'] = array('','','','','','','active');
+        $this->load->view('admin/header');
+        $this->load->view('admin/menu', $data);
+        $this->load->view('admin/others_feedback');
         $this->load->view('admin/footer');
 	}
 
@@ -69,7 +76,7 @@ class Others extends CI_Controller {
         $this->load->model('about_model');
         $data['data']= $this->about_model->updateAboutInfo();
 
-        $data['cur_title'] = array('','','','','active');
+        $data['cur_title'] = array('','','','','','active','');
         $this->load->view('admin/header',$data);
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_about_success', $data);
@@ -79,9 +86,12 @@ class Others extends CI_Controller {
 	public  function set_siteinfo(){
         $this->load->helper('url');
         $this->load->model('siteinfo_model');
-        $site_info = $this->siteinfo_model->updateSiteInfo();
+        if ($_POST['title']!=''){
 
-        $data['cur_title'] = array('','','','','active');
+        	$site_info = $this->siteinfo_model->updateSiteInfo();
+    		}
+
+        $data['cur_title'] = array('','active','','','','','');
 
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
@@ -93,13 +103,12 @@ class Others extends CI_Controller {
 	{
 		$this->load->helper('url');
 		$this->load->database();
-		$backup_article = $_POST['backup_article'];
+		$this->load->model('articles_model');
+        $data = $this->articles_model->getAllArticles();
 		$path = $_POST['backup_path'];
-		foreach ($backup_article as $key => $value) {
-			$this->db->where('id', $key);
-      		$article = $this->db->get('articles')->result_array();
-      		$str = 'title:'.$article[0]['title']."\r\ncategory:".$article[0]['category']."\r\ntag:".$article[0]['tag']."\r\npublished_at:".$article[0]['published_at']."\r\n\r\n============================\r\n\r\n".$article[0]['content'];
-      		$file = $path.$value.'.txt';
+		foreach ($data as $key => $value) {
+      		$str = 'title:'.$value['title']."\r\ncategory:".$value['category']."\r\ntag:".$value['tag']."\r\npublished_at:".$value['published_at']."\r\n\r\n============================\r\n\r\n".$value['content'];
+      		$file = $path.$value['title'].'.txt';
       		$file=iconv("utf-8","gb2312",$file);
 			$fp = fopen($file, 'w');
 			if ($fp) {
@@ -108,10 +117,10 @@ class Others extends CI_Controller {
 			}
 			
 		}
-        $data['cur_title'] = array('','','','','active');
+        $data['cur_title'] = array('','','','','','active','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
-        $this->load->view('admin/others_backup_success', $data);
+        $this->load->view('admin/others_backup_success');
         $this->load->view('admin/footer');
 	}
 
@@ -134,7 +143,7 @@ class Others extends CI_Controller {
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
 
 
-		$data['cur_title'] = array('','','','','active');
+		$data['cur_title'] = array('','','','','','','');
 	  if ($this->form_validation->run() == FALSE)
 	  {
 	   	$this->load->view('admin/header');

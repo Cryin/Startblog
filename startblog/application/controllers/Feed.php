@@ -13,7 +13,7 @@ class Feed extends CI_Controller {
         $data['page_language'] = 'zh-CN'; // the language
         $data['feed_name'] = 'startblog.cc';
         $data['encoding'] = 'utf-8';
-        $data['feed_url'] = 'http://www.startblog.cc/feed';
+        $data['feed_url'] = 'http://cryin.startblog.cc/feed';
         $data['page_description'] = 'startblog是一个基于codeigniter 3.x开发的简洁，易用的Markdown博客系统';  
         header("Content-Type: text/xml; charset=UTF-8");
          

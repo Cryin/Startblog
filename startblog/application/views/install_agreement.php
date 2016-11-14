@@ -9,10 +9,7 @@
   <meta name="author" content="https://github.com/cryin/startblog" />
 
   <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap.min.css')?>">
-  <link rel="stylesheet" href="<?php echo base_url('/static/css/github-markdown.css')?>">
-  <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap-datetimepicker.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('static/css/style.css');?>" media="screen" rel="stylesheet" type="text/css" />
-  <script src="<?php echo base_url('/static/js/jquery.min.js')?>"></script>
   <script src="<?php echo base_url('/static/js/bootstrap.min.js')?>"></script>
   <script type="text/javascript" src="<?php echo base_url('/static/js/moment.min.js')?>"></script>
   <script type="text/javascript">
@@ -55,9 +52,7 @@
                                 <a class="btn btn-primary btn-block" href="<?php echo site_url('install/check');?>" role="button">接受协议并继续</a>
                             </center>
                     </div>
-                    <center class="panel-footer">
-                        <?php $this->load->view ( 'footer' ); ?>
-                    </center>
+                    
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 title:Startblog
 category:4
 tag:startblog,php,github
-published_at:2016-07-22 00:00:00
+published_at:2016-10-23 12:05:00
 
 ============================
 
@@ -40,10 +40,8 @@ published_at:2016-07-22 00:00:00
 
 >>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
 >>如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，并修改application\config\config.php文件，添加目录字段：
+>>$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
 
-'''php
-$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
-'''
 
 ###手动安装说明:
 
@@ -84,4 +82,4 @@ $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
 
 >2016/8/5  增加install功能！version：startblog v1.4
 
->...
+>2016/10/23  修复markdown编辑器加载不稳定问题，修复post提交时bug！version：startblog v1.5

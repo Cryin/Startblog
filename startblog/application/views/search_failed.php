@@ -1,4 +1,4 @@
-<div class="col-sm-8 col-sm-offset-2">
+<div class="am-g am-g-fixed blog-fixed blog-content">
 <center>
 	<div >
 <h1 class="text-center">

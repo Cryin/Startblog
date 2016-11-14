@@ -1,12 +1,29 @@
+<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+    <div class="am-u-sm-12">
+        <h1 class="blog-text-center">-- 标签归档 --</h1>
+        <div class="timeline-year">
+            <h1><?php if(isset($data[0]['tag_name']))echo $data[0]['tag_name']?></h1>
+            <hr>
+                <ul>
+                <hr>
+                <?php foreach ($data as $key => $value): ?>
+                <li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span"><?php echo $value['published_at']?></span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="<?php echo site_url("Articles/article/{$value["id"]}");?>"><?php echo $value['title']?></a></span>
+                    <?php $category_id = $value['category'];$category_name = $all_category["$category_id"]['category'];?>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only"><?php echo $category_name;?></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only"><?php echo $value['tag']?></span>
+                </li>
+                <?php endforeach; ?>
+                </ul>
+        </div>
 
-    <div class="col-sm-8 col-sm-offset-2" style="padding-top:20px">
-    <ol class="breadcrumb">
-     <li><?php echo anchor("Tag/index","标签","")?></li>
-     <li class="active"><button type='button' class='btn btn-<?php if(isset($data[0]['tag_button_type']))echo $data[0]['tag_button_type']?> btn-md'><?php if(isset($data[0]['tag_name']))echo $data[0]['tag_name']?></button></li>
-    </ol>
-        <?php foreach ($data as $key => $value): ?>
-            <blockquote style="background-color: #FFF;margin-bottom:-20px;border-radius: 8px;box-shadow:5px 5px 8px #DDDDDD;"><a href='<?php echo site_url("Articles/article/{$value["id"]}");?>'><h2><?php echo $value['title']?></h2></a><small><cite title="Source Title"> published at <?php echo $value['published_at']?></cite></small></blockquote>
-          
-          <hr style="solid">
-        <?php endforeach ?>
+        <hr>
     </div>
+
+
+</div>
+<!-- content end -->
+    
+
