@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
                         <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> Dashboard <small>Startblog Admin</small></div>
-                        <p class="page-header-description">Startblog是一款基于Codeigniter、Html5开发的简洁、易用、跨平台自适应的Markdown博客系统.</p>
+                        <p class="page-header-description">Startblog是一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.</p>
                     </div>
                 </div>
 
@@ -84,12 +84,12 @@
                                 Startblog
                             </div>
                             <div class="achievement-subheading">
-                               一款基于Codeigniter、Html5开发的简洁、易用、跨平台自适应的Markdown博客系统.
+                               一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.
                             </div>
                             <img class="achievement-image" src="<?php echo base_url('/static/admin/img/logoa.png')?>" alt="">
                             <div class="achievement-description">
                                 开发者:</b>Cryin<br/>
-                                贡献者:</b>Hardy、Ant、半城人<br/>
+                                贡献者:</b>LUHOO、Hardy、Ant、半城人<br/>
                                 捐赠者:</b>Hardy<br/></div>
                     <p class="copyright">
                         © 2014-2016 Cryin' | Images : <a href="https://github.com/Cryin/Startblog"><span class="am-icon-github"> Startblog</span></a>

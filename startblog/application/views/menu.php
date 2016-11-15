@@ -5,7 +5,7 @@
 
   <div class="am-collapse am-topbar-collapse" id="blog-collapse">
     <ul class="am-nav am-nav-pills am-topbar-nav">
-      <li class="am-active"><a href="<?php echo base_url()?>">首页</a></li>
+      <li class="<?php echo $cur_title[0];?>"><a href="<?php echo base_url()?>">首页</a></li>
       <li class="am-dropdown" data-am-dropdown>
         <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
           文章分类 <span class="am-icon-caret-down"></span>

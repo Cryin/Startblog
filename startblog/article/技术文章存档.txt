@@ -1,0 +1,31 @@
+title:技术文章存档
+category:5
+tag:Paper
+published_at:2016-11-14 00:00:00
+
+============================
+
+slideshare被墙了，09年开始使用的百度空间也关停了，到现在换了三个笔记本，两块移动硬盘。导致很多自己写的文章找不到。所以这里单独整理一个存档，放一些自己曾今和后续写的安全技术相关的文档。 
+##Paper list：
+
+> * Talking About Exploit Writing
+> * Bypassing AntiVirus Detection for Malicious PDFs
+> * MBR病毒分析
+> * 使用bochs调试MBR
+> * 基于MBR的系统登录密码验证程序
+> * PDF文件格式分析
+> * 恶意PDF文件解析思路
+> * Win 7下定位kernel32.dll基址及shellcode编写
+> * CVE-2009-0658漏洞分析
+> * Firefox vulnerability(CVE-2011-0065 ) Bypassing DEP
+> * CVE-2009-4324漏洞分析
+> * More Insights On The APT
+> * 慢速http拒绝服务攻击及防御方案
+> * 由交互式扫描联想到的实时漏洞感知方法
+> * ......
+
+链接:[github](https://github.com/Cryin/Paper)    
+Date: 2016/08/15
+
+
+

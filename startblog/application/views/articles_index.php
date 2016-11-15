@@ -52,11 +52,11 @@ foreach ($data as $key => $value) {
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-text-center blog-title"><span>Contact ME</span></h2>
             <p>
-                <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
-                <a href=""><span class="am-icon-github am-icon-fw blog-icon"></span></a>
-                <a href=""><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+                <a href="tencent://message/?uin=416049355"><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+                <a href="https://github.com/Cryin/"><span class="am-icon-github am-icon-fw blog-icon"></span></a>
+                <a href="http://weibo.com/justear"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
                 <a href=""><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
-                <a href=""><span class="am-icon-rss am-icon-fw blog-icon"></span></a>
+                <a href="<?php echo base_url('/feed')?>"><span class="am-icon-rss am-icon-fw blog-icon"></span></a>
             </p>
         </div>
         <div class="blog-clear-margin blog-sidebar-widget blog-bor am-g ">

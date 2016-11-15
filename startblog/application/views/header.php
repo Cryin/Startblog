@@ -6,7 +6,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <?php if(isset($siteinfo))foreach ($siteinfo as $key => $value);?>
-  <title><?php if(isset($value['title'])) echo $value['title'];?> - powered by startblog</title>
+  <title><?php if(isset($value['title']))echo $value['title'];?></title>
   <meta name="keywords" content="<?php if(isset($value['keywords']))echo $value['keywords'];?>" />
   <meta name="description" content="<?php if(isset($value['description']))echo $value['description'];?>" />
   <meta name="generator" content="startblog v2.0" />
@@ -31,7 +31,7 @@
 <body id="blog">
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div class="am-u-sm-8 am-u-sm-centered">
-        <img width="200" src="<?php echo base_url('/static/img/bigtitle.png')?>" alt="Startblog Logo"/>
+        <a href="<?php echo base_url()?>"><img width="200" src="<?php echo base_url('/static/img/bigtitle.png')?>" alt="Startblog Logo"/></a>
         <h2 class="am-hide-sm-only"> a simple Markdown blog system based on the CodeIgniter.</h2>
     </div>
 </header>

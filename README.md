@@ -4,6 +4,10 @@
 
 >Author: [Cryin']
 
+###主页
+
+ [http://startblog.cc/](https://startblog.cc)
+
 ###程序功能：
 
 *markdown博文撰写、修改、删除功能,采用使用simplemde编辑器;
@@ -27,13 +31,12 @@
 
 * github https://github.com/Cryin
 
-###下载
- [startblog v2.0](https://github.com/Cryin/Startblog)
-
 ###贡献者
+
 感谢辉哥设计的Logo，感谢贡献者LUHOO、Hardy、Ant、半城人
 
 ###捐赠者
+
 感谢Hardy、gege的捐赠！
 
 ###安装方法:

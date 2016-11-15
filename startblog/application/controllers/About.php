@@ -13,10 +13,10 @@ class About extends CI_Controller {
         $this->load->model('siteinfo_model');
         $data['siteinfo']= $this->siteinfo_model->getSiteInfo();
         
-        $data['cur_title'] = array('','','','active');
+        $data['cur_title'] = array('','','','am-active');
         $this->load->view('header',$data);
         $this->load->view('menu',$data);
         $this->load->view('about');
-        $this->load->view('footer');
+        $this->load->view('footer',$data);
     }
 }

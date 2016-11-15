@@ -30,7 +30,7 @@
 <body id="blog">
 <header class="am-g am-g-fixed blog-fixed blog-text-center blog-header">
     <div class="am-u-sm-8 am-u-sm-centered">
-        <img width="200" src="<?php echo base_url('/static/img/bigtitle.png')?>" alt="Startblog Logo"/>
+        <a href="<?php echo base_url()?>"><img width="200" src="<?php echo base_url('/static/img/bigtitle.png')?>" alt="Startblog Logo"/></a>
         <h2 class="am-hide-sm-only"> a simple Markdown blog system based on the CodeIgniter.</h2>
     </div>
 </header>
