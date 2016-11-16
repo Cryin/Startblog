@@ -25,6 +25,7 @@
                                     <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-2 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
                                         <div class="am-u-sm-10">
+                                            <input class="am-sr-only" name="pv" value="<?php echo isset($article['0']['pv'])?$article['0']['pv']:1?>">
                                             <input type="text" class="tpl-form-input" name="title" value="<?php if(isset($article['0']['title'])) echo $article['0']['title'];?>" placeholder="请输入标题文字" required>
                                         </div>
 

@@ -75,7 +75,7 @@ class Articles extends Controller {
                 'published_at' => $_POST['published_at'],
                 'category' => $_POST['category'],
                 'tag' => $_POST['tag'],  
-                'pv' => '1'             
+                'pv' => $_POST['pv']            
             );
         //获取表中该文章相关的标签
         $this->load->model('tag_model');
