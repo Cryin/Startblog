@@ -96,3 +96,5 @@ $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
 >2016/10/23  修复markdown编辑器加载不稳定问题，修复post提交时bug！version：startblog v1.5
 
 >2016/11/14  全面升级UI，采用Amazeui开发后台及前端UI！version：startblog v2.0
+
+>2016/11/21  修改新建、编辑文章PV重置、数据库报错bug！version：startblog v2.0
