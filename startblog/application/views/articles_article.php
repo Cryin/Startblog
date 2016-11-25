@@ -77,7 +77,7 @@ var duoshuoQuery = {short_name:"startblog"};
                 <a href="tencent://message/?uin=416049355"><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
                 <a href="https://github.com/Cryin/"><span class="am-icon-github am-icon-fw blog-icon"></span></a>
                 <a href="http://weibo.com/justear"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
-                <a href=""><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
+                <a href="http://www.startblog.cc/"><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
                 <a href="<?php echo base_url('/feed')?>"><span class="am-icon-rss am-icon-fw blog-icon"></span></a>
             </p>
         </div>

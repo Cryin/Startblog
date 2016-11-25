@@ -98,3 +98,6 @@ $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
 >2016/11/14  全面升级UI，采用Amazeui开发后台及前端UI！version：startblog v2.0
 
 >2016/11/21  修改新建、编辑文章PV重置、数据库报错bug！version：startblog v2.0
+
+>2016/11/25  新增友情链接编辑、排序功能，修改文件编辑界面，增加编辑框边框。修复dreamkill同学提出的bug及程序问题，输入输出统一进行安全过滤，model类修改为大写 ！version：startblog v2.1
+

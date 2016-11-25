@@ -25,7 +25,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
+                               <!-- <div class="am-u-sm-12 am-u-md-6 am-u-lg-3">
                                     <div class="am-form-group tpl-table-list-select">
                                         <select data-am-selected="{btnSize: 'sm'}">
               <?php foreach ($all_category as $key => $value): ?>
@@ -41,10 +41,10 @@
                                         <button class="am-btn  am-btn-default am-btn-success tpl-table-list-field am-icon-search" type="button"></button>
                                         </span>
                                     </div>
-                                </div>
+                                </div>-->
 
                                 <div class="am-u-sm-12">
-                                    <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black ">
+                                    <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black">
                                         <thead>
                                             <tr>
                                                 <th>序号</th>

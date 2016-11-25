@@ -2,8 +2,8 @@
     <div class="am-g am-g-fixed blog-fixed am-u-sm-centered blog-footer-padding">
         <div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
             <h3>关于 StartBlog</h3>
-            <p class="am-text-sm">一款基于Codeigniter、Html5开发的简洁、易用、跨平台自适应的Markdown博客系统.<br> 使用Amaze UI 跨屏前端框架实现模板 <br> 支持多平台、终端<br>嗯嗯嗯，不知道说啥了。感谢这些开源的程序<br><br>
-            Made with in Startblog v2.0 <a href="https://github.com/Cryin/Startblog"><span class="am-icon-github"></span> </a></p>
+            <p class="am-text-sm">一款基于Codeigniter、Amazeui(Html5)开发的简洁、易用、跨平台自适应的Markdown博客系统.<br> 使用Amaze UI 跨屏前端框架实现模板 <br> 支持多平台、终端<br>嗯嗯嗯，不知道说啥了。感谢这些开源的程序<br><br>
+            Made with in Startblog v2.1 <a href="https://github.com/Cryin/Startblog"><span class="am-icon-github"></span> </a></p>
         </div>
         <div class="am-u-sm-12 am-u-md-4- am-u-lg-4">
             <h3>社交账号</h3>
@@ -24,7 +24,7 @@
                 <ul>
                     <li>Codeigniter</li>
                     <li>Amazeui</li>
-                    <li>simplemde</li>
+                    <li>Simplemde</li>
                     <li>...</li>
                 </ul>
             </p>

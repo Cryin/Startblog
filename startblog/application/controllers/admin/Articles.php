@@ -67,15 +67,15 @@ class Articles extends Controller {
         $data['cur_title'] = array('','active','','','');
         $data['data'] = array(
                 'id' => $id,
-                'title' => $_POST['title'],
-                'keyword' => $_POST['keyword'],
-                'description' => $_POST['description'],
-                'imagelink' => $_POST['imagelink'],
-                'content' => $_POST['content'],
-                'published_at' => $_POST['published_at'],
-                'category' => $_POST['category'],
-                'tag' => $_POST['tag'],  
-                'pv' => $_POST['pv']            
+                'title' => $this->input->post('title', TRUE),
+                'keyword' => $this->input->post('keyword', TRUE),
+                'description' => $this->input->post('description', TRUE),
+                'imagelink' => $this->input->post('imagelink', TRUE),
+                'content' => $this->input->post('content', TRUE),
+                'published_at' => $this->input->post('published_at', TRUE),
+                'category' => $this->input->post('category', TRUE),
+                'tag' => $this->input->post('tag', TRUE),  
+                'pv' => $this->input->post('pv', TRUE)           
             );
         //获取表中该文章相关的标签
         $this->load->model('tag_model');

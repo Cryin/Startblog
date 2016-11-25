@@ -26,9 +26,9 @@ class Category extends Controller {
     public  function add(){
         $this->load->database();
 
-        if ($_POST['category']!='') {
+        if ($this->input->post('category', TRUE)!='') {
             $data['data'] = array(
-                'category' => $_POST['category'],             
+                'category' => $this->input->post('category', TRUE)          
             );
             $this->db->insert('category', $data['data']);
         }

@@ -18,8 +18,8 @@ $html = $Parsedown->text($about[0]['content']);
         <div class="am-article-hd">
           <h1 class="am-article-title blog-text-center"><?php echo $about[0]['title'];?></h1>
           <p class="am-article-meta blog-text-center">
-              <span><a href="#" class="blog-color">root &nbsp;</a></span>-
-              <span><a href="#">@Startblog &nbsp;</a></span>-
+              <span><a href="#" class="blog-color">Cryin' &nbsp;</a></span>-
+              <span><a href="#">@Startblog.cc &nbsp;</a></span>-
               <span><a href="#">2014/10/9</a></span>
           </p>
         </div>        
@@ -71,7 +71,7 @@ var duoshuoQuery = {short_name:"startblog"};
                 <a href="tencent://message/?uin=416049355"><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
                 <a href="https://github.com/Cryin/"><span class="am-icon-github am-icon-fw blog-icon"></span></a>
                 <a href="http://weibo.com/justear"><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
-                <a href=""><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
+                <a href="http://www.startblog.cc/"><span class="am-icon-weixin am-icon-fw blog-icon"></span></a>
                 <a href="<?php echo base_url('/feed')?>"><span class="am-icon-rss am-icon-fw blog-icon"></span></a>
             </p>
         </div>

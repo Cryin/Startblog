@@ -28,11 +28,11 @@
                                 </div>
 
                                 <div class="am-u-sm-12">
-                                    <table width="100%" class="am-table am-table-compact tpl-table-black" id="example-r">
+                                    <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black">
 
                                         <thead>
                                             <tr>
-                                                <th>序号</th>
+                                                <th>排序</th>
                                                 <th>名称</th>
                                                 <th>链接</th>
                                                 <th>操作</th>
@@ -41,11 +41,12 @@
                                         <tbody>
                                           <?php foreach ($data as $key => $value): ?>
                                             <tr class="gradeX">
-                                                <td class="am-text-middle"><?php echo $value['id']?></td>
+                                                <td class="am-text-middle"><?php echo $value['link_order']?></td>
                                                 <td class="am-text-middle"><?php echo $value['link_name']?></td>
                                                 <td class="am-text-middle"><?php echo $value['link']?></td>
                                                 <td class="am-text-middle">
                                                     <div class="tpl-table-black-operation">
+                                                    <?php echo anchor("admin/Friendship/editpage/{$value['id']}",'<i class="am-icon-pencil"></i> 编辑',"")?>
                                                         <a href="<?php echo site_url("admin/Friendship/delete/{$value['id']}")?>" class="tpl-table-black-operation-del">
                                                             <i class="am-icon-trash"></i> 删除
                                                         </a>

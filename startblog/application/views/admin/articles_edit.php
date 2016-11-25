@@ -17,31 +17,19 @@
 <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
                         <div class="widget am-cf">
                             
-                            <div class="widget-body am-cf">
+                            <div class="widget-body am-fr">
 
-                                <form class="am-form tpl-form-line-form" method="post" action="<?php echo site_url("admin/Articles/update/{$article['0']['id']}")?>">
+                                <form class="am-form tpl-form-border-form tpl-form-border-br" method="post" action="<?php echo site_url("admin/Articles/update/{$article['0']['id']}")?>">
                                                                                               
                                   
                                     <div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-2 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
-                                        <div class="am-u-sm-10">
+                                        <label for="user-name" class="am-u-sm-2 am-form-label">文章标题:</label>
+                                        <div class="am-u-sm-4">
                                             <input class="am-sr-only" name="pv" value="<?php echo isset($article['0']['pv'])?$article['0']['pv']:1?>">
                                             <input type="text" class="tpl-form-input" name="title" value="<?php if(isset($article['0']['title'])) echo $article['0']['title'];?>" placeholder="请输入标题文字" required>
                                         </div>
-
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="published_at" class="am-u-sm-2 am-form-label">发布时间 <span class="tpl-form-line-small-title">Time</span></label>
-                                        <div class="am-u-sm-10">
-                                            <input type="text" class="am-form-field" name="published_at" value="<?php if(isset($article['0']['published_at'])) echo $article['0']['published_at']?>" placeholder="发布时间" data-am-datepicker="" readonly>
-                                            <small>发布时间为必填</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="user-phone" class="am-u-sm-2 am-form-label">类别选择 <span class="tpl-form-line-small-title">Category</span></label>
-                                        <div class="am-u-sm-10">
+                                        <label for="user-phone" class="am-u-sm-2 am-form-label">类别选择:</label>
+                                        <div class="am-u-sm-4">
                                             <select data-am-selected="{btnSize: 'sm'}" name="category">
                                               <?php foreach ($all_category as $key => $value): ?>
                                               <option  <?php if(isset($article['0']['category'])) echo $value['id']==$article['0']['category']?'selected':'' ?> value="<?php echo $value['id']?>"><?php echo $value['category']?></option>
@@ -49,24 +37,30 @@
                                             </select>
 
                                         </div>
+
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-2 am-form-label">标签 <span class="tpl-form-line-small-title">Tag</span></label>
-                                        <div class="am-u-sm-10">
-                                            <input type="text" id="name" name="tag" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" placeholder="多个标签请用英文","分离">
+                                        <label for="published_at" class="am-u-sm-2 am-form-label">发布时间:</label>
+                                        <div class="am-u-sm-4">
+                                            <input type="text" class="am-form-field" name="published_at" value="<?php if(isset($article['0']['published_at'])) echo $article['0']['published_at']?>" placeholder="发布时间为必填" data-am-datepicker="" readonly>
+                                        </div>
+                                        <label class="am-u-sm-2 am-form-label">标签归类:</label>
+                                        <div class="am-u-sm-4">
+                                            <input type="text" id="name" name="tag" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" placeholder="多个标签请用英文,分离">
                                         </div>
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-2 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">Keyword</span></label>
+                                        <label class="am-u-sm-2 am-form-label">SEO关键词:</label>
                                         <div class="am-u-sm-10">
                                             
                                             <input type="text" id="name" name="keyword" value="<?php if(isset($article['0']['keyword'])) echo $article['0']['keyword']?>" placeholder="多个关键词用,分割">
                                         </div>
                                     </div>
+                                    
                                     <div class="am-form-group">
-                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">站点描述 <span class="tpl-form-line-small-title">Description</span></label>
+                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">文章描述:</label>
                                         <div class="am-u-sm-10">
                                             <input name="description" type="text" value="<?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?>" placeholder="请输入SEO描述内容">
                                             <div>
@@ -75,9 +69,9 @@
                                         </div>
                                     </div>
                                     <div class="am-form-group">
-                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">封面图 <span class="tpl-form-line-small-title">Images</span></label>
+                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">封面配图:</label>
                                         <div class="am-u-sm-10">
-                                            <input name="imagelink" type="text" value="<?php if(isset($article['0']['imagelink'])) echo $article['0']['imagelink']?>" placeholder="请输入图片链接地址如:http://www.xxx.com/img/pic.jpg">
+                                            <input name="imagelink" type="text" value="<?php if(isset($article['0']['imagelink'])) echo $article['0']['imagelink']?>" placeholder="请输入图片(960*540效果最佳)链接地址如:http://www.xxx.com/img/pic.jpg">
                                             <div>
 
                                             </div>
@@ -85,14 +79,18 @@
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label for="user-intro" class="am-u-sm-2 am-form-label">文章内容 <span class="tpl-form-line-small-title">Content</span></label>
-                                        <div class="am-u-sm-10">
-                                            <textarea id="textcontent" name="content" rows="21"><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']);?></textarea>
+                                        <label for="user-intro" class="am-u-sm-2 am-form-label">文章内容:</label>
+                                        
+                                    </div>
+                                    <div class="am-form-group">
+                                        
+                                        <div class="am-u-sm-11 am-u-sm-push-1">
+                                            <textarea id="textcontent" name="content" rows="23"><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']);?></textarea>
                                         </div>
                                     </div>
 
                                     <div class="am-form-group">
-                                        <div class="am-u-sm-10 am-u-sm-push-2">
+                                        <div class="am-u-sm-11 am-u-sm-push-1">
                                             <button type="submit" name='subimit' value="subimit" class="am-btn am-btn-primary am-btn-block tpl-btn-bg-color-success tpl-login-btn">发布</button>
                                         </div>
                                     </div>

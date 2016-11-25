@@ -32,14 +32,42 @@ class Friendship extends Controller {
         $this->load->view('admin/friendship_add');
         $this->load->view('admin/footer');
     }
+    public function editpage($id){
+        //加载分页类库
+        if($id != 0){
+            $this->load->model('friendship_model');    
+            $data['data'] = $this->friendship_model->getFriendship($id);      
+        }
+        $data['cur_title'] = array('','','','','','active','');
+        $this->load->view('admin/header');
+        $this->load->view('admin/menu', $data);
+        $this->load->view('admin/friendship_edit',$data);
+        $this->load->view('admin/footer');
+    }
+    public  function edit($id){
+        $this->load->database();
 
+        if ($this->input->post('link', TRUE)!='') {
+            $data['data'] = array(
+                'link' => $this->input->post('link', TRUE),  
+                'link_name' => $this->input->post('link_name', TRUE), 
+                'link_order' => $this->input->post('link_order', TRUE)          
+            );
+            $this->db->where('id', $id);
+            $this->db->update('friendship', $data['data']);
+        }
+
+        redirect('/admin/Friendship/index');
+      
+    }
     public  function add(){
         $this->load->database();
 
-        if ($_POST['link']!='') {
+        if ($this->input->post('link', TRUE)!='') {
             $data['data'] = array(
-                'link' => $_POST['link'],  
-                'link_name' => $_POST['link_name'],           
+                'link' => $this->input->post('link', TRUE),  
+                'link_name' => $this->input->post('link_name', TRUE), 
+                'link_order' => $this->input->post('link_order', TRUE)          
             );
             $this->db->insert('friendship', $data['data']);
         }

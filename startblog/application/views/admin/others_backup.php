@@ -18,15 +18,15 @@
                             <div class="widget-body am-fr">
                                 <form class="am-form tpl-form-border-form tpl-form-border-br"  method="post" action="<?php echo site_url('admin/Others/backup')?>">
                                     <div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-3 am-form-label">备份路径 <span class="tpl-form-line-small-title">Path</span></label>
-                                        <div class="am-u-sm-9">
+                                        <label for="user-name" class="am-u-sm-2 am-form-label">备份路径:</label>
+                                        <div class="am-u-sm-6 am-u-sm-pull-4">
                                             <input class="tpl-form-input" name="backup_path" type="text" placeholder="请输入备份路径" value="<?php echo $path;?>">
                                             <small>请选择文章备份路径,备份为markdown格式TXT文件</small>
                                         </div>
                                     </div>
 
                                     <div class="am-form-group">
-                                        <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <div class="am-u-sm-10 am-u-sm-push-2">
                                             <button type="submit" name='subimit' class="am-btn am-btn-primary tpl-btn-bg-color-success tpl-login-btn">备份文章</button>
                                         </div>
                                     </div>

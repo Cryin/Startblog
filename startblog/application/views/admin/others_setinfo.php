@@ -19,39 +19,39 @@
                                 <form class="am-form tpl-form-border-form tpl-form-border-br"  method="post" action="<?php echo site_url('admin/Others/set_siteinfo')?>">
                                   <?php foreach ($data as $key => $value):?>
                                     <div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-3 am-form-label">站点标题 <span class="tpl-form-line-small-title">Title</span></label>
-                                        <div class="am-u-sm-9">
+                                        <label for="user-name" class="am-u-sm-2 am-form-label">站点标题:</label>
+                                        <div class="am-u-sm-6 am-u-sm-pull-4">
                                             <input class="tpl-form-input" name="title" type="text" value="<?php echo $value['title'];?>">
                                             <small>请填写标题文字10-20字左右。</small>
                                         </div>
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label for="user-email" class="am-u-sm-3 am-form-label">站点URL <span class="tpl-form-line-small-title">Url</span></label>
-                                        <div class="am-u-sm-9">
+                                        <label for="user-email" class="am-u-sm-2 am-form-label">站点URL:</label>
+                                        <div class="am-u-sm-6 am-u-sm-pull-4">
                                             <input class="am-form-field tpl-form-no-bg" name="url" type="text" value="<?php echo $value['url'];?>">
                                             <small>以http://开头</small>
                                         </div>
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label for="user-email" class="am-u-sm-3 am-form-label">管理邮箱 <span class="tpl-form-line-small-title">Email</span></label>
-                                        <div class="am-u-sm-9">
+                                        <label for="user-email" class="am-u-sm-2 am-form-label">管理邮箱:</label>
+                                        <div class="am-u-sm-4 am-u-sm-pull-6">
                                             <input class="am-form-field tpl-form-no-bg" name="email" type="text" value="<?php echo $value['email'];?>">
                                         </div>
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-3 am-form-label">SEO关键字 <span class="tpl-form-line-small-title">SEO</span></label>
-                                        <div class="am-u-sm-9">
+                                        <label class="am-u-sm-2 am-form-label">SEO关键字:</label>
+                                        <div class="am-u-sm-6 am-u-sm-pull-4">
                                             
                                             <input name="keywords" type="text" value="<?php echo $value['keywords'];?>">
                                             <small>添加多个关键词用逗号隔开</small>
                                         </div>
                                     </div>
                                     <div class="am-form-group">
-                                        <label for="user-weibo" class="am-u-sm-3 am-form-label">站点描述 <span class="tpl-form-line-small-title">Description</span></label>
-                                        <div class="am-u-sm-9">
+                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">站点描述:</label>
+                                        <div class="am-u-sm-10">
                                             <input name="description" type="text" value="<?php echo $value['description'];?>">
                                             <div>
 
@@ -60,14 +60,14 @@
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label for="user-intro" class="am-u-sm-3 am-form-label">统计代码 <span class="tpl-form-line-small-title">Statistics</span></label>
-                                        <div class="am-u-sm-9">
+                                        <label for="user-intro" class="am-u-sm-2 am-form-label">统计代码:</label>
+                                        <div class="am-u-sm-10">
                                             <textarea class="" name="statistic" rows="5"><?php echo $value['statistic'];?></textarea>
                                         </div>
                                     </div>
 
                                     <div class="am-form-group">
-                                        <div class="am-u-sm-9 am-u-sm-push-3">
+                                        <div class="am-u-sm-10 am-u-sm-push-2">
                                             <button type="submit" name='subimit' class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success tpl-login-btn">提交</button>
                                         </div>
                                     </div>

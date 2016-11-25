@@ -25,9 +25,9 @@ class Tag extends Controller {
     public  function add(){
         $this->load->database();
         $color_array=array("primary", "success", "info", "warning", "danger");
-        if ($_POST['tag_name']!='') {
+        if ($this->input->post('tag_name', TRUE)!='') {
             $data['data'] = array(
-                'tag_name' => $_POST['tag_name'],
+                'tag_name' => $this->input->post('tag_name', TRUE),
                 'tag_button_type' => $color_array[array_rand($color_array)]         
             );
             $this->db->insert('tag', $data['data']);

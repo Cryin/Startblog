@@ -9,7 +9,7 @@
   <title><?php if(isset($value['title']))echo $value['title'];?></title>
   <meta name="keywords" content="<?php if(isset($value['keywords']))echo $value['keywords'];?>" />
   <meta name="description" content="<?php if(isset($value['description']))echo $value['description'];?>" />
-  <meta name="generator" content="startblog v2.0" />
+  <meta name="generator" content="startblog v2.1" />
   <meta name="renderer" content="webkit">
   <meta name="author" content="https://github.com/cryin/startblog" />
   <meta http-equiv="Cache-Control" content="no-siteapp"/>

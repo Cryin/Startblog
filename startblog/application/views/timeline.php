@@ -10,6 +10,24 @@
                 <h3>11月</h3>
                 <hr>
                 <li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/11/25</span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="#">修复dreamkill同学提出的程序bug</a></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">修复bug</span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">startblog v2.1</span>
+                </li>
+                <li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/11/24</span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="#">修改文章编辑界面、增加友情链接编辑、排序功能</a></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">修复bug</span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">startblog v2.1</span>
+                </li>
+				<li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/11/16</span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="#">修复文章编辑后浏览数PV数量被重置为1的bug</a></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">修复bug</span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">startblog v2.0</span>
+                </li>
+                <li>
                     <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/11/14</span>
                     <span class="am-u-sm-8 am-u-md-6"><a href="#">全面升级UI，采用Amazeui开发后台及前端UI</a></span>
                     <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">更新</span>

@@ -8,7 +8,7 @@
   <title><?php echo $article[0]['title'];?> - Powered By Startblog</title>
   <meta name="keywords" content="<?php if(isset($article[0]['keyword']))echo $article[0]['keyword'];?>" />
   <meta name="description" content="<?php if(isset($article[0]['description']))echo $article[0]['description'];?>" />
-  <meta name="generator" content="startblog v2.0" />
+  <meta name="generator" content="startblog v2.1" />
   <meta name="renderer" content="webkit">
   <meta name="author" content="https://github.com/cryin/startblog" />
   <meta http-equiv="Cache-Control" content="no-siteapp"/>

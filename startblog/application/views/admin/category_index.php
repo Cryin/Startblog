@@ -30,7 +30,7 @@
                                 </div>
 
                                 <div class="am-u-sm-12">
-                                    <table width="100%" class="am-table am-table-compact tpl-table-black">
+                                    <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black">
 
                                         <thead>
                                             <tr>

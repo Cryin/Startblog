@@ -27,11 +27,12 @@
                             </div>
                             <img class="achievement-image" src="<?php echo base_url('/static/admin/img/logob.png')?>" alt="">
                             <div class="achievement-description">
-                                开发者:</b>Cryin<br/>
-                                反馈QQ:</b>416049355<br/>
+                                开发者: </b>Cryin<br/>
+                                反馈QQ: </b>416049355<br/>
+                                感谢反馈者: </b>dreamkill、xiao8Git、JunJun-Love-Amber<br/>
                                 </div>
                     <p class="copyright">
-                        © 2014-2016 Cryin' | Images : https://github.com/Cryin/Startblog<a href="https://github.com/Cryin/Startblog">Github</a>
+                        © 2014-2016 Cryin' | Images : www.startblog.cc<a href="http://www.startblog.cc/"></a>
                     </p>
                             
                         </div>

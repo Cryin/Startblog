@@ -5,8 +5,8 @@
             <div class="container-fluid am-cf">
                 <div class="row">
                     <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> Dashboard <small>Startblog Admin</small></div>
-                        <p class="page-header-description">Startblog是一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.</p>
+                        <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> Dashboard <small>Startblog Admin Page</small></div>
+                        <p class="page-header-description">Startblog是一款基于Codeigniter、Amazeui(html5)开发的简洁、易用、跨平台自适应的Markdown博客系统.</p>
                     </div>
                 </div>
 
@@ -25,7 +25,7 @@
                                     <div class="widget-fluctuation-period-text">
                                         Startblog Version:
                                         <button class="widget-fluctuation-tpl-btn">
-                        <a href="javascript:;" class="am-icon-cog"> v2.0.0</a>
+                        <a href="https://github.com/Cryin/Startblog" class="am-icon-cog"> v2.1.0</a>
                        
                       </button>
                                     </div>
@@ -92,7 +92,7 @@
                                 贡献者:</b>LUHOO、Hardy、Ant、半城人<br/>
                                 捐赠者:</b>Hardy<br/></div>
                     <p class="copyright">
-                        © 2014-2016 Cryin' | Images : <a href="https://github.com/Cryin/Startblog"><span class="am-icon-github"> Startblog</span></a>
+                        © 2014-2016 Cryin' | Images : www.startblog.cc<a href="http://www.startblog.cc/"></a>
                     </p>
                             
                         </div>

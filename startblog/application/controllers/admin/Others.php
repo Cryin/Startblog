@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Others extends CI_Controller {
+class Others extends Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -105,7 +105,7 @@ class Others extends CI_Controller {
 		$this->load->database();
 		$this->load->model('articles_model');
         $data = $this->articles_model->getAllArticles();
-		$path = $_POST['backup_path'];
+		$path = $this->input->post('backup_path', TRUE);
 		foreach ($data as $key => $value) {
       		$str = 'title:'.$value['title']."\r\ncategory:".$value['category']."\r\ntag:".$value['tag']."\r\npublished_at:".$value['published_at']."\r\n\r\n============================\r\n\r\n".$value['content'];
       		$file = $path.$value['title'].'.txt';
@@ -154,7 +154,7 @@ class Others extends CI_Controller {
 	  else
 	  {
 
-	  	$new_password = array('password' => md5($_POST['new_password']));
+	  	$new_password = array('password' => md5($this->input->post('new_password', TRUE)));
 		$this->db->where('username', $_SESSION['username']);
 		$this->db->update('user', $new_password);
 

@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>StartBlog Admin</title>
-    <meta name="generator" content="startblog v2.0" />
-    <meta name="author" content="https://github.com/cryin/startblog" />
+    <title>StartBlog Markdown博客后台管理系统</title>
+    <meta name="generator" content="startblog v2.1" />
+    <meta name="author" content="http://www.startblog.cc/" />
     <meta name="description" content="startblog是一款基于Codeigniter、Html5开发的简洁、易用、跨平台自适应的Markdown博客系统.！！">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">

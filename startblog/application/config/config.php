@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'];
 
 
-$config['startblog_ver'] = '2.0';
+$config['startblog_ver'] = '2.1';
 
 /*
 |--------------------------------------------------------------------------
@@ -425,7 +425,7 @@ $config['standardize_newlines'] = FALSE;
 |          for backwards compatibility purposes!
 |
 */
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
