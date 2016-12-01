@@ -33,7 +33,7 @@
 
 ###贡献者
 
-感谢辉哥设计的Logo，感谢贡献者LUHOO、Hardy、Ant、半城人
+感谢辉哥设计的Logo，感谢贡献者LUHOO、Hardy、Ant、半城人、[Seven](http://www.sevenblog.cn/)
 
 ###捐赠者
 
