@@ -32,7 +32,7 @@
                                 感谢反馈者: </b>dreamkill、xiao8Git、JunJun-Love-Amber<br/>
                                 </div>
                     <p class="copyright">
-                        © 2014-2016 Cryin' | Images : www.startblog.cc<a href="http://www.startblog.cc/"></a>
+                        © 2014-2016 Cryin' | Images : cryin.startblog.cc<a href="http://cryin.startblog.cc/"></a>
                     </p>
                             
                         </div>

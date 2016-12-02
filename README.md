@@ -6,7 +6,7 @@
 
 ###主页
 
- [http://startblog.cc/](http://startblog.cc)
+ [http://cryin.startblog.cc/](http://cryin.startblog.cc/)
 
 ###程序功能：
 
