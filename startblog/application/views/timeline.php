@@ -6,6 +6,18 @@
         <div class="timeline-year">
             <h1>2016</h1>
             <hr>
+				<ul>
+                <h3>12月</h3>
+                <hr>
+                <li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/12/02</span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="#">增加封面配图为空时随机展示的功能</a></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">修复bug</span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">startblog v2.1</span>
+                </li>
+                
+                </ul>
+                <br>
                 <ul>
                 <h3>11月</h3>
                 <hr>

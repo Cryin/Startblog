@@ -18,7 +18,8 @@ foreach ($data as $key => $value) {
          <?php foreach ($data as $key => $value): ?>
         <article class="am-g blog-entry-article">
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
-                <img src="<?php echo $value['imagelink']?>" alt="封面配图" class="am-u-sm-12">
+                <!--<img src="<?php echo $value['imagelink']?>" alt="封面配图" class="am-u-sm-12">-->
+                <img src="<?php echo $value['imagelink'] == '' ? json_decode(file_get_contents('http://bing.ioliu.cn/v1/rand?type=json'))->data->bmiddle_pic : $value['imagelink']?>" alt="封面配图" class="am-u-sm-12">
             </div>
             <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
 

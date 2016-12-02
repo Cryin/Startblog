@@ -33,7 +33,7 @@ class Category extends Controller {
             $this->db->insert('category', $data['data']);
         }
 
-        redirect('/admin/category/index');
+        redirect('/admin/Category/index');
       
     }
 
@@ -43,7 +43,7 @@ class Category extends Controller {
         $this->db->where('id', $id);
         $this->db->delete('category');
 
-        redirect('/admin/category/index');
+        redirect('/admin/Category/index');
 
     }
     private function getPaginationConfig(){

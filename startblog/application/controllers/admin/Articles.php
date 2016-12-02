@@ -131,13 +131,13 @@ class Articles extends Controller {
 
             foreach ($diff as $key => $value) {
                 $insert_link = $this->db->query("select b.id as article_id,c.id as tag_id FROM `articles` as b join `tag` as c WHERE b.title ='{$data['data']['title']}' AND c.tag_name= '{$value}'")->result_array();
-                echo "select b.id as article_id,c.id as tag_id FROM `articles` as b join `tag` as c WHERE b.id ='{$data['data']['id']}' AND c.tag_name= '{$value}'";
+               
                 $this->db->query("INSERT INTO `article_tag`(`article_id`, `tag_id`) VALUES ({$insert_link['0']['article_id']},{$insert_link['0']['tag_id']})");
             }
             
         }
 
-        redirect('/admin/articles/index');
+        redirect('/admin/Articles/index');
       
     }
 
@@ -149,7 +149,7 @@ class Articles extends Controller {
         $this->db->where('id', $id);
         $this->db->delete('articles');
 
-        redirect('/admin/articles/index');
+        redirect('/admin/Articles/index');
 
     }
     private function getPaginationConfig(){

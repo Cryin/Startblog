@@ -32,7 +32,7 @@ class Tag extends Controller {
             );
             $this->db->insert('tag', $data['data']);
         }
-        redirect('/admin/tag/index');
+        redirect('/admin/Tag/index');
       
     }
     public  function edit($tag_id){
@@ -84,7 +84,7 @@ class Tag extends Controller {
         $this->db->where('id', $id);
         $this->db->delete('tag');
 
-        redirect('/admin/tag/index');
+        redirect('/admin/Tag/index');
 
     }
     public  function delete_link($article_id, $tag_id){
@@ -118,7 +118,7 @@ class Tag extends Controller {
             $this->db->where('id', $tag_id);
             $this->db->delete('tag');
         }
-        redirect('/admin/tag/index');
+        redirect('/admin/Tag/index');
     }
     private function getPaginationConfig(){
         $this->load->database();

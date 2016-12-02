@@ -60,7 +60,8 @@
                                             <tr class="gradeX">
                                               <td class="am-text-middle"><?php echo $value['id']?></td>
                                                 <td>
-                                                    <img src="<?php echo $value['imagelink']?>" class="tpl-table-line-img" alt="封面图">
+                                                    <!--<img src="<?php echo $value['imagelink']?>" class="tpl-table-line-img" alt="封面图">-->
+                                                    <img src="<?php echo $value['imagelink'] == '' ? json_decode(file_get_contents('http://bing.ioliu.cn/v1/rand?type=json'))->data->bmiddle_pic : $value['imagelink']?>" alt="封面配图" class="tpl-table-line-img">
                                                 </td>
                                                 <td class="am-text-middle"><?php echo $value['title']?></td>
                                                 <?php $category_id = $value['category'];$category_name = $all_category["$category_id"]['category'];?>
