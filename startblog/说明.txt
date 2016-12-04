@@ -35,7 +35,14 @@ github [https://github.com/Cryin/Startblog](https://github.com/Cryin/Startblog)
 
 有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
 
-如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，并修改application\config\config.php文件，添加目录字段： $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/mulu';
+修改application\config\config.php文件，添加目录字段，如目录为startblog：
+$config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/startblog';
+
+如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，如目录为startblog则修改为：
+
+RewriteEngine on  
+RewriteCond $1 !^(index\.php|static|favicon\.ico|robots\.txt)  
+RewriteRule ^(.*)$ /startblog/index.php/$1 [L]
 
 
 ##手动安装说明
