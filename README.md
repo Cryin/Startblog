@@ -41,14 +41,16 @@
 
 ###安装方法:
 
+>手动创建数据库
+
 >将程序上传至站点根目录,输入http://www.yoursite.cc/install进行安装即可
 
->有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
+如果安装在目录则根据站点目录
 
 >修改application\config\config.php文件，添加目录字段，如目录为startblog：
 $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/startblog';
 
->如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，如目录为startblog则修改为：
+>修改.htaccess文件Rewrite规则，如目录为startblog则修改为：
 >>RewriteEngine on  
 >>RewriteCond $1 !^(index\.php|static|favicon\.ico|robots\.txt)  
 >>RewriteRule ^(.*)$ /startblog/index.php/$1 [L]
@@ -65,7 +67,6 @@ $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/startblog';
 
 >管理默认用户名、密码均为startblog
 
->>有些环境下可能会出现找不到model的问题，这种情况把application\models\ 下所有文件首字母改成大写即可
 
 ###Screenshot
 后台及文章管理:

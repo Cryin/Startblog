@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>安装向导 | Powered By Startblog</title>
-  <meta name="generator" content="startblog v1.4" />
+  <meta name="generator" content="startblog v2.1" />
   <meta name="author" content="https://github.com/cryin/startblog" />
 
   <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap.min.css')?>">

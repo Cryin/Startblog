@@ -70,7 +70,7 @@
 
                     </div>
                 </form>
-                <p>Powered by startblog &copy; 2016 version 1.5</p>
+                <p>Powered by startblog &copy; 2016 version 2.1</p>
             </div>
             
         </div>

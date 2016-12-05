@@ -285,6 +285,7 @@ a {
     padding:0;
     max-width:100%;
     height:auto;
+    overflow:hidden;
 }
 .blog-entry-article {
     margin:3rem 0;

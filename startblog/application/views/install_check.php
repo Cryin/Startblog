@@ -5,12 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>安装向导 | Powered By Startblog</title>
-  <meta name="generator" content="startblog v1.4" />
+  <meta name="generator" content="startblog v2.1" />
   <meta name="author" content="https://github.com/cryin/startblog" />
 
   <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('/static/css/github-markdown.css')?>">
-  <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap-datetimepicker.min.css')?>">
+
   <link rel="stylesheet" href="<?php echo base_url('static/css/style.css');?>" media="screen" rel="stylesheet" type="text/css" />
   <script src="<?php echo base_url('/static/js/jquery.min.js')?>"></script>
   <script src="<?php echo base_url('/static/js/bootstrap.min.js')?>"></script>

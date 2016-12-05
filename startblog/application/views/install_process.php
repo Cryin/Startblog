@@ -5,12 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>安装向导 | Powered By Startblog</title>
-  <meta name="generator" content="startblog v1.4" />
+  <meta name="generator" content="startblog v2.1" />
   <meta name="author" content="https://github.com/cryin/startblog" />
 
   <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('/static/css/github-markdown.css')?>">
-  <link rel="stylesheet" href="<?php echo base_url('/static/css/bootstrap-datetimepicker.min.css')?>">
   <link rel="stylesheet" href="<?php echo base_url('static/css/style.css');?>" media="screen" rel="stylesheet" type="text/css" />
   <script src="<?php echo base_url('/static/js/jquery.min.js')?>"></script>
   <script src="<?php echo base_url('/static/js/bootstrap.min.js')?>"></script>
@@ -70,19 +69,10 @@
                             <div class="form-group">
                                 <label for="dbname" class="col-md-2 col-md-offset-1 control-label">数据库名</label>
                                 <div class="col-md-7">
-                                    <input type="text" class="form-control" id="dbname" name="dbname" value="<?php echo set_value('dbname')?>">
+                                    <input type="text" class="form-control" id="dbname" name="dbname" value="<?php echo set_value('dbname')?>" placeholder="请先手动创建数据库">
 	                            	<span class="help-block red"><?php echo form_error('dbname');?></span>
                                 </div> 
                             </div>
-                             <div class="form-group">
-                                <label class="col-md-offset-1 control-label"><h3><b>站点目录：</b></h3></label>
-                            </div>
-                             <div class="form-group">
-                                <label for="base_url" class="col-md-2 col-md-offset-1 control-label">安装目录</label>
-                                <div class="col-md-7">
-                                    <input type="text" class="form-control" id="base_url" name="base_url" value="<?php echo set_value('base_url')?>" placeholder="根目录请留空,子目录请填目录名">
-                                </div>
-                            </div> 
 
                             <div class="row">
                             <label class="col-md-offset-1 control-label"><h3><b></b></h3></label>
