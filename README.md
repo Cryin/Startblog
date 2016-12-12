@@ -4,7 +4,8 @@
 
 >Author: [Cryin']
 
-![](http://cryin.startblog.cc/static/img/b1.jpg)
+![](http://i1.piimg.com/567571/6947db2521f305f1.jpg)
+
 ###主页
 
  [http://cryin.startblog.cc/](http://cryin.startblog.cc/)
