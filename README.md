@@ -4,21 +4,22 @@
 
 >Author: [Cryin']
 
+![](http://cryin.startblog.cc/static/img/b1.jpg)
 ###主页
 
  [http://cryin.startblog.cc/](http://cryin.startblog.cc/)
 
 ###程序功能：
 
-*markdown博文撰写、修改、删除功能,采用使用simplemde编辑器;
+>专业的markdown博文撰写、修改、删除功能,
 
-*markdown语法解析支持，使用parsedown解析;
+>Markdown在线编辑器，实时预览;
 
-*文章搜索、备份功能;
+>文章搜索、备份功能;
 
-*站点、博文SEO信息设置;
+>站点、博文SEO信息设置;
 
-*rss订阅功能;
+>RSS订阅、友情链接功能;
 
 ###运行环境:
 * php 5.x + mysql
@@ -69,9 +70,8 @@ $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/startblog';
 
 
 ###Screenshot
-后台及文章管理:
+后台文章管理:
 
-![](http://i1.piimg.com/567571/fcece6993c374e48.png)
 ![](http://i1.piimg.com/567571/6bbf83711d00c63b.png)
 
 前台页面：
