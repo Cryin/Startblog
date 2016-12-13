@@ -11,7 +11,7 @@ spl_autoload_register(function($class){
 
 $Parsedown = new Parsedown();
 $html = $Parsedown->text($article[0]['content']);
-
+date_default_timezone_set("Asia/Shanghai"); 
 ?>
 
 <!-- content srart -->

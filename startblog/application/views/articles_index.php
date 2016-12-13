@@ -11,7 +11,7 @@ foreach ($data as $key => $value) {
   $data[$key]['description'] = substr($Parsedown->text($value['description']), 0, 100);
 }
 
-
+date_default_timezone_set("Asia/Shanghai"); 
 ?>
 <div class="am-g am-g-fixed blog-fixed">
     <div class="am-u-md-8 am-u-sm-12">
