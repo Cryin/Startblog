@@ -24,36 +24,28 @@
                                   
                                     <div class="am-form-group">
                                         <label for="user-name" class="am-u-sm-2 am-form-label">文章标题:</label>
-                                        <div class="am-u-sm-4">
+                                        <div class="am-u-sm-4 am-u-sm-pull-6">
                                             <input class="am-sr-only" name="pv" value="<?php echo isset($article['0']['pv'])?$article['0']['pv']:1?>">
                                             <input type="text" class="tpl-form-input" name="title" value="<?php if(isset($article['0']['title'])) echo $article['0']['title'];?>" placeholder="请输入标题文字" required>
                                         </div>
+                                        
+                                    </div>
+
+                                    <div class="am-form-group">
                                         <label for="user-phone" class="am-u-sm-2 am-form-label">类别选择:</label>
-                                        <div class="am-u-sm-4">
-                                            <select data-am-selected="{btnSize: 'sm'}" name="category">
+                                        <div class="am-u-sm-4 am-u-sm-pull-6">
+                                            <select data-am-selected="{btnWidth: '100%', btnSize: 'sm', btnStyle: 'primary'}" name="category">
                                               <?php foreach ($all_category as $key => $value): ?>
                                               <option  <?php if(isset($article['0']['category'])) echo $value['id']==$article['0']['category']?'selected':'' ?> value="<?php echo $value['id']?>"><?php echo $value['category']?></option>
                                               <?php endforeach; ?>
                                             </select>
 
                                         </div>
-
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label for="published_at" class="am-u-sm-2 am-form-label">发布时间:</label>
-                                        <div class="am-u-sm-4">
-                                            <input type="text" class="am-form-field" name="published_at" value="<?php if(isset($article['0']['published_at'])) echo $article['0']['published_at']?>" placeholder="发布时间为必填" data-am-datepicker="" readonly>
-                                        </div>
-                                        <label class="am-u-sm-2 am-form-label">标签归类:</label>
-                                        <div class="am-u-sm-4">
-                                            <input type="text" id="name" name="tag" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" placeholder="多个标签请用英文,分离">
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-2 am-form-label">SEO关键词:</label>
-                                        <div class="am-u-sm-10">
+                                        <label class="am-u-sm-2 am-form-label">标签、关键词:</label>
+                                        <div class="am-u-sm-4 am-u-sm-pull-6">
                                             
                                             <input type="text" id="name" name="keyword" value="<?php if(isset($article['0']['keyword'])) echo $article['0']['keyword']?>" placeholder="多个关键词用,分割">
                                         </div>
@@ -61,7 +53,7 @@
                                     
                                     <div class="am-form-group">
                                         <label for="user-weibo" class="am-u-sm-2 am-form-label">文章描述:</label>
-                                        <div class="am-u-sm-10">
+                                        <div class="am-u-sm-8 am-u-sm-pull-2">
                                             <input name="description" type="text" value="<?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?>" placeholder="请输入SEO描述内容">
                                             <div>
 
@@ -70,7 +62,7 @@
                                     </div>
                                     <div class="am-form-group">
                                         <label for="user-weibo" class="am-u-sm-2 am-form-label">封面配图:</label>
-                                        <div class="am-u-sm-10">
+                                        <div class="am-u-sm-8 am-u-sm-pull-2">
                                             <input name="imagelink" type="text" value="<?php if(isset($article['0']['imagelink'])) echo $article['0']['imagelink']?>" placeholder="请输入图片(960*540效果最佳)链接地址如:http://www.xxx.com/img/pic.jpg">
                                             <div>
 

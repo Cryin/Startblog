@@ -10,6 +10,18 @@
                 <h3>12月</h3>
                 <hr>
                 <li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/12/13</span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="#">优化文章编辑界面,添加新banner图</a></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">更新</span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">startblog v2.1</span>
+                </li>
+                <li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/12/04</span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="#">修复文章页strtotime告警信息</a></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">修复bug</span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">startblog v2.1</span>
+                </li>
+                <li>
                     <span class="am-u-sm-4 am-u-md-2 timeline-span">2016/12/02</span>
                     <span class="am-u-sm-8 am-u-md-6"><a href="#">增加封面配图为空时随机展示的功能</a></span>
                     <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">修复bug</span>

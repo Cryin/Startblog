@@ -1,128 +1,111 @@
 title:Markdown入门指南
 category:4
-tag: Markdown
-published_at:2016-07-22 00:00:00
+tag: Markdown入门指南
+published_at:2016-12-13 15:27:22
 
 ============================
 
-#Markdown入门指南
+## 什么是 Markdown
 
-##Strong and Emphasize
-```
-*emphasize*   **strong**
-_emphasize_   __strong__
-```
-##Links and Email
-Inline:
-```
-An [example](http://url.com/ "Title")
-```
-Reference-style labels (titles are optional):
-```
+Markdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，**粗体** 或者 *斜体* 某些文字，更棒的是，它还可以
 
-An [example][id]. Then, anywhere
-else in the doc, define the link:
+### 1. 制作一份待办事宜 [Startblog Todo 列表]
 
-  [id]: http://example.com/  "Title"
-```
-Email:
-```
-An email <example@example.com> link.
-```
+- [x] 整站备份功能
+- [x] 文章编辑优化，自动提取关键词、文章简要描述
+- [x] 图片上传或图床接口
+- [x] 安装程序优化，自动识别根目录、子目录
+- [x] 持续坚决程序bug及反馈
 
-##Images
-Inline (titles are optional):
-```
-![alt text](/path/img.jpg "Title")
-```
-Reference-style:
-```
-![alt text][id]
+## Markdown 简明语法手册
 
-[id]: /url/to/img.jpg "Title"
-```
-##Headers
-```
-Setext-style:
-
-Header 1
-========
-
-Header 2
---------
-```
-atx-style (closing #’s are optional):
-```
-# Header 1 #
-
-## Header 2 ##
-
-###### Header 6
-```
-##Lists
-Ordered, without paragraphs:
-```
-1.  Foo
-2.  Bar
-```
-Unordered, with paragraphs:
-```
-*   A list item.
-
-    With multiple paragraphs.
-
-*   Bar
-```
-You can nest them:
-```
-*   Abacus
-    * answer
-*   Bubbles
-    1.  bunk
-    2.  bupkis
-        * BELITTLER
-    3. burper
-*   Cunning
-```
-##Blockquotes
-```
-> Email-style angle brackets
-> are used for blockquotes.
-
-> > And, they can be nested.
-
-> #### Headers in blockquotes
-> 
-> * You can quote a list.
-> * Etc.
-```
-##Inline Code
-```
-`<code>` spans are delimited
-by backticks.
-
-You can include literal backticks
-like `` `this` ``.
-```
-##Block Code
-Indent every line of a code block by at least 4 spaces or 1 tab.
-```
-This is a normal paragraph.
-
-    This is a preformatted
-    code block.
-```
-##Horizontal Rules
-Three or more dashes or asterisks:
-```
 ---
 
-* * *
+### 1. 斜体和粗体
 
-- - - -
+使用 * 和 ** 表示斜体和粗体。
+
+示例：
+
+这是 *斜体*，这是 **粗体**。
+
+### 2. 分级标题
+
+使用 === 表示一级标题，使用 --- 表示二级标题。
+
+示例：
+
 ```
-##Hard Line Breaks
-End a line with two or more spaces:
+这是一个一级标题
+============================
+
+这是一个二级标题
+--------------------------------------------------
+
+### 这是一个三级标题
 ```
-Roses are red,   
-Violets are blue.```
+
+你也可以选择在行首加井号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4。
+
+### 3. 外链接
+
+使用 \[描述](链接地址) 为文字增加外链接。
+
+示例：
+
+这是去往 [Startblog](https://github.com/Cryin/Startblog) 的链接。
+
+### 4. 无序列表
+
+使用 *，+，- 表示无序列表。
+
+示例：
+
+- 无序列表项 一
+- 无序列表项 二
+- 无序列表项 三
+
+### 5. 有序列表
+
+使用数字和点表示有序列表。
+
+示例：
+
+1. 有序列表项 一
+2. 有序列表项 二
+3. 有序列表项 三
+
+### 6. 文字引用
+
+使用 > 表示文字引用。
+
+示例：
+
+> 野火烧不尽，春风吹又生。
+
+### 7. 行内代码块
+
+使用 \`代码` 表示行内代码块。
+
+示例：
+
+让我们聊聊 `html`。
+
+### 8.  代码块
+
+使用 四个缩进空格 表示代码块。
+
+示例：
+
+    这是一个代码块，此行左侧有四个不可见的空格。
+
+### 9.  插入图像
+
+使用 \!\[描述](图片链接地址) 插入图像。
+
+示例：
+
+![logo](http://cryin.startblog.cc/static/img/b1.jpg)
+
+
+总而言之，不同于其它 *所见即所得* 的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。**Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。** 目前它已经成为世界上最大的技术分享网站 GitHub 和 技术问答网站 StackOverFlow 的御用书写格式。

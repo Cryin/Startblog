@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-11-25 14:40:55
+Date: 2016-12-13 15:44:05
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,7 +29,7 @@ CREATE TABLE `about` (
 -- ----------------------------
 -- Records of about
 -- ----------------------------
-INSERT INTO `about` VALUES ('1', '关于', 'startblog,python,Security Engineer,hacker', '##Startblog是什么?\r\n\r\n一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.\r\n\r\n###博客功能\r\nmarkdown博文撰写、修改、删除功能,采用使用simplemde编辑器;\r\nmarkdown语法解析支持，使用parsedown解析;\r\n文章搜索、备份功能;\r\n站点、博文SEO信息设置;\r\nRSS订阅功能;\r\n\r\n###运行环境:\r\n```python\r\nphp 5.3+ 、 mysql\r\n```\r\n###反馈\r\n本着大道至简的原则，本Blog程序只维持最基本的Blog形态，不会轻易增加其它功能。有任何问题可以反馈至issues或者qq交流。\r\n\r\n###关于作者\r\ngithub [https://github.com/Cryin/Startblog](https://github.com/Cryin/Startblog)\r\n\r\n###下载\r\n [startblog v2.1](https://github.com/Cryin/Startblog)\r\n\r\n###贡献者\r\n感谢辉哥设计的Logo，感谢贡献者LUHOO、Hardy、Ant、半城人\r\n\r\n###捐赠者\r\n感谢Hardy、gege的捐赠！');
+INSERT INTO `about` VALUES ('1', '关于', 'startblog,python,Security Engineer,hacker', '##Startblog是什么?\r\n\r\n一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.\r\n\r\n###博客功能\r\n\r\n>markdown博文撰写、修改、删除功能,\r\n\r\n>Markdown在线编辑器，采用Simplemde编辑器;\r\n\r\n>markdown语法解析支持，使用parsedown解析;\r\n\r\n>文章全文搜索、备份功能;\r\n\r\n>站点、博文SEO信息设置;\r\n\r\n>RSS订阅、友情链接功能;\r\n\r\n###运行环境:\r\n```python\r\nphp 5.3+ 、 mysql\r\n```\r\n###反馈\r\n本着大道至简的原则，本Blog程序只维持最基本的Blog形态，不会轻易增加其它功能。有任何问题可以反馈至issues或者qq:416049355 交流。\r\n\r\n###关于作者\r\ngithub [https://github.com/Cryin/Startblog](https://github.com/Cryin/Startblog)\r\n\r\n###下载\r\n [startblog v2.1](http://cryin.startblog.cc/upload/startblogv2.1.zip)\r\n\r\n###贡献者\r\n感谢辉哥设计的Logo，感谢贡献者LUHOO、Hardy、Ant、半城人、[Seven](http://www.sevenblog.cn/)\r\n\r\n###捐赠者\r\n感谢Hardy、格格的捐赠！\r\n\r\n###使用案例\r\n[Cryin](http://cryin.startblog.cc/)、[智戎创客](http://www.zrcktech.com/)、[dearmrli](http://www.dearmrli.com/)、待续....');
 
 -- ----------------------------
 -- Table structure for `article_tag`
@@ -40,7 +40,7 @@ CREATE TABLE `article_tag` (
   `article_id` int(50) unsigned NOT NULL,
   `tag_id` int(50) unsigned NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=54 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=64 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of article_tag
@@ -79,14 +79,19 @@ INSERT INTO `article_tag` VALUES ('33', '21', '52');
 INSERT INTO `article_tag` VALUES ('34', '22', '53');
 INSERT INTO `article_tag` VALUES ('35', '23', '54');
 INSERT INTO `article_tag` VALUES ('36', '1', '38');
-INSERT INTO `article_tag` VALUES ('51', '1', '35');
-INSERT INTO `article_tag` VALUES ('38', '1', '37');
-INSERT INTO `article_tag` VALUES ('39', '2', '44');
+INSERT INTO `article_tag` VALUES ('59', '1', '64');
+INSERT INTO `article_tag` VALUES ('58', '1', '63');
+INSERT INTO `article_tag` VALUES ('57', '2', '62');
 INSERT INTO `article_tag` VALUES ('45', '24', '55');
 INSERT INTO `article_tag` VALUES ('48', '25', '56');
 INSERT INTO `article_tag` VALUES ('49', '26', '57');
 INSERT INTO `article_tag` VALUES ('52', '27', '52');
 INSERT INTO `article_tag` VALUES ('53', '28', '58');
+INSERT INTO `article_tag` VALUES ('54', '29', '59');
+INSERT INTO `article_tag` VALUES ('56', '30', '61');
+INSERT INTO `article_tag` VALUES ('61', '1', '65');
+INSERT INTO `article_tag` VALUES ('62', '1', '66');
+INSERT INTO `article_tag` VALUES ('63', '1', '35');
 
 -- ----------------------------
 -- Table structure for `articles`
@@ -106,13 +111,13 @@ CREATE TABLE `articles` (
   `pv` int(50) unsigned DEFAULT '1',
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of articles
 -- ----------------------------
-INSERT INTO `articles` VALUES ('admin', '1', 'Startblog', 'startblog,codeigniter blog,markdown blog,php', 'startblog是一个基于codeigniter 3.x开发的简洁，易用的Markdown博客系统', 'http://cryin.startblog.cc/static/img/b2.jpg', '# Startblog\r\n\r\n>一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.\r\n\r\n>Author: [Cryin\']\r\n\r\n###主页\r\n\r\n [http://cryin.startblog.cc/](http://cryin.startblog.cc/)\r\n\r\n###程序功能：\r\n\r\n*markdown博文撰写、修改、删除功能,采用使用simplemde编辑器;\r\n\r\n*markdown语法解析支持，使用parsedown解析;\r\n\r\n*文章搜索、备份功能;\r\n\r\n*站点、博文SEO信息设置;\r\n\r\n*rss订阅功能;\r\n\r\n###运行环境:\r\n* php 5.x + mysql\r\n\r\n###反馈:\r\n\r\n本着大道至简的原则，本Blog程序只维持最基本的Blog形态，不会轻易增加其它功能。有任何问题可以反馈至issues或者qq交流。\r\n\r\n###关于作者\r\n\r\n* github https://github.com/Cryin\r\n\r\n###贡献者\r\n\r\n感谢辉哥设计的Logo，感谢贡献者LUHOO、Hardy、Ant、半城人\r\n\r\n###捐赠者\r\n\r\n感谢Hardy、gege的捐赠！\r\n\r\n###安装方法:\r\n\r\n>将程序上传至站点根目录,输入http://www.yoursite.cc/install进行安装即可\r\n\r\n>有些环境下可能会出现找不到model的问题，这种情况把application\\models\\ 下所有文件首字母改成大写即可\r\n\r\n>如果安装在目录则根据站点目录修改.htaccess文件Rewrite规则，并修改application\\config\\config.php文件，添加目录字段：\r\n$config[\'base_url\'] = \'http://\'.$_SERVER[\'SERVER_NAME\'].\'/mulu\';\r\n\r\n\r\n###手动安装说明:\r\n\r\n>根据站点目录设置application\\config\\config.php文件$config[\'base_url\']项\r\n\r\n>根据站点目录修改.htaccess文件Rewrite规则\r\n\r\n>设置数据库配置信息：application\\config\\database.php文件\r\n\r\n>创建数据库startblog，并导入sql文件，路径data\\db\\startblog.sql\r\n\r\n>管理默认用户名、密码均为startblog\r\n\r\n>>有些环境下可能会出现找不到model的问题，这种情况把application\\models\\ 下所有文件首字母改成大写即可\r\n\r\n###Screenshot\r\n后台及文章管理:\r\n\r\n![](http://i1.piimg.com/567571/fcece6993c374e48.png)\r\n![](http://i1.piimg.com/567571/6bbf83711d00c63b.png)\r\n\r\n前台页面：\r\n\r\n![](http://i1.piimg.com/567571/3ca2f44da1c73fea.png)\r\n\r\n###更新说明:\r\n\r\n>2014/9/18 初识CodeIgniter，编写博客程序！\r\n\r\n>2015/3/27 实现markdown编辑器与解析\r\n\r\n>2016/7/12 完成基本功能！version：startblog v1.0\r\n\r\n>2016/7/22 初始化sql文件，修复xss问题及标签显示bug！\r\n\r\n>2016/7/25 修改登录页面及标签页面！\r\n\r\n>2016/7/27 完成站点SEO功能，增加url rewrite，完成文章页面seo功能，添加登录logo！version：startblog v1.1\r\n\r\n>2016/7/27 增加about编辑功能，添加评论功能！version：startblog v1.2\r\n\r\n>2016/8/1  增加rss订阅功能！version：startblog v1.3\r\n\r\n>2016/8/5  增加install功能！version：startblog v1.4\r\n\r\n>2016/10/23  修复markdown编辑器加载不稳定问题，修复post提交时bug！version：startblog v1.5\r\n\r\n>2016/11/14  全面升级UI，采用Amazeui开发后台及前端UI！version：startblog v2.0\r\n\r\n>2016/11/25  新增友情链接编辑、排序功能，修改文件编辑界面，增加编辑框边框。修复dreamkill同学提出的bug及程序问题，输入输出统一进行安全过滤，model类修改为大写 ！version：startblog v2.1\r\n', '4', 'startblog,php,github', '2016-10-23 12:05:00', '21');
-INSERT INTO `articles` VALUES ('admin', '2', 'Markdown入门指南', ' Markdown入门指南', ' Markdown入门指南', 'http://10.65.10.195/startblog/static/img/f6.jpg', '#Markdown入门指南\r\n\r\n##Strong and Emphasize\r\n```\r\n*emphasize*   **strong**\r\n_emphasize_   __strong__\r\n```\r\n##Links and Email\r\nInline:\r\n```\r\nAn [example](http://url.com/ \"Title\")\r\n```\r\nReference-style labels (titles are optional):\r\n```\r\n\r\nAn [example][id]. Then, anywhere\r\nelse in the doc, define the link:\r\n\r\n  [id]: http://example.com/  \"Title\"\r\n```\r\nEmail:\r\n```\r\nAn email <example@example.com> link.\r\n```\r\n\r\n##Images\r\nInline (titles are optional):\r\n```\r\n![alt text](/path/img.jpg \"Title\")\r\n```\r\nReference-style:\r\n```\r\n![alt text][id]\r\n\r\n[id]: /url/to/img.jpg \"Title\"\r\n```\r\n##Headers\r\n```\r\nSetext-style:\r\n\r\nHeader 1\r\n========\r\n\r\nHeader 2\r\n--------\r\n```\r\natx-style (closing #’s are optional):\r\n```\r\n# Header 1 #\r\n\r\n## Header 2 ##\r\n\r\n###### Header 6\r\n```\r\n##Lists\r\nOrdered, without paragraphs:\r\n```\r\n1.  Foo\r\n2.  Bar\r\n```\r\nUnordered, with paragraphs:\r\n```\r\n*   A list item.\r\n\r\n    With multiple paragraphs.\r\n\r\n*   Bar\r\n```\r\nYou can nest them:\r\n```\r\n*   Abacus\r\n    * answer\r\n*   Bubbles\r\n    1.  bunk\r\n    2.  bupkis\r\n        * BELITTLER\r\n    3. burper\r\n*   Cunning\r\n```\r\n##Blockquotes\r\n```\r\n> Email-style angle brackets\r\n> are used for blockquotes.\r\n\r\n> > And, they can be nested.\r\n\r\n> #### Headers in blockquotes\r\n> \r\n> * You can quote a list.\r\n> * Etc.\r\n```\r\n##Inline Code\r\n```\r\n`<code>` spans are delimited\r\nby backticks.\r\n\r\nYou can include literal backticks\r\nlike `` `this` ``.\r\n```\r\n##Block Code\r\nIndent every line of a code block by at least 4 spaces or 1 tab.\r\n```\r\nThis is a normal paragraph.\r\n\r\n    This is a preformatted\r\n    code block.\r\n```\r\n##Horizontal Rules\r\nThree or more dashes or asterisks:\r\n```\r\n---\r\n\r\n* * *\r\n\r\n- - - -\r\n```\r\n##Hard Line Breaks\r\nEnd a line with two or more spaces:\r\n```\r\nRoses are red,   \r\nViolets are blue.```', '4', ' Markdown', '2016-07-22 00:00:00', '1');
+INSERT INTO `articles` VALUES ('admin', '1', 'Startblog', 'startblog,codeigniter blog,markdown blog,php', 'startblog是一个基于codeigniter 3.x开发的简洁，易用的Markdown博客系统', 'http://cryin.startblog.cc/static/img/b11.jpg', '# Startblog\r\n\r\n>一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.\r\n\r\n>Author: [Cryin\']\r\n\r\n![](http://i1.piimg.com/567571/6947db2521f305f1.jpg)\r\n\r\n###主页\r\n\r\n [http://cryin.startblog.cc](http://cryin.startblog.cc)\r\n\r\n###下载：\r\n\r\n [startblog v2.1](http://cryin.startblog.cc/upload/startblogv2.1.zip)\r\n \r\n ###源码下载：\r\n \r\n  [github]( https://github.com/Cryin/Startblog)\r\n \r\n###程序功能：\r\n\r\n>Markdown博文撰写、修改、删除功能,\r\n\r\n>Markdown在线编辑器,实时预览;\r\n\r\n>文章全文搜索、备份功能;\r\n\r\n>站点、博文SEO信息设置;\r\n\r\n>RSS订阅、友情链接功能;\r\n\r\n###运行环境:\r\n* php 5.x + mysql\r\n\r\n###反馈:\r\n\r\n本着大道至简的原则，本Blog程序只维持最基本的Blog形态，不会轻易增加其它功能。有任何问题可以反馈至issues或者qq交流。\r\n\r\n###关于作者\r\n\r\n* github https://github.com/Cryin\r\n\r\n###贡献者\r\n\r\n感谢辉哥设计的Logo，感谢贡献者LUHOO、Hardy、Ant、半城人\r\n\r\n###捐赠者\r\n\r\n感谢Hardy、格格的捐赠！\r\n\r\n###安装方法:\r\n\r\n>手动创建数据库\r\n\r\n>将程序上传至站点根目录,输入http://www.yoursite.cc/install进行安装即可\r\n\r\n如果安装在目录则根据站点目录\r\n\r\n>修改application\\config\\config.php文件，添加目录字段，如目录为startblog：\r\n$config[\'base_url\'] = \'http://\'.$_SERVER[\'SERVER_NAME\'].\'/startblog\';\r\n\r\n>修改.htaccess文件Rewrite规则，如目录为startblog则修改为：\r\n>>RewriteEngine on  \r\n>>RewriteCond $1 !^(index\\.php|static|favicon\\.ico|robots\\.txt)  \r\n>>RewriteRule ^(.*)$ /startblog/index.php/$1 [L]\r\n\r\n###手动安装说明:\r\n\r\n>根据站点目录设置application\\config\\config.php文件$config[\'base_url\']项\r\n\r\n>根据站点目录修改.htaccess文件Rewrite规则\r\n\r\n>设置数据库配置信息：application\\config\\database.php文件\r\n\r\n>创建数据库startblog，并导入sql文件，路径data\\db\\startblog.sql\r\n\r\n>管理默认用户名、密码均为startblog\r\n\r\n###Screenshot\r\n移动端页面:\r\n\r\n![](https://static.oschina.net/uploads/space/2016/1122/111415_PPhq_2720166.png)\r\n\r\nPC端页面：\r\n\r\n![](http://i1.piimg.com/567571/3ca2f44da1c73fea.png)\r\n\r\n###更新说明:\r\n\r\n>2014/9/18 初识CodeIgniter，编写博客程序！\r\n\r\n>2015/3/27 实现markdown编辑器与解析\r\n\r\n>2016/7/12 完成基本功能！version：startblog v1.0\r\n\r\n>2016/7/22 初始化sql文件，修复xss问题及标签显示bug！\r\n\r\n>2016/7/25 修改登录页面及标签页面！\r\n\r\n>2016/7/27 完成站点SEO功能，增加url rewrite，完成文章页面seo功能，添加登录logo！version：startblog v1.1\r\n\r\n>2016/7/27 增加about编辑功能，添加评论功能！version：startblog v1.2\r\n\r\n>2016/8/1  增加rss订阅功能！version：startblog v1.3\r\n\r\n>2016/8/5  增加install功能！version：startblog v1.4\r\n\r\n>2016/10/23  修复markdown编辑器加载不稳定问题，修复post提交时bug！version：startblog v1.5\r\n\r\n>2016/11/14  全面升级UI，采用Amazeui开发后台及前端UI！version：startblog v2.0\r\n\r\n>2016/11/25  新增友情链接编辑、排序功能，修改文件编辑界面，增加编辑框边框。修复dreamkill同学提出的bug及程序问题，输入输出统一进行安全过滤，model类修改为大写 ！version：startblog v2.1\r\n', '4', 'startblog,codeigniter blog,markdown blog,php', '2016-12-13 15:38:45', '24');
+INSERT INTO `articles` VALUES ('admin', '2', 'Markdown入门指南', ' Markdown入门指南', ' Markdown入门指南', 'http://10.65.10.195/startblog/static/img/f6.jpg', '## 什么是 Markdown\r\n\r\nMarkdown 是一种方便记忆、书写的纯文本标记语言，用户可以使用这些标记符号以最小的输入代价生成极富表现力的文档：譬如您正在阅读的这份文档。它使用简单的符号标记不同的标题，分割不同的段落，**粗体** 或者 *斜体* 某些文字，更棒的是，它还可以\r\n\r\n### 1. 制作一份待办事宜 [Startblog Todo 列表]\r\n\r\n- [x] 整站备份功能\r\n- [x] 文章编辑优化，自动提取关键词、文章简要描述\r\n- [x] 图片上传或图床接口\r\n- [x] 安装程序优化，自动识别根目录、子目录\r\n- [x] 持续坚决程序bug及反馈\r\n\r\n## Markdown 简明语法手册\r\n\r\n---\r\n\r\n### 1. 斜体和粗体\r\n\r\n使用 * 和 ** 表示斜体和粗体。\r\n\r\n示例：\r\n\r\n这是 *斜体*，这是 **粗体**。\r\n\r\n### 2. 分级标题\r\n\r\n使用 === 表示一级标题，使用 --- 表示二级标题。\r\n\r\n示例：\r\n\r\n```\r\n这是一个一级标题\r\n============================\r\n\r\n这是一个二级标题\r\n--------------------------------------------------\r\n\r\n### 这是一个三级标题\r\n```\r\n\r\n你也可以选择在行首加井号表示不同级别的标题 (H1-H6)，例如：# H1, ## H2, ### H3，#### H4。\r\n\r\n### 3. 外链接\r\n\r\n使用 \\[描述](链接地址) 为文字增加外链接。\r\n\r\n示例：\r\n\r\n这是去往 [Startblog](https://github.com/Cryin/Startblog) 的链接。\r\n\r\n### 4. 无序列表\r\n\r\n使用 *，+，- 表示无序列表。\r\n\r\n示例：\r\n\r\n- 无序列表项 一\r\n- 无序列表项 二\r\n- 无序列表项 三\r\n\r\n### 5. 有序列表\r\n\r\n使用数字和点表示有序列表。\r\n\r\n示例：\r\n\r\n1. 有序列表项 一\r\n2. 有序列表项 二\r\n3. 有序列表项 三\r\n\r\n### 6. 文字引用\r\n\r\n使用 > 表示文字引用。\r\n\r\n示例：\r\n\r\n> 野火烧不尽，春风吹又生。\r\n\r\n### 7. 行内代码块\r\n\r\n使用 \\`代码` 表示行内代码块。\r\n\r\n示例：\r\n\r\n让我们聊聊 `html`。\r\n\r\n### 8.  代码块\r\n\r\n使用 四个缩进空格 表示代码块。\r\n\r\n示例：\r\n\r\n    这是一个代码块，此行左侧有四个不可见的空格。\r\n\r\n### 9.  插入图像\r\n\r\n使用 \\!\\[描述](图片链接地址) 插入图像。\r\n\r\n示例：\r\n\r\n![logo](http://cryin.startblog.cc/static/img/b1.jpg)\r\n\r\n\r\n总而言之，不同于其它 *所见即所得* 的编辑器：你只需使用键盘专注于书写文本内容，就可以生成印刷级的排版格式，省却在键盘和工具栏之间来回切换，调整内容和格式的麻烦。**Markdown 在流畅的书写和印刷级的阅读体验之间找到了平衡。** 目前它已经成为世界上最大的技术分享网站 GitHub 和 技术问答网站 StackOverFlow 的御用书写格式。', '4', ' Markdown入门指南', '2016-12-13 15:27:22', '2');
 
 -- ----------------------------
 -- Table structure for `category`
@@ -141,13 +146,14 @@ CREATE TABLE `friendship` (
   `link` varchar(200) DEFAULT NULL,
   `link_order` int(50) DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of friendship
 -- ----------------------------
 INSERT INTO `friendship` VALUES ('1', 'Startblog', 'https://github.com/Cryin/Startblog', '1');
 INSERT INTO `friendship` VALUES ('7', 'AmazeUI', 'http://amazeui.org/', '2');
+INSERT INTO `friendship` VALUES ('9', 'Cryin\'blog', 'http://cryin.startblog.cc/', '3');
 
 -- ----------------------------
 -- Table structure for `siteinfo`
@@ -167,7 +173,7 @@ CREATE TABLE `siteinfo` (
 -- ----------------------------
 -- Records of siteinfo
 -- ----------------------------
-INSERT INTO `siteinfo` VALUES ('1', 'http://cryin.startblog.cc/', '79564065@qq.com', 'Startblog  - 一款简洁、易用、跨平台自适应的Markdown博客系统', 'startblog,codeigniter blog,markdown博客程序,php blog,markdown blog,Markdown博客系统', 'startblog是一个基于codeigniter 3.x开发的简单，易用，Markdown博客系统！！！', '');
+INSERT INTO `siteinfo` VALUES ('1', 'http://cryin.startblog.cc', '416049355@qq.com', 'Startblog  |  一款简洁、易用、跨平台自适应的Markdown博客系统', 'startblog,codeigniter blog,markdown博客程序,php blog,markdown blog,Markdown博客系统', '一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.', '');
 
 -- ----------------------------
 -- Table structure for `tag`
@@ -178,24 +184,22 @@ CREATE TABLE `tag` (
   `tag_name` varchar(50) CHARACTER SET utf8 NOT NULL,
   `tag_button_type` varchar(50) DEFAULT 'success',
   PRIMARY KEY (`id`,`tag_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=59 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tag
 -- ----------------------------
 INSERT INTO `tag` VALUES ('44', ' Markdown', 'warning');
-INSERT INTO `tag` VALUES ('42', 'php', 'danger');
-INSERT INTO `tag` VALUES ('41', 'XXE', 'info');
+INSERT INTO `tag` VALUES ('66', 'markdown blog', 'danger');
 INSERT INTO `tag` VALUES ('40', 'XSS', 'success');
 INSERT INTO `tag` VALUES ('39', 'codeigniter', 'danger');
 INSERT INTO `tag` VALUES ('38', 'startblog', 'danger');
 INSERT INTO `tag` VALUES ('37', 'github', 'success');
-INSERT INTO `tag` VALUES ('36', 'PHP Markdown', 'info');
+INSERT INTO `tag` VALUES ('65', 'codeigniter blog', 'danger');
 INSERT INTO `tag` VALUES ('35', 'PHP', 'warning');
 INSERT INTO `tag` VALUES ('34', 'HTML5', 'danger');
-INSERT INTO `tag` VALUES ('33', 'python', 'info');
-INSERT INTO `tag` VALUES ('58', '斯蒂芬', 'info');
 INSERT INTO `tag` VALUES ('54', 'Paper', 'info');
+INSERT INTO `tag` VALUES ('67', 'php', 'warning');
 
 -- ----------------------------
 -- Table structure for `user`

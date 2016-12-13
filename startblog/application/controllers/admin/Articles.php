@@ -71,10 +71,10 @@ class Articles extends Controller {
                 'keyword' => $this->input->post('keyword', TRUE),
                 'description' => $this->input->post('description', TRUE),
                 'imagelink' => $this->input->post('imagelink', TRUE),
-                'content' => $this->input->post('content', TRUE),
-                'published_at' => $this->input->post('published_at', TRUE),
+                'content' => $this->input->post('content', FALSE),
+                'published_at' => date('Y-m-d H:i:s',time()),
                 'category' => $this->input->post('category', TRUE),
-                'tag' => $this->input->post('tag', TRUE),  
+                'tag' => $this->input->post('keyword', TRUE),  
                 'pv' => $this->input->post('pv', TRUE)           
             );
         //获取表中该文章相关的标签

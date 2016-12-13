@@ -87,3 +87,5 @@ RewriteRule ^(.*)$ /startblog/index.php/$1 [L]
 >2016/11/25  新增友情链接编辑、排序功能，修改文件编辑界面，增加编辑框边框。修复dreamkill同学提出的bug及程序问题，输入输出统一进行安全过滤，model类修改为大写 ！version：startblog v2.1
 
 >2016/12/02  修改新建文章时有时出现告警信息并暴露sql语句，增加文章配图随机功能，当封面配图为空时，随机显示图片 ！version：startblog v2.1
+
+>2016/12/13  优化文章编辑界面,发布时间自动获取,添加新banner图，感谢辉哥制作！version：startblog v2.1

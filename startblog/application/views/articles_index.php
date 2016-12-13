@@ -2,7 +2,7 @@
 spl_autoload_register(function($class){
   require preg_replace('{\\\\|_(?!.*\\\\)}', DIRECTORY_SEPARATOR, ltrim($class, '\\')).'.php';
 });
-date_default_timezone_set("Asia/Shanghai");
+
 # Get Markdown class
 $Parsedown = new Parsedown();
 

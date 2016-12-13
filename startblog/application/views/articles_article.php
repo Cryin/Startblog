@@ -8,7 +8,7 @@ spl_autoload_register(function($class){
 #require_once __DIR__ . '/Michelf/Parsedown.php';
 # Read file and pass content through the Markdown parser
 #$html = MarkdownExtra::defaultTransform($article[0]['content']);
-date_default_timezone_set("Asia/Shanghai");
+
 $Parsedown = new Parsedown();
 $html = $Parsedown->text($article[0]['content']);
 
