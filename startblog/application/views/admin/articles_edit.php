@@ -44,10 +44,10 @@
                                     </div>
 
                                     <div class="am-form-group">
-                                        <label class="am-u-sm-2 am-form-label">标签、关键词:</label>
+                                        <label class="am-u-sm-2 am-form-label">标签:</label>
                                         <div class="am-u-sm-4 am-u-sm-pull-6">
                                             
-                                            <input type="text" id="name" name="keyword" value="<?php if(isset($article['0']['keyword'])) echo $article['0']['keyword']?>" placeholder="多个关键词用,分割">
+                                            <input type="text" id="name" name="tag" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" placeholder="多个标签用,分割">
                                         </div>
                                     </div>
                                     

@@ -68,13 +68,13 @@ class Articles extends Controller {
         $data['data'] = array(
                 'id' => $id,
                 'title' => $this->input->post('title', TRUE),
-                'keyword' => $this->input->post('keyword', TRUE),
+                'keyword' => $this->input->post('tag', TRUE),
                 'description' => $this->input->post('description', TRUE),
                 'imagelink' => $this->input->post('imagelink', TRUE),
                 'content' => $this->input->post('content', FALSE),
                 'published_at' => date('Y-m-d H:i:s',time()),
                 'category' => $this->input->post('category', TRUE),
-                'tag' => $this->input->post('keyword', TRUE),  
+                'tag' => $this->input->post('tag', TRUE),  
                 'pv' => $this->input->post('pv', TRUE)           
             );
         //获取表中该文章相关的标签
