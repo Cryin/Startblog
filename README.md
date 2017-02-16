@@ -110,3 +110,5 @@ $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/startblog';
 >2016/12/02  修改新建文章时有时出现告警信息并暴露sql语句，增加文章配图随机功能，当封面配图为空时，随机显示图片 ！version：startblog v2.1
 
 >2016/12/13  优化文章编辑界面,发布时间自动获取,添加新banner图，感谢辉哥制作！version：startblog v2.1
+
+>2017/02/16  视图代码通用化，简化banner及footer代码。增加留言板功能 ！version：startblog v2.2

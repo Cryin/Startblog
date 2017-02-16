@@ -54,8 +54,9 @@ class Articles extends CI_Controller {
 
 		$this->load->view('header',$data);
 		$this->load->view('menu', $data);
-		$this->load->view('banner', $data);
+		#$this->load->view('banner', $data);
 		$this->load->view('articles_index', $data);
+		$this->load->view('sidebar', $data);
 		$this->load->view('footer',$data);
 	}
 	public function timeline()
@@ -134,6 +135,7 @@ class Articles extends CI_Controller {
 		$this->load->view('articles_header',$data);
 		$this->load->view('menu',$data);
 		$this->load->view('articles_article', $data);
+		$this->load->view('contact', $data);
 		$this->load->view('footer',$data);
 
 	}

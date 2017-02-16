@@ -26,4 +26,10 @@ class About_model extends CI_Model {
 		$this->db->where('id', $id);
 		$this->db->update('about', $data);
 	}
+	public function getMsboard(){
+		$this->load->database();
+		$sql="select * from mesboard";
+		$data=$this->db->query($sql)->result_array();
+		return $data;
+	}
 }

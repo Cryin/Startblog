@@ -14,7 +14,7 @@
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
   <link rel="icon" type="image/png" href="<?php echo base_url('/static/img/favicon.png')?>">
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="<?php echo base_url('/static/img/app-icon72x72@2x.png')?>">
+  <link rel="icon" sizes="192x192" href="<?php echo base_url('/static/img/favicon.png')?>">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Amaze UI"/>

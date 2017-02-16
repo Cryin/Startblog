@@ -21,8 +21,6 @@
         <hr>
     </div>
 
-
-</div>
 <!-- content end -->
     
 

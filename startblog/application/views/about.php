@@ -18,9 +18,9 @@ $html = $Parsedown->text($about[0]['content']);
         <div class="am-article-hd">
           <h1 class="am-article-title blog-text-center"><?php echo $about[0]['title'];?></h1>
           <p class="am-article-meta blog-text-center">
-              <span><a href="#" class="blog-color">Cryin' &nbsp;</a></span>-
-              <span><a href="#">@Startblog.cc &nbsp;</a></span>-
-              <span><a href="#">2014/10/9</a></span>
+              <span><a href="https://github.com/Cryin" class="blog-color">Cryin &nbsp;</a></span>
+              <span><a href="https://github.com/Cryin/Startblog">@startblog.cc &nbsp;</a></span>
+              <span><a href="#">2014/8/15</a></span>
           </p>
         </div>        
         <div class="am-article-bd">
@@ -37,27 +37,44 @@ $html = $Parsedown->text($about[0]['content']);
             <span class="am-icon-tags"> &nbsp;</span>
             <a href="#"><?php echo $about[0]['tag']; ?></a>
             <hr>
-            
           </div>
         </div>
-<div class="ds-thread" data-thread-key="0" data-title="about" data-url="<?php echo base_url("/About/index");?>"></div>
-  <!-- 多说评论框 start -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"startblog"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-     || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- 多说公共JS代码 end -->
+        <form class="am-form am-g" method="post" action="<?php echo site_url('About/leaving_message')?>">
+            <h3 class="blog-comment">留言板</h3>
+          <fieldset>
+            <div class="am-form-group am-u-sm-4 blog-clear-left">
+              <input type="text" name="name" class="am-form-field am-input-sm" placeholder="名字">
+            </div>
+            <div class="am-form-group am-u-sm-4">
+              <input type="text" name="email" class="am-form-field am-input-sm" placeholder="邮箱">
+            </div>
+
+            <div class="am-form-group am-u-sm-4 blog-clear-right">
+              <input type="text" name="site" class="am-form-field am-input-sm" placeholder="网站地址">
+            </div>
+        
+            <div class="am-form-group">
+              <textarea name="message" class="am-form-field am-input-sm" rows="5" placeholder="一字千金"></textarea>
+            </div>
+        
+            <p><button type="submit" name='subimit' value="subimit" class="am-btn am-btn-default">发表留言</button></p>
+          </fieldset>
+        </form>
+<hr>
+        <?php if(isset($mesboard))foreach ($mesboard as $key => $value):?>
+        <div class="am-g blog-author blog-article-margin">
+          <div class="am-u-sm-3 am-u-md-3 am-u-lg-2">
+            <img src="<?php echo base_url('/static/img/f15.jpg')?>" alt="" class="blog-author-img am-circle">
+          </div>
+          <div class="am-u-sm-9 am-u-md-9 am-u-lg-10">
+          <h3><span><a href="<?php echo $value['site'];?>"><?php echo $value['name'];?></a>| <?php echo $value['time'];?></span></h3>
+            <p><?php echo $value['message'];?></p>
+          </div>
+        </div>
         <hr>
-    </div>
-<div class="am-u-md-4 am-u-sm-12 blog-sidebar">
+  <?php endforeach ?>
+        </div>
+    <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
         <div class="blog-sidebar-widget blog-bor">
             <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
             <img src="<?php echo base_url('/static/img/favicon.png')?>" alt="about me" class="blog-entry-img" >

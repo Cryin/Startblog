@@ -65,7 +65,7 @@
                                         <div class="am-u-sm-8 am-u-sm-pull-2">
                                             <input name="imagelink" type="text" value="<?php if(isset($article['0']['imagelink'])) echo $article['0']['imagelink']?>" placeholder="请输入图片(960*540效果最佳)链接地址如:http://www.xxx.com/img/pic.jpg">
                                             <div>
-
+                                            <small>推荐图床:<a href="http://yotuku.cn/">极简图床yotuku.cn</a></small>
                                             </div>
                                         </div>
                                     </div>
