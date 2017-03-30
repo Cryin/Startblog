@@ -89,4 +89,4 @@ RewriteRule ^(.*)$ /startblog/index.php/$1 [L]
 >2016/12/02  修改新建文章时有时出现告警信息并暴露sql语句，增加文章配图随机功能，当封面配图为空时，随机显示图片 ！version：startblog v2.1
 
 
->2017/02/16  视图代码通用化，简化banner及footer代码。增加留言板功能 ！version：startblog v2.1
+>2017/02/16  视图代码通用化，简化banner及footer代码。增加留言板功能 ！version：startblog v2.2

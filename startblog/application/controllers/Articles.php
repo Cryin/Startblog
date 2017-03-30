@@ -94,6 +94,13 @@ class Articles extends CI_Controller {
 		$this->load->model('articles_model');
 
 		$data_tmp['articles'] = $this->articles_model->getArticle($id);
+		if (count($data_tmp['articles'])==0)
+		{
+			#redirect('/Articles/index');
+        	$this->load->view('404');
+		}
+		else
+		{
 		$tag_info = $this->articles_model->getTagsType();
 		foreach ($data_tmp as $key => $value) {
 			foreach ($value as $value1) {
@@ -137,6 +144,7 @@ class Articles extends CI_Controller {
 		$this->load->view('articles_article', $data);
 		$this->load->view('contact', $data);
 		$this->load->view('footer',$data);
+		}
 
 	}
 
