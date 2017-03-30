@@ -7,6 +7,17 @@
             <h1>2017</h1>
             <hr>
                 <ul>
+                <h3>3月</h3>
+                <hr>
+                <li>
+                    <span class="am-u-sm-4 am-u-md-2 timeline-span">2017/3/30</span>
+                    <span class="am-u-sm-8 am-u-md-6"><a href="#">添加404页面，当文章已删除或者访问不存在的文章id时跳转到404页面</a></span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">更新</span>
+                    <span class="am-u-sm-4 am-u-md-2 am-hide-sm-only">startblog v2.2</span>
+                </li>
+                
+                </ul>
+                <ul>
                 <h3>2月</h3>
                 <hr>
                 <li>
