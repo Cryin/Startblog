@@ -17,6 +17,13 @@ class Articles extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct() {
+      parent::__construct ();
+    
+      $this->load->model('siteinfo_model');
+      define ('LANG', $this->siteinfo_model->getLang());
+      $this->lang->load('admin', LANG);
+     }
 	public function index()
 	{
 		//判断是否安装
@@ -94,10 +101,15 @@ class Articles extends CI_Controller {
 		$this->load->model('articles_model');
 
 		$data_tmp['articles'] = $this->articles_model->getArticle($id);
+		#echo 'test'.$data_tmp['articles'].count($data_tmp['articles']);
 		if (count($data_tmp['articles'])==0)
 		{
 			#redirect('/Articles/index');
+        	#$this->load->view('header');
+ 
         	$this->load->view('404');
+
+        	#$this->load->view('footer');
 		}
 		else
 		{
@@ -144,7 +156,7 @@ class Articles extends CI_Controller {
 		$this->load->view('articles_article', $data);
 		$this->load->view('contact', $data);
 		$this->load->view('footer',$data);
-		}
+	}
 
 	}
 

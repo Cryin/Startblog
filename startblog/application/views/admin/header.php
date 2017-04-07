@@ -1,77 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>StartBlog Markdown博客后台管理系统</title>
-    <meta name="generator" content="startblog v2.1" />
-    <meta name="author" content="http://www.startblog.cc/" />
-    <meta name="description" content="startblog是一款基于Codeigniter、Html5开发的简洁、易用、跨平台自适应的Markdown博客系统.！！">
-    <meta name="keywords" content="index">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="renderer" content="webkit">
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="<?php echo base_url('/static/admin/img/logoa.png')?>">
-    <link rel="apple-touch-icon-precomposed" href="<?php echo base_url('/static/admin/img/app-icon72x72@2x.png')?>">
-    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="<?php echo base_url('/static/admin/css/amazeui.min.css')?>" />
-    <link rel="stylesheet" href="<?php echo base_url('/static/admin/css/amazeui.datatables.min.css')?>" />
-    <link rel="stylesheet" href="<?php echo base_url('/static/admin/css/app.css')?>">
-    <script src="<?php echo base_url('/static/admin/js/jquery.min.js')?>"></script>
+<meta charset="utf-8">
+<title>StartBlog Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+
+
+
+<script src="<?php echo base_url('/static/admin/js/jquery.min.js')?>"></script>
+<script src="<?php echo base_url('/static/admin/js/bootstrap.min.js')?>"></script>
+<link rel="stylesheet" href="<?php echo base_url('/static/admin/css/bootstrap.min.css')?>">
+<link rel="stylesheet" href="<?php echo base_url('/static/admin/css/sb-admin.css')?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('/static/admin/font-awesome/css/font-awesome.min.css')?>">
 </head>
-<body data-type="index">
-    <script src="<?php echo base_url('/static/admin/js/theme.js')?>"></script>
-    <div class="am-g tpl-g">
-        <!-- 头部 -->
-        <header>
-            <!-- logo -->
-            <div class="am-fl tpl-header-logo">
-                <a href="<?php echo base_url('Articles/index')?>"><img src="<?php echo base_url('/static/admin/img/logo.png')?>" alt="StartBlog"></a>
+<body>
+<div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php echo site_url('admin/index')?>"><img src="<?php echo base_url('/static/img/bigtitle.png')?>" class="logo-icon" alt="Startblog"></a>
             </div>
-            <!-- 右侧内容 -->
-            <div class="tpl-header-fluid">
-                <!-- 侧边切换 -->
-                <div class="am-fl tpl-header-switch-button am-icon-list">
-                    <span>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li>
+                    <a href="<?php echo base_url('Articles/index')?>"><i class="fa fa-home"></i></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> <?php echo $this->session->userdata('username'); ?> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                       <!--  <li>
+                            <a href="<?php echo base_url('admin/Others/change_password')?>"><i class="fa fa-fw fa fa-pencil"></i> <?php echo $this->lang->line('nav_profile'); ?></a>
+                        </li>-->
 
-                </span>
-                </div>
-                <!-- 搜索 -->
-                <div class="am-fl tpl-header-search">
-                    <form class="tpl-header-search-form" action="javascript:;">
-                        <button class="tpl-header-search-btn am-icon-search"></button>
-                        <input class="tpl-header-search-box" type="text" placeholder="搜索内容...">
-                    </form>
-                </div>
-                <!-- 其它功能-->
-                <div class="am-fr tpl-header-navbar">
-                    <ul>
-                        <!-- 欢迎语 -->
-                        <li class="am-text-sm tpl-header-navbar-welcome">
-                            <a href="https://github.com/Cryin/Startblog"><span class="am-icon-github"></span> </a>
+                        <li>
+                            <a href="<?php echo base_url('admin/Index/logout')?>"><i class="fa fa-fw fa-power-off"></i> <?php echo $this->lang->line('nav_logout'); ?></a>
                         </li>
-                        <!-- 退出 -->
-                        <li class="am-text-sm">
-                            <?php echo anchor('admin/Index/logout','<span class="am-icon-sign-out"></span> 退出',"");?>
-                        </li>
+                            
                     </ul>
-                </div>
-            </div>
-
-        </header>
-        <!-- 风格切换 -->
-        <div class="tpl-skiner">
-            <div class="tpl-skiner-toggle am-icon-cog">
-            </div>
-            <div class="tpl-skiner-content">
-                <div class="tpl-skiner-content-title">
-                    选择主题
-                </div>
-                <div class="tpl-skiner-content-bar">
-                    <span class="skiner-color skiner-white" data-color="theme-white"></span>
-                    <span class="skiner-color skiner-black" data-color="theme-black"></span>
-                </div>
-            </div>
-        </div>
+                </li>
+            </ul>

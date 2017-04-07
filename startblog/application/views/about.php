@@ -40,24 +40,24 @@ $html = $Parsedown->text($about[0]['content']);
           </div>
         </div>
         <form class="am-form am-g" method="post" action="<?php echo site_url('About/leaving_message')?>">
-            <h3 class="blog-comment">留言板</h3>
+            <h3 class="blog-comment"><?php echo $this->lang->line('blog_message'); ?></h3>
           <fieldset>
             <div class="am-form-group am-u-sm-4 blog-clear-left">
-              <input type="text" name="name" class="am-form-field am-input-sm" placeholder="名字">
+              <input type="text" name="name" class="am-form-field am-input-sm" placeholder="<?php echo $this->lang->line('mess_name'); ?>">
             </div>
             <div class="am-form-group am-u-sm-4">
-              <input type="text" name="email" class="am-form-field am-input-sm" placeholder="邮箱">
+              <input type="text" name="email" class="am-form-field am-input-sm" placeholder="<?php echo $this->lang->line('mess_email'); ?>">
             </div>
 
             <div class="am-form-group am-u-sm-4 blog-clear-right">
-              <input type="text" name="site" class="am-form-field am-input-sm" placeholder="网站地址">
+              <input type="text" name="site" class="am-form-field am-input-sm" placeholder="<?php echo $this->lang->line('mess_site'); ?>">
             </div>
         
             <div class="am-form-group">
-              <textarea name="message" class="am-form-field am-input-sm" rows="5" placeholder="一字千金"></textarea>
+              <textarea name="message" class="am-form-field am-input-sm" rows="5" placeholder="<?php echo $this->lang->line('mess_content'); ?>"></textarea>
             </div>
         
-            <p><button type="submit" name='subimit' value="subimit" class="am-btn am-btn-default">发表留言</button></p>
+            <p><button type="submit" name='subimit' value="subimit" class="am-btn am-btn-default"><?php echo $this->lang->line('mess_leave'); ?></button></p>
           </fieldset>
         </form>
 <hr>
@@ -76,14 +76,14 @@ $html = $Parsedown->text($about[0]['content']);
         </div>
     <div class="am-u-md-4 am-u-sm-12 blog-sidebar">
         <div class="blog-sidebar-widget blog-bor">
-            <h2 class="blog-text-center blog-title"><span>About ME</span></h2>
+            <h2 class="blog-text-center blog-title"><span><?php echo $this->lang->line('blog_aboutme'); ?></span></h2>
             <img src="<?php echo base_url('/static/img/favicon.png')?>" alt="about me" class="blog-entry-img" >
             <p>StartBlog</p>
-            <p>一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.</p>
+            <p><?php echo $this->lang->line('blog_header'); ?></p>
         </div>
 
         <div class="blog-sidebar-widget blog-bor">
-            <h2 class="blog-text-center blog-title"><span>Contact ME</span></h2>
+            <h2 class="blog-text-center blog-title"><span><?php echo $this->lang->line('blog_contact'); ?></span></h2>
             <p>
                 <a href="tencent://message/?uin=416049355"><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
                 <a href="https://github.com/Cryin/"><span class="am-icon-github am-icon-fw blog-icon"></span></a>

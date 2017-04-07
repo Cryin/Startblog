@@ -1,52 +1,59 @@
 <!-- 内容区域 -->
-        <div class="tpl-content-wrapper">
-
-            <div class="container-fluid am-cf">
-                <div class="row">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-cog page-header-heading-icon"></span> 友情链接 <small>Friendship</small></div>
-                        <p class="page-header-description">更新友情链接</p>
-                    </div>
-                </div>
-
-            </div>
-              <div class="row">
-
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-                        <div class="widget am-cf">
-                            
-                            <div class="widget-body am-fr">
-                                <form class="am-form tpl-form-border-form tpl-form-border-br"  method="post" action="<?php echo site_url("admin/Friendship/edit/{$data['0']['id']}");?>">
-                                    <div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-2 am-form-label">链接名称 <span class="tpl-form-line-small-title">Name</span></label>
-                                        <div class="am-u-sm-4 am-u-sm-pull-6">
-                                            <input class="tpl-form-input" name="link_name" value="<?php if(isset($data['0']['link_name'])) echo $data['0']['link_name']?>" type="text" placeholder="输入友情链接名称">
-                                            <small>请填写标题文字10-20字左右。</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="user-email" class="am-u-sm-2 am-form-label">链接URL <span class="tpl-form-line-small-title">Link</span></label>
-                                        <div class="am-u-sm-4 am-u-sm-pull-6">
-                                            <input class="am-form-field tpl-form-no-bg" name="link" value="<?php if(isset($data['0']['link'])) echo $data['0']['link']?>" type="text" placeholder="输入友情链接地址">
-                                            <small>以http://开头</small>
-                                        </div>
-                                    </div>
-                                    <div class="am-form-group">
-                                        <label for="link-order" class="am-u-sm-2 am-form-label">链接排序:</label>
-                                        <div class="am-u-sm-4 am-u-sm-pull-6">
-                                            <input class="am-form-field tpl-form-no-bg" name="link_order" value="<?php if(isset($data['0']['link_order'])) echo $data['0']['link_order']?>" type="text" placeholder="输入排序顺序">
-                                        </div>
-                                    </div>
-                                    <div class="am-form-group">
-                                        <div class="am-u-sm-10 am-u-sm-push-2">
-                                            <button type="submit" name='subimit' class="am-btn am-btn-primary tpl-btn-bg-color-success tpl-login-btn">更新</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                <?php echo $this->lang->line('link_edit_header'); ?>            </h1>
+            <ol class="breadcrumb">
+                <li>
+                <i class="fa fa-dashboard"></i>
+                    <a href="<?php echo site_url('admin/index')?>"><?php echo $this->lang->line('nav_dash'); ?></a>
+                </li>
+                <li class="active">
+                <i class="fa fa-fw fa-cogs "></i>
+                    <a href="<?php echo site_url('admin/Friendship/index')?>"><?php echo $this->lang->line('link_header'); ?></a>
+                </li>
+                <li class="active">
+                <i class="fa fa-fw fa-pencil"></i>
+                    <?php echo $this->lang->line('link_edit_header'); ?>
+                </li>
+            </ol>
         </div>
+    </div>
+</div>
+<div class="container-fluid">
+    
+    <div class="panel panel-default">
+        
+        <div class="panel-body">
+            <div class="form-group">  
+            <?php foreach ($data as $key => $value):?>  
+            <form action="<?php echo site_url("admin/Friendship/edit/{$value['id']}");?>" method="post" accept-charset="utf-8">
+                                                   
+                    <label class="control-label" for="link_name"> <?php echo $this->lang->line('link_name'); ?> </label>
+                    <div class="controls">
+                    <input type="text" name="link_name" value="<?php echo $value['link_name'];?>" id="link_name" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                <div class="form-group">    
+                    <label class="control-label" for="link"><?php echo $this->lang->line('link_address'); ?></label>
+                    <div class="controls">
+                    <input type="text" name="link" value="<?php echo $value['link'];?>" id="link" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                <div class="form-group">    
+                    <label class="control-label" for="link_order"><?php echo $this->lang->line('link_id'); ?></label>
+                    <div class="controls">
+                    <input type="text" name="link_order" value="<?php echo $value['link_order'];?>" id="link_order" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+           <div class="panel-footer">
+                   <input type="submit" name="submit" value="<?php echo $this->lang->line('btn_save');?>" id="submit" class="btn btn-primary"  />
+                    <a class="btn" href="<?php echo site_url('admin/Friendship/index')?>"><?php echo $this->lang->line('btn_cancel');?></a>
+            </div> 
+            </form> 
+        <?php endforeach;  ?>           
+        </div> 
+        </div>
+    </div>
+</div>

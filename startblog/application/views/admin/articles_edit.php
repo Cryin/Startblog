@@ -1,104 +1,120 @@
-
 <link rel="stylesheet" href="<?php echo base_url('/static/admin/css/simplemde.min.css')?>">
 <script src="<?php echo base_url('/static/admin/js/simplemde.min.js')?>"></script>
-<!-- 内容区域 -->
-        <div class="tpl-content-wrapper">
+<script src="<?php echo base_url('/static/admin/js/datepicker/jquery.datetimepicker.js'); ?>"></script>
+<script src="<?php echo base_url('/static/admin/js/date.js'); ?>"></script>
+<link href="<?php echo base_url('/static/admin/js/datepicker/jquery.datetimepicker.css'); ?>" rel="stylesheet">
 
- 
-                <div class="row">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-clone page-header-heading-icon"></span> 编辑文章 <small>Edit Article </small></div>
-                        
-                    </div>
-                </div>
-
-<div class="row">
-
-<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-                        <div class="widget am-cf">
-                            
-                            <div class="widget-body am-fr">
-
-                                <form class="am-form tpl-form-border-form tpl-form-border-br" method="post" action="<?php echo site_url("admin/Articles/update/{$article['0']['id']}")?>">
-                                                                                              
-                                  
-                                    <div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-2 am-form-label">文章标题:</label>
-                                        <div class="am-u-sm-4 am-u-sm-pull-6">
-                                            <input class="am-sr-only" name="pv" value="<?php echo isset($article['0']['pv'])?$article['0']['pv']:1?>">
-                                            <input type="text" class="tpl-form-input" name="title" value="<?php if(isset($article['0']['title'])) echo $article['0']['title'];?>" placeholder="请输入标题文字" required>
-                                        </div>
-                                        
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="user-phone" class="am-u-sm-2 am-form-label">类别选择:</label>
-                                        <div class="am-u-sm-4 am-u-sm-pull-6">
-                                            <select data-am-selected="{btnWidth: '100%', btnSize: 'sm', btnStyle: 'primary'}" name="category">
-                                              <?php foreach ($all_category as $key => $value): ?>
-                                              <option  <?php if(isset($article['0']['category'])) echo $value['id']==$article['0']['category']?'selected':'' ?> value="<?php echo $value['id']?>"><?php echo $value['category']?></option>
-                                              <?php endforeach; ?>
-                                            </select>
-
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-2 am-form-label">标签:</label>
-                                        <div class="am-u-sm-4 am-u-sm-pull-6">
-                                            
-                                            <input type="text" id="name" name="tag" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" placeholder="多个标签用,分割">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="am-form-group">
-                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">文章描述:</label>
-                                        <div class="am-u-sm-8 am-u-sm-pull-2">
-                                            <input name="description" type="text" value="<?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?>" placeholder="请输入SEO描述内容">
-                                            <div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="am-form-group">
-                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">封面配图:</label>
-                                        <div class="am-u-sm-8 am-u-sm-pull-2">
-                                            <input name="imagelink" type="text" value="<?php if(isset($article['0']['imagelink'])) echo $article['0']['imagelink']?>" placeholder="请输入图片(960*540效果最佳)链接地址如:http://www.xxx.com/img/pic.jpg">
-                                            <div>
-                                            <small>推荐图床:<a href="http://yotuku.cn/">极简图床yotuku.cn</a></small>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="user-intro" class="am-u-sm-2 am-form-label">文章内容:</label>
-                                        
-                                    </div>
-                                    <div class="am-form-group">
-                                        
-                                        <div class="am-u-sm-11 am-u-sm-push-1">
-                                            <textarea id="textcontent" name="content" rows="23"><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']);?></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <div class="am-u-sm-11 am-u-sm-push-1">
-                                            <button type="submit" name='subimit' value="subimit" class="am-btn am-btn-primary am-btn-block tpl-btn-bg-color-success tpl-login-btn">发布</button>
-                                        </div>
-                                    </div>
-
-                                    
-    
-                                </form>
-                                <script>
-                                          
-                                          var simplemde = new SimpleMDE({element: document.getElementById("textcontent")});
-                                    </script>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                <?php echo $this->lang->line('articles_new_header'); ?> </h1>
+            <ol class="breadcrumb">
+                <li>
+                <i class="fa fa-dashboard"></i>
+                    <a href="<?php echo site_url('admin/index')?>"><?php echo $this->lang->line('nav_dash'); ?></a>
+                </li>
+                <li>
+                <i class="fa fa-fw fa-newspaper-o"></i>
+                    <a href="<?php echo site_url('admin/Articles/index')?>"><?php echo $this->lang->line('articles_header'); ?></a>
+                </li>
+                <li class="active">
+                <i class="fa fa-fw fa-pencil"></i>
+                    <?php echo $this->lang->line('articles_new_header'); ?>               
+                    </li>
+            </ol>
         </div>
     </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12">
+                                            <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <i class="fa fa-pencil fa-fw"></i>
+                    <?php echo $this->lang->line('articles_new_header'); ?>                
+                    </h3>
+            </div>
+
+         <div class="panel-body">
+            <form action="<?php echo site_url("admin/Articles/update/{$article['0']['id']}")?>" id="contentForm" method="post" accept-charset="utf-8">
+                        <textarea name="content" cols="40" rows="50" id="textcontent" class="js-st-instance" ><?php if(isset($article['0']['content'])) echo htmlspecialchars($article['0']['content']);?></textarea>
+
+              </div>
+              <div class="panel-footer">
+                    <a class="btn btn-primary" data-toggle="modal" href="#attributes"><?php echo $this->lang->line('btn_next'); ?></a>
+                    <a class="btn" href="<?php echo site_url('admin/Articles/index')?>"><?php echo $this->lang->line('btn_cancel'); ?></a>
+                </div>
+            </div>
+
+        <div id="attributes" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><?php echo $this->lang->line('articles_new_attributes'); ?></h4>
+              </div>
+              <div class="modal-body">
+            <div class="alert alert-info"><?php echo $this->lang->line('articles_new_required'); ?></div>
+            <div class="form-group">
+                                        <label class="control-label" for="postTitle"><?php echo $this->lang->line('articles_new_title'); ?></label>
+                    <div class="controls">
+                    <input type="text" name="title" id="title" value="<?php if(isset($article['0']['title'])) echo $article['0']['title'];?>" class="form-control"  placeholder="<?php echo $this->lang->line('articles_title_tips'); ?>" required/>
+                    <input type="text" name="pv" id="pv" value="<?php echo isset($article['0']['pv'])?$article['0']['pv']:1?>" style="display:none;"  />
+                    <input type="text" name="published_at" id="published_at" value="<?php if(isset($article['0']['published_at'])) echo $article['0']['published_at'];?>" style="display:none;"  />
+                    </div> <!-- /controls -->
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                                    <label class="control-label" for="category"><?php echo $this->lang->line('articles_new_category'); ?></label>
+                    <div class="controls">
+                        <select name="category" id="category" class="form-control">
+                        <?php foreach ($all_category as $key => $value): ?>
+                        <option  <?php if(isset($article['0']['category'])) echo $value['id']==$article['0']['category']?'selected':'' ?> value="<?php echo $value['id']?>"><?php echo $value['category']?></option>
+                        <?php endforeach; ?>
+                        </select>
+                    </div> <!-- /controls -->
+                </div> <!-- /form-group -->
+
+                
+                <div class="form-group">
+                                        <label class="control-label" for="imagelink"><?php echo $this->lang->line('articles_new_feature'); ?></label>
+                    <div class="controls">
+                         <input type="text" name="imagelink" id="imagelink" value="<?php if(isset($article['0']['imagelink'])) echo $article['0']['imagelink']?>" placeholder="http://www.xxx.com/img/pic.jpg(960*540)" class="form-control" />
+
+                    </div> <!-- /controls -->
+                </div> <!-- /form-group -->
+               <div class="form-group">
+                                        <label class="control-label" for="description"><?php echo $this->lang->line('articles_new_excerpt'); ?></label>
+                    <div class="controls">
+                         <textarea name="description" cols="40" rows="4" id="description" class="form-control" ><?php if(isset($article['0']['description'])) echo htmlspecialchars($article['0']['description']);?></textarea>
+
+                    </div> <!-- /controls -->
+                </div> <!-- /form-group -->
+
+                 <div class="form-group">
+                    <label class="control-label" for="tag"><?php echo $this->lang->line('articles_new_tags'); ?></label>
+                    <div class="controls">
+                         <input type="text" name="tag" id="tag" class="form-control" value="<?php if(isset($article['0']['tag'])) echo $article['0']['tag']?>" placeholder="<?php echo $this->lang->line('articles_tags_tips'); ?>" />
+
+                    </div> <!-- /controls -->
+                </div> <!-- /form-group -->
+
+            </div>
+            <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true"><?php echo $this->lang->line('btn_back'); ?></button>
+            <input type="submit" name="submit" value="<?php echo $this->lang->line('btn_save');?>" id="submit" class="btn btn-primary"  />
+            </div></div>
+           </form>     
+           <script>                           
+            var simplemde = new SimpleMDE({element: document.getElementById("textcontent")});
+            </script>
+           </div>
+      <!-- /span12 -->
+
+      </div>
+      <!-- /row -->
     </div>

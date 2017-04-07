@@ -1,6 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Articles extends Controller {
+    public function __construct() {
+      parent::__construct ();
+    
+      $this->load->model('siteinfo_model');
+      define ('LANG', $this->siteinfo_model->getLang());
+      $this->lang->load('admin', LANG);
+     }
     public function index(){
         //加载分页类库
         $this->load->library('pagination');
@@ -18,7 +25,8 @@ class Articles extends Controller {
         $this->load->model('category_model');
         $data['all_category'] =  $this->category_model->getAllCategory();
 
-        $data['cur_title'] = array('','','active','','','','');
+        $data['cur_title'] = array('','active','','','','','','');
+        $data['cur_collapse'] = array('in','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/articles_index', $data);
@@ -27,8 +35,8 @@ class Articles extends Controller {
 
 	public  function edit($id=0){
 
-        $data['cur_title'] = array('','','active','','','','');
-
+        $data['cur_title'] = array('','active','','','','','','');
+        $data['cur_collapse'] = array('in','');
         $this->load->model('category_model');
         $data['all_category'] =  $this->category_model->getAllCategory();
         if($id != 0){
@@ -49,8 +57,8 @@ class Articles extends Controller {
 	}
     public  function add(){
 
-        $data['cur_title'] = array('','','active','','','','');
-
+        $data['cur_title'] = array('','active','','','','','','');
+        $data['cur_collapse'] = array('in','');
         $this->load->model('category_model');
         $data['all_category'] =  $this->category_model->getAllCategory();
 
@@ -72,7 +80,7 @@ class Articles extends Controller {
                 'description' => $this->input->post('description', TRUE),
                 'imagelink' => $this->input->post('imagelink', TRUE),
                 'content' => $this->input->post('content', FALSE),
-                'published_at' => date('Y-m-d H:i:s',time()),
+                'published_at' => $this->input->post('published_at', FALSE),
                 'category' => $this->input->post('category', TRUE),
                 'tag' => $this->input->post('tag', TRUE),  
                 'pv' => $this->input->post('pv', TRUE)           
@@ -122,11 +130,14 @@ class Articles extends Controller {
                     $this->db->query("INSERT INTO `article_tag`(`article_id`, `tag_id`) VALUES ({$insert_link['0']['article_id']},{$insert_link['0']['tag_id']})");
                 }
             }
+            
             $this->db->where('id', $data['data']['id']);
             $this->db->replace('articles', $data['data']);
         }
         else
         {
+            $data['data']['published_at'] = date('Y-m-d H:i:s',time());
+            //$data['published_at'] = $this->input->post('published_at', TRUE);
             $this->db->insert('articles', $data['data']);
 
             foreach ($diff as $key => $value) {

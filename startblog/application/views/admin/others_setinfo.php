@@ -1,81 +1,76 @@
-<!-- 内容区域 -->
-        <div class="tpl-content-wrapper">
-
-            <div class="container-fluid am-cf">
-                <div class="row">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-cog page-header-heading-icon"></span> 站点设置 <small>Setting</small></div>
-                        <p class="page-header-description">站点SEO信息设置</p>
-                    </div>
-                </div>
-
-            </div>
-              <div class="row">
-
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-                        <div class="widget am-cf">
-                            
-                            <div class="widget-body am-fr">
-                                <form class="am-form tpl-form-border-form tpl-form-border-br"  method="post" action="<?php echo site_url('admin/Others/set_siteinfo')?>">
-                                  <?php foreach ($data as $key => $value):?>
-                                    <div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-2 am-form-label">站点标题:</label>
-                                        <div class="am-u-sm-6 am-u-sm-pull-4">
-                                            <input class="tpl-form-input" name="title" type="text" value="<?php echo $value['title'];?>">
-                                            <small>请填写标题文字10-20字左右。</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="user-email" class="am-u-sm-2 am-form-label">站点URL:</label>
-                                        <div class="am-u-sm-6 am-u-sm-pull-4">
-                                            <input class="am-form-field tpl-form-no-bg" name="url" type="text" value="<?php echo $value['url'];?>">
-                                            <small>以http://开头</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="user-email" class="am-u-sm-2 am-form-label">管理邮箱:</label>
-                                        <div class="am-u-sm-4 am-u-sm-pull-6">
-                                            <input class="am-form-field tpl-form-no-bg" name="email" type="text" value="<?php echo $value['email'];?>">
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-2 am-form-label">SEO关键字:</label>
-                                        <div class="am-u-sm-6 am-u-sm-pull-4">
-                                            
-                                            <input name="keywords" type="text" value="<?php echo $value['keywords'];?>">
-                                            <small>添加多个关键词用逗号隔开</small>
-                                        </div>
-                                    </div>
-                                    <div class="am-form-group">
-                                        <label for="user-weibo" class="am-u-sm-2 am-form-label">站点描述:</label>
-                                        <div class="am-u-sm-10">
-                                            <input name="description" type="text" value="<?php echo $value['description'];?>">
-                                            <div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="user-intro" class="am-u-sm-2 am-form-label">统计代码:</label>
-                                        <div class="am-u-sm-10">
-                                            <textarea class="" name="statistic" rows="5"><?php echo $value['statistic'];?></textarea>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <div class="am-u-sm-10 am-u-sm-push-2">
-                                            <button type="submit" name='subimit' class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success tpl-login-btn">提交</button>
-                                        </div>
-                                    </div>
-                                </form>
-                                <?php endforeach;  ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                <?php echo $this->lang->line('settings_header'); ?>            </h1>
+            <ol class="breadcrumb">
+                <li>
+                <i class="fa fa-dashboard"></i>
+                    <a href="<?php echo site_url('admin/index')?>"><?php echo $this->lang->line('nav_dash'); ?></a>
+                </li>
+                <li class="active">
+                <i class="fa fa-fw fa-cogs "></i>
+                    <a href="<?php echo site_url('admin/Others/show_siteinfo')?>"><?php echo $this->lang->line('settings_header'); ?></a>
+                </li>
+            </ol>
         </div>
+    </div>
+</div>
+<div class="container-fluid">
+    
+    <div class="panel panel-default">
+        
+        <div class="panel-body">
+            <div class="form-group">  
+            <?php foreach ($data as $key => $value):?>  
+            <form action="<?php echo site_url('admin/Others/set_siteinfo');?>" method="post" accept-charset="utf-8">
+                                                   
+                    <label class="control-label" for="title"> <?php echo $this->lang->line('settings_title'); ?> </label>
+                    <div class="controls">
+                    <input type="text" name="title" value="<?php echo $value['title'];?>" id="siteTitle" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                <div class="form-group">    
+                    <label class="control-label" for="keywords"><?php echo $this->lang->line('settings_keywords'); ?></label>
+                    <div class="controls">
+                    <input type="text" name="keywords" value="<?php echo $value['keywords'];?>" id="keywords" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                <div class="form-group">    
+                    <label class="control-label" for="description"><?php echo $this->lang->line('settings_description'); ?></label>
+                    <div class="controls">
+                    <input type="text" name="description" value="<?php echo $value['description'];?>" id="description" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                <div class="form-group">    
+                    <label class="control-label" for="footer"><?php echo $this->lang->line('settings_footer'); ?></label>
+                    <div class="controls">
+                    <input type="text" name="footer" value="<?php echo $value['footer'];?>" id="footer" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+
+                <div class="form-group">
+                    <label class="control-label" for="language"><?php echo $this->lang->line('settings_lang'); ?></label>
+                    <div class="controls">
+                    <select name="language" id="language" class="form-control">
+                        <option <?php if($value['language']=='english') echo 'selected '?>value="english">english</option>
+                        <option <?php if($value['language']=='chinese') echo 'selected '?> value="chinese">chinese</option>
+                        </select>
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+            <hr />
+              <div class="form-group">  
+                    <label class="control-label" for="statistic"><?php echo $this->lang->line('settings_additional_js'); ?></label>
+                    <div class="controls">
+                    <textarea name="statistic" cols="40" rows="5" id="statistic" class="form-control" ><?php echo $value['statistic'];?></textarea>
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+           <div class="panel-footer">
+                 <input type="submit" name="submit" value="<?php echo $this->lang->line('btn_save');?>" id="submit" class="btn btn-primary"  />
+            </div> 
+            </form> 
+        <?php endforeach;  ?>           
+        </div> 
+        </div>
+    </div>
+</div>

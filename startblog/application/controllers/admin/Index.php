@@ -8,13 +8,19 @@ class Index extends Controller {
       
 	  $this->load->helper(array('form', 'url'));
 	  $this->load->library('session');
-      
+      $this->load->model('siteinfo_model');
+      define ('LANG', $this->siteinfo_model->getLang());
+      $this->lang->load('admin', LANG);
 	 }
      public function index(){
-        $data['cur_title'] = array('active','','','','','','');
+        $this->load->model('articles_model');
+        $data['data'] = $this->articles_model->getRecentlyArticles(3);
+        $data['version'] = $this->articles_model->getRecentlyUpdate(3);
+        $data['cur_title'] = array('active','','','','','','','');
+        $data['cur_collapse'] = array('','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu',$data);
-        $this->load->view('admin/index');
+        $this->load->view('admin/index',$data);
         $this->load->view('admin/footer');
      }
 	 public  function login()
@@ -36,7 +42,6 @@ class Index extends Controller {
 	  }
 	  else
 	  {
-	  	//当前标题（首页，文章，分类，标签，功能）
 		$userdata= array(
             'username' => $username,
             'passowrd' => $passowrd

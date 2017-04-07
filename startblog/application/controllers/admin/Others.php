@@ -17,6 +17,13 @@ class Others extends Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	public function __construct() {
+	  parent::__construct ();
+
+      $this->load->model('siteinfo_model');
+      define ('LANG', $this->siteinfo_model->getLang());
+      $this->lang->load('admin', LANG);
+	 }
 	public function back_up()
 	{
         //加载分页类库
@@ -31,6 +38,7 @@ class Others extends Controller {
 
         $data['path'] = dirname(dirname(dirname(dirname(__FILE__)))).'\\article\\';
         $data['cur_title'] = array('','','','','','active','');
+        $data['cur_collapse'] = array('','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_backup', $data);
@@ -38,11 +46,14 @@ class Others extends Controller {
 	}
 	public function show_siteinfo()
 	{
+		$this->load->helper('directory');
+		$this->data['langdir'] = directory_map(APPPATH.'/language/', 1);
 
         $this->load->model('siteinfo_model');
         $data['data']= $this->siteinfo_model->getSiteInfo();
 
-       $data['cur_title'] = array('','active','','','','','');
+       $data['cur_title'] = array('','','','','','','','active');
+       $data['cur_collapse'] = array('','');
         $this->load->view('admin/header',$data);
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_setinfo', $data);
@@ -54,7 +65,8 @@ class Others extends Controller {
         $this->load->model('about_model');
         $data['data']= $this->about_model->getAboutInfo();
 
-        $data['cur_title'] = array('','','','','','active','');
+        $data['cur_title'] = array('','','','','','','active','');
+        $data['cur_collapse'] = array('','');
         $this->load->view('admin/header',$data);
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_about', $data);
@@ -64,6 +76,7 @@ class Others extends Controller {
 	{
 
         $data['cur_title'] = array('','','','','','','active');
+        $data['cur_collapse'] = array('','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_feedback');
@@ -76,7 +89,8 @@ class Others extends Controller {
         $this->load->model('about_model');
         $data['data']= $this->about_model->updateAboutInfo();
 
-        $data['cur_title'] = array('','','','','','active','');
+        $data['cur_title'] = array('','','','','','','active','');
+        $data['cur_collapse'] = array('','');
         $this->load->view('admin/header',$data);
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_about_success', $data);
@@ -86,14 +100,16 @@ class Others extends Controller {
 	public  function set_siteinfo(){
         $this->load->helper('url');
         $this->load->model('siteinfo_model');
+       
         if ($_POST['title']!=''){
 
         	$site_info = $this->siteinfo_model->updateSiteInfo();
     		}
 
-        $data['cur_title'] = array('','active','','','','','');
-
-        $this->load->view('admin/header');
+        $data['cur_title'] = array('','','','','','','','active');
+        $data['cur_collapse'] = array('','');
+        #redirect('/admin/index', 'refresh');
+        $this->load->view('admin/header',$data);
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_setsiteinfo_success', $data);
         $this->load->view('admin/footer');
@@ -118,6 +134,7 @@ class Others extends Controller {
 			
 		}
         $data['cur_title'] = array('','','','','','active','');
+        $data['cur_collapse'] = array('','');
         $this->load->view('admin/header');
         $this->load->view('admin/menu', $data);
         $this->load->view('admin/others_backup_success');
@@ -142,8 +159,8 @@ class Others extends Controller {
 		$this->form_validation->set_message('matches', '两次输入不一致！');
 		$this->form_validation->set_error_delimiters('<p class="text-danger">', '</p>');
 
-
-		$data['cur_title'] = array('','','','','','','');
+		$data['cur_title'] = array('','','','','active','','','');
+		$data['cur_collapse'] = array('','');
 	  if ($this->form_validation->run() == FALSE)
 	  {
 	   	$this->load->view('admin/header');
@@ -174,22 +191,8 @@ class Others extends Controller {
 		$config['total_rows'] = $this->db->count_all('articles');
 		$config['per_page'] = '10';
 		$config['num_links'] = 3 ;
-		$config['last_link'] = '末页';
-		$config['first_link'] = '首页';
-		$config['prev_link'] = false;
-		$config['next_link'] = false;
-		$config['first_tag_open'] = '<li>';
-		$config['first_tag_close'] = '</li><li><a>...</a></li>';
-		$config['last_tag_open'] = '<li><a>...</a></li><li>';
-		$config['last_tag_close'] = '</li>';
-		$config['cur_tag_open'] = '<li class="active"><a href="">';
-		$config['cur_tag_close'] = '</li></a>';
-		$config['num_tag_open'] = '<li>';
-	 	$config['num_tag_close'] = '</li>';
-	 	$config['prev_tag_open'] = '<li>';
-		$config['prev_tag_close'] = '</li>';
-		$config['next_tag_open'] = '<li>';
-		$config['next_tag_close'] = '</li>';
+		$config['last_link'] = 'Last &rsaquo;';
+        $config['first_link'] = '&lsaquo; First';
 		return $config;
 	}
 	public function password_check($str)

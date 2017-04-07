@@ -1,59 +1,57 @@
-<!-- 内容区域 -->
-        <div class="tpl-content-wrapper">
-
-            <div class="container-fluid am-cf">
-                <div class="row">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-cog page-header-heading-icon"></span> 关于本站 <small>About</small></div>
-                        <p class="page-header-description">关于本站的介绍</p>
-                    </div>
-                </div>
-
-            </div>
-<div class="row">
-
-<div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-                        <div class="widget am-cf">
-                            
-                            <div class="widget-body am-fr">
-
-                                <form class="am-form tpl-form-border-form tpl-form-border-br" method="post" action="<?php echo site_url('admin/Others/edit_about')?>">
-                                  
-                                    <div class="am-form-group">
-                                        <label for="user-name" class="am-u-sm-2 am-form-label">标题 <span class="tpl-form-line-small-title">Title</span></label>
-                                        <div class="am-u-sm-8 am-u-sm-pull-2">
-                                            <input type="text" class="tpl-form-input" name="title" value="<?php echo $data[0]['title'];?>" placeholder="请输入标题文字">
-                                            <small>请填写标题文字</small>
-                                        </div>
-                                    </div>
-                                    <div class="am-form-group">
-                                        <label class="am-u-sm-2 am-form-label">标签 <span class="tpl-form-line-small-title">Tag</span></label>
-                                        <div class="am-u-sm-8 am-u-sm-pull-2">
-                                            <input type="text" name="tag" type="text" value="<?php echo $data[0]['tag'];?>" placeholder="输入Tag关键字">
-                                            <small>多个标签请用英文","分离</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <label for="user-intro" class="am-u-sm-2 am-form-label">关于内容 <span class="tpl-form-line-small-title">Content</span></label>
-                                        <div class="am-u-sm-10">
-                                            <textarea class="" name="content" rows="21"><?php echo htmlspecialchars($data[0]['content']);?></textarea>
-                                            <small>请使用Markdown格式编辑内容</small>
-                                        </div>
-                                    </div>
-
-                                    <div class="am-form-group">
-                                        <div class="am-u-sm-10 am-u-sm-push-2">
-                                            <button type="submit" name='subimit' value="subimit" class="am-btn am-btn-primary am-btn-block tpl-btn-bg-color-success tpl-login-btn">提交</button>
-                                        </div>
-                                    </div>
-    
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                <?php echo $this->lang->line('contact_header'); ?>            </h1>
+            <ol class="breadcrumb">
+                <li>
+                <i class="fa fa-dashboard"></i>
+                    <a href="<?php echo site_url('admin/index')?>"><?php echo $this->lang->line('nav_dash'); ?></a>
+                </li>
+                <li class="active">
+                <i class="fa fa-fw fa-cogs "></i>
+                    <a href="<?php echo site_url('admin/Others/about')?>"><?php echo $this->lang->line('contact_header'); ?></a>
+                </li>
+            </ol>
         </div>
     </div>
+</div>
+<div class="container-fluid">
+    
+    <div class="panel panel-default">
+        
+        <div class="panel-body">
+            <div class="form-group">  
+            <?php foreach ($data as $key => $value):?>  
+            <form action="<?php echo site_url('admin/Others/edit_about');?>" method="post" accept-charset="utf-8">
+                                                   
+                    <label class="control-label" for="title"> <?php echo $this->lang->line('contact_title'); ?> </label>
+                    <div class="controls">
+                    <input type="text" name="title" value="<?php echo $value['title'];?>" id="siteTitle" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                <div class="form-group">    
+                    <label class="control-label" for="content"><?php echo $this->lang->line('contact_content'); ?></label>
+                    <div class="controls">
+                    <textarea name="content" cols="40" rows="18" id="content" class="form-control" ><?php echo htmlspecialchars($value['content']);?></textarea>  
+                    <?php echo $this->lang->line('contact_tips'); ?>
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                <div class="form-group">    
+                    <label class="control-label" for="tags"><?php echo $this->lang->line('contact_tags'); ?></label>
+                    <div class="controls">
+                    <input type="text" name="tag" value="<?php echo $value['tag'];?>" id="tag" class="form-control"  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                
+                <div class="panel-footer">
+
+                 <input type="submit" name="submit" value="<?php echo $this->lang->line('btn_save');?>" id="submit" class="btn btn-primary"  />
+                   
+                </div>
+            </form> 
+        <?php endforeach;  ?>           
+        </div> 
+        </div>
     </div>
+</div>

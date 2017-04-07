@@ -31,6 +31,18 @@ class Articles_model extends CI_Model {
 		$data = $this->db->query($sql)->result_array();
 		return $data;
 	}
+	public function getRecentlyArticles($limit = 3){
+		$this->load->database();
+		$sql="select * from articles order by published_at DESC limit {$limit}";
+		$data = $this->db->query($sql)->result_array();
+		return $data;
+	}
+	public function getRecentlyUpdate($limit = 3){
+		$this->load->database();
+		$sql="select * from version order by updatetime DESC limit {$limit}";
+		$data = $this->db->query($sql)->result_array();
+		return $data;
+	}
 	public function getArticlesDuring($offset,$row){
 		$this->load->database();
 		$sql="select * from articles order by published_at DESC limit {$offset},{$row}";

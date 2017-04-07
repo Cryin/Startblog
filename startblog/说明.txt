@@ -59,34 +59,3 @@ RewriteRule ^(.*)$ /startblog/index.php/$1 [L]
 管理默认用户名、密码均为startblog
 
 
-
-##更新记录
-
->2014/9/18 初识CodeIgniter，编写博客程序！
-
->2015/3/27 实现markdown编辑器与解析，命名startblog
-
->2016/7/12 完成基本功能！version：startblog v1.0
-
->2016/7/22 初始化sql文件，修复xss问题及标签显示bug！
-
->2016/7/25 修改登录页面及标签页面！
-
->2016/7/27 完成站点SEO功能，增加url rewrite，完成文章页面seo功能，添加登录logo！version：startblog v1.1
-
->2016/7/27 增加about编辑功能，添加评论功能！version：startblog v1.2
-
->2016/8/1  增加rss订阅功能！version：startblog v1.3
-
->2016/8/5  增加install功能！version：startblog v1.4
-
->2016/10/23  修复markdown编辑器加载不稳定问题，修复post提交时bug！version：startblog v1.5
-
->2016/11/14  全面升级UI，采用Amazeui开发后台及前端UI！version：startblog v2.0
-
->2016/11/25  新增友情链接编辑、排序功能，修改文件编辑界面，增加编辑框边框。修复dreamkill同学提出的bug及程序问题，输入输出统一进行安全过滤，model类修改为大写 ！version：startblog v2.1
-
->2016/12/02  修改新建文章时有时出现告警信息并暴露sql语句，增加文章配图随机功能，当封面配图为空时，随机显示图片 ！version：startblog v2.1
-
-
->2017/02/16  视图代码通用化，简化banner及footer代码。增加留言板功能 ！version：startblog v2.2

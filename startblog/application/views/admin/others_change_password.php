@@ -1,62 +1,81 @@
-
-
 <!-- 内容区域 -->
-        <div class="tpl-content-wrapper">
-
-            <div class="container-fluid am-cf">
-                <div class="row">
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                        <div class="page-header-heading"><span class="am-icon-cog page-header-heading-icon"></span> 账户设置 <small>Admin</small></div>
-                        <p class="page-header-description">密码修改</p>
-                    </div>
-                </div>
-
-            </div>
-<div class="row">
-
-                    <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
-                        <div class="widget am-cf">
-                            <div class="widget-body am-cf">
-                                <div class="am-form-group">
-                                <div class="am-u-sm-6">
-                                当前用户：<?php echo $_SESSION['username']?>
-                                    
-                                </div>
-                                </div>
-                               
-                            </div>
-                            <div class="widget-body am-fr">
-                                <?php echo form_open('admin/Others/change_password',array('class' => 'am-form tpl-form-line-form'));?>
-                               
-                    <div class="am-form-group">
-                    <div class="am-u-sm-6">
-                        <input type="password" class="tpl-form-input" id="old_password" name="old_password" placeholder="请输入原密码">
-                        <p class="text-danger"><?php echo form_error('old_password'); ?></p>
-                    </div>
-                    </div>
-                    <div class="am-form-group">
-                        <div class="am-u-sm-6">
-                        <input type="password" class="tpl-form-input" id="new_password" name="new_password" placeholder="请输入新密码">
-                        <p class="text-danger"><?php echo form_error('new_password'); ?></p>
-                    </div>
-                    </div>
-
-                    <div class="am-form-group">
-                    <div class="am-u-sm-6">
-                        <input type="password" class="tpl-form-input" id="new_password_conf" name="new_password_conf" placeholder="再次确认输入新密码">
-                        <p class="text-danger"><?php echo form_error('new_password_conf'); ?></p>
-                    </div>
-                    </div>
-
-                    <div class="am-form-group">
-                        <div class="am-u-sm-6">
-                        <button type="submit" name='subimit' class="am-btn am-btn-primary  am-btn-block tpl-btn-bg-color-success tpl-login-btn">修改</button>
-                        </div>
-                    </div>
-                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                <?php echo $this->lang->line('user_edit_header'); ?>           </h1>
+            <ol class="breadcrumb">
+                <li>
+                <i class="fa fa-dashboard"></i>
+                    <a href="<?php echo site_url('admin/index')?>"><?php echo $this->lang->line('nav_dash'); ?></a>
+                </li>
+                <li>
+                <i class="fa fa-fw fa-user"></i>
+                    <a href="<?php echo base_url('admin/Others/change_password')?>"><?php echo $this->lang->line('user_edit_header'); ?></a>
+                </li>
+                <li class="active">
+                <i class="fa fa-fw fa-pencil"></i>
+                    <?php echo $this->lang->line('user_edit_pass'); ?> </li>
+            </ol>
         </div>
+    </div>
+</div>
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <i class="fa fa-pencil fa-fw"></i>
+                    <?php echo $this->lang->line('user_edit_pass'); ?>              </h3>
+            </div>
+            
+         <div class="panel-body">
+             <form action="<?php echo site_url('admin/Others/change_password');?>" method="post" accept-charset="utf-8">
+
+                <div class="form-group">        
+                                                    
+                    <label class="control-label" for="username"><?php echo $this->lang->line('user_username'); ?></label>
+                    <div class="controls">
+                    <input type="text" name="username" value="<?php echo $_SESSION['username']?>" id="username" class="form-control disabled" disabled=""  />
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+
+                <div class="form-group">        
+                                                    
+                    <label class="control-label" for="old_password"><?php echo $this->lang->line('user_old_pass'); ?></label>
+                    <div class="controls">
+                         <input type="password" name="old_password" id="old_password" class="form-control"  />
+                         <p class="text-danger"><?php echo form_error('old_password'); ?></p>
+
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                
+                <div class="form-group">        
+                                                    
+                    <label class="control-label" for="new_password"><?php echo $this->lang->line('user_new_pass'); ?></label>
+                    <div class="controls">
+                        <input type="password" name="new_password" id="new_password" class="form-control"  />
+                        <p class="text-danger"><?php echo form_error('new_password'); ?></p>
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+
+                <div class="form-group">    
+                                                    
+                    <label class="control-label" for="new_password_conf"><?php echo $this->lang->line('user_new_confirm'); ?></label>
+                    <div class="controls">
+                        <input type="password" name="new_password_conf" id="new_password_conf" class="form-control"  />
+                        <p class="text-danger"><?php echo form_error('new_password_conf'); ?></p>
+                    </div> <!-- /controls -->               
+                </div> <!-- /form-group -->
+                </div>
+                
+                <div class="panel-footer">
+                <input type="submit" name="submit" value="<?php echo $this->lang->line('btn_save'); ?>" id="submit" class="btn btn-primary"  />
+ 
+                    <a class="btn" href="<?php echo site_url('admin/index')?>"><?php echo $this->lang->line('btn_cancel'); ?></a>
+                </div> <!-- /form-actions -->
+               </form>          </div>
+        </div>
+    </div>
+</div>

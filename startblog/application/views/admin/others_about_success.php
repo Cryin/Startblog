@@ -1,25 +1,31 @@
 
 <!-- 内容区域 -->
-        <div class="tpl-content-wrapper">
-
-
-
-            <div class="row-content am-cf">
-                <div class="widget am-cf">
-                    <div class="widget-body">
-                        <div class="tpl-page-state">
-                            <div class="tpl-error-title-info">操作提示</div>
-                            <div class="tpl-page-state-content tpl-error-content">
-
-                                <p>关于页面更新成功</p>
-                                <a class="am-btn am-btn-secondary am-radius" href="<?php echo site_url("admin/Others/about");?>">Back Home</a></div>
-
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                <?php echo $this->lang->line('contact_header'); ?>            </h1>
+            <ol class="breadcrumb">
+                <li>
+                <i class="fa fa-dashboard"></i>
+                    <a href="<?php echo site_url('admin/index')?>"><?php echo $this->lang->line('nav_dash'); ?></a>
+                </li>
+                <li class="active">
+                <i class="fa fa-fw fa-cogs "></i>
+                    <a href="<?php echo site_url('admin/Others/about')?>"><?php echo $this->lang->line('contact_header'); ?></a>
+                </li>
+            </ol>
         </div>
     </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+          <div class="panel panel-default">
+          
+            <div class="panel-body">
+            <h3><?php echo $this->lang->line('contact_notice'); ?><h3>
+            <a class="btn btn-primary am-btn-secondary" href="<?php echo site_url("admin/index");?>"><?php echo $this->lang->line('contact_dash'); ?></a></div>
+               
+            </div> 
+          </div>

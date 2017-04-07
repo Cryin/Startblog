@@ -2,7 +2,7 @@
 <!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
     <div class="am-u-sm-12">
-        <h1 class="blog-text-center">-- 分类归档 --</h1>
+        <h1 class="blog-text-center"><?php echo $this->lang->line('categorys_blog'); ?></h1>
         <div class="timeline-year">
             <h1><?php if(isset($cur_category[0]['category']))echo $cur_category[0]['category']?></h1>
             <hr>

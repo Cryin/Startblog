@@ -1,7 +1,7 @@
 <!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
     <div class="am-u-sm-12">
-        <h1 class="blog-text-center">-- 标签归档 --</h1>
+        <h1 class="blog-text-center"><?php echo $this->lang->line('tags_blog'); ?></h1>
         <div class="timeline-year">
             <h1><?php if(isset($data[0]['tag_name']))echo $data[0]['tag_name']?></h1>
             <hr>
