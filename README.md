@@ -30,7 +30,7 @@
 * Apache+php 5.x + mysql
 
 ###demo:
-* www.startblog.cc 
+* demo.startblog.cc 
 * admin page：/admin/Index/login
 * username：startblog
 * password：startblog
