@@ -29,6 +29,12 @@
 ###运行环境:
 * Apache+php 5.x + mysql
 
+###demo:
+* www.startblog.cc 
+* admin page：/admin/Index/login
+* username：startblog
+* password：startblog
+
 ###反馈:
 
 本着大道至简的原则，本Blog程序只维持最基本的Blog形态，不会轻易增加其它功能。有任何问题可以反馈至issues或者qq交流。
