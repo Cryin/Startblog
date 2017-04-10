@@ -1,18 +1,30 @@
 # Startblog
 
->一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.
+> Startblog is a simple Markdown blog system based on the CodeIgniter!
+> 一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.
 
 >Author: [Cryin']
 
 ![](http://i1.piimg.com/567571/6947db2521f305f1.jpg)
 
-###主页
+### Live Demo
 
- [http://cryin.startblog.cc](http://cryin.startblog.cc)
+ [http://demo.startblog.cc](http://demo.startblog.cc/)
+ 
+#### Logging In
 
- ###下载：
+* demo.startblog.cc 
+* admin page：/admin/Index/login
+* username：startblog
+* password：startblog
+
+###Github:
  
   [github]( https://github.com/Cryin/Startblog)
+  
+###运行环境:
+
+* Apache+php 5.x + mysql
  
 ###程序功能：
 
@@ -26,14 +38,6 @@
 
 >RSS订阅、友情链接功能;
 
-###运行环境:
-* Apache+php 5.x + mysql
-
-###demo:
-* demo.startblog.cc 
-* admin page：/admin/Index/login
-* username：startblog
-* password：startblog
 
 ###反馈:
 
@@ -49,7 +53,8 @@
 
 ###捐赠者
 
-感谢Hardy、格格的捐赠！
+感谢Hardy、格格、Ant、Michael Zhang的捐赠！
+
 
 ###安装方法:
 

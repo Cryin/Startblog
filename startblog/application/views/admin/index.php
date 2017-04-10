@@ -1,3 +1,7 @@
+<?php 
+date_default_timezone_set('Asia/Chongqing'); 
+echo date('Y-m-d H:i:s'); 
+?>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12">
