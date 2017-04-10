@@ -2,146 +2,158 @@
 //Navigation Bar
 $lang['nav_dash']			= "Dashboard";
 $lang['nav_posts']			= "文章管理";
-$lang['nav_posts_new']		= "New Article";
-$lang['nav_posts_all']		= "All Articles";
-$lang['nav_categories']		= "Categories";
-$lang['nav_categories_new']	= "New Category";
-$lang['nav_categories_all']	= "All Categories";
-$lang['nav_tags']			= "Tags";
-$lang['nav_tags_new']		= "New Tag";
-$lang['nav_tags_all']		= "All Tags";
-$lang['nav_users']			= "Users";
-$lang['nav_users_new']		= "New User";
-$lang['nav_users_all']		= "All Users";
-$lang['nav_settings']		= "Settings";
-$lang['nav_social']			= "Social";
-$lang['nav_contact']		= "Contact";
-$lang['nav_friendly_links']	= "Friendly links";
-$lang['nav_friendly_all']	= "All links";
-$lang['nav_friendly_new']	= "New links";
-$lang['nav_logout']			= "Logout";
-$lang['nav_profile']		= "Profile";
+$lang['nav_posts_new']		= "新建文章";
+$lang['nav_posts_all']		= "所有文章";
+$lang['nav_categories']		= "类别管理";
+$lang['nav_categories_new']	= "新增类别";
+$lang['nav_categories_all']	= "所有类别";
+$lang['nav_tags']			= "标签管理";
+$lang['nav_tags_new']		= "新增标签";
+$lang['nav_tags_all']		= "所有标签";
+$lang['nav_users']			= "用户管理";
+$lang['nav_users_new']		= "新增用户";
+$lang['nav_users_all']		= "所有用户";
+$lang['nav_settings']		= "设置";
+$lang['nav_social']			= "社交帐号";
+$lang['nav_contact']		= "关于";
+$lang['nav_friendly_links']	= "友情链接";
+$lang['nav_friendly_all']	= "所有链接";
+$lang['nav_friendly_new']	= "新增链接";
+$lang['nav_logout']			= "退出";
+$lang['nav_profile']		= "简介";
 
 
 //Login Page
-$lang['login_message']		= "Please provide your details";
-$lang['login_username']		= "Username";
-$lang['login_password']		= "Password";
-$lang['login_signin']		= "Sign In";
-$lang['login_reset']		= "Reset Password";
-$lang['login_incorrect']	= "The Username of Password entered is incorrect.";
-$lang['login_expired']		= "Your session has expired, please use the form below to sign back in!";
-
-//Forgot Password
-$lang['forgot_reset']		= "Password Reset";
-$lang['forgot_email']		= "Email Address";
-$lang['forgot_password']	= "New Password";
-$lang['forgot_confirm']		= "Confirm Password";
-$lang['forgot_complete']	= "Your password has been reset";
-$lang['forgot_btn']			= "Reset";
-$lang['forgot_check_email']	= "Please check your email for further instructions";
-
-
+$lang['login_username']		= "用户名";
+$lang['login_password']		= "密码";
+$lang['login_signin']		= "登录";
 
 //Dashboard
 $lang['dash_welcome']					= "Welcome <small>to Startblog</small>";
-$lang['dash_unreachable']				= "The news feed cannot be reached.";
-$lang['dash_recent']					= "Recently Updated Pages";
-$lang['dash_message']					= "This is your Startblog dashboard, Startblog is a simple markdown blog system based on the codeIgniter! It is built around the Amaze UI and bootstrap framework, this should make your website fully responsive with ease.";
-$lang['feed_heading']					= "Startblog News";
+$lang['dash_recent']					= "最近文章";
+$lang['dash_message']					= "Startblog是一款基于Codeigniter开发的简洁、易用、跨平台自适应的Markdown博客系统.";
+$lang['feed_heading']					= "程序更新";
 
 
 //Settings Page
-$lang['settings_header']				= "Settings";
-$lang['settings_message']				= "Some basic settings for your site ";
-$lang['settings_info']					= "Information";
-$lang['settings_title']					= "Site Title";
-$lang['settings_keywords']				= "Site Keywords";
-$lang['settings_description']			= "Site Description";
-$lang['settings_footer']				= "Site Footer Message";
-$lang['settings_lang']					= "Current Dash Language:";
-$lang['settings_dash']					= "Back Dashboard";
-$lang['settings_additional_js']			= "Additional Javascript (such as Google Analytics) this will be loaded into all pages, remember to include script tags where necessary:";
-$lang['settings_notice']				= "Settings save success!";
+$lang['settings_header']				= "设置";
+$lang['settings_message']				= "站点基本设置 ";
+$lang['settings_info']					= "信息";
+$lang['settings_title']					= "站点标题";
+$lang['settings_keywords']				= "站点关键词";
+$lang['settings_description']			= "站点描述";
+$lang['settings_footer']				= "站点Footer信息";
+$lang['settings_lang']					= "当前语言:";
+$lang['settings_dash']					= "返回管理主页面";
+$lang['settings_additional_js']			= "第三方Javascript统计代码:";
+$lang['settings_notice']				= "设置保存成功!";
 
 
 //Contact Page
-$lang['contact_header']				= "Contact";
-$lang['contact_title']				= "Title";
-$lang['contact_tags']				= "Tags";
-$lang['contact_content']			= "Content";
-$lang['contact_tips']				= "<small>*Please edit content in Markdown format</small>";
-$lang['contact_notice']				= "Contact page save success!";
-$lang['contact_dash']				= "Back Dashboard";
+$lang['contact_header']				= "关于";
+$lang['contact_title']				= "标题";
+$lang['contact_tags']				= "标签";
+$lang['contact_content']			= "页面内容";
+$lang['contact_tips']				= "<small>*请使用Markdown格式编写文章</small>";
+$lang['contact_notice']				= "关于页面保存成功!";
+$lang['contact_dash']				= "返回管理主页面";
 
 //Friendship links Page
-$lang['link_header']			= "All Friendly Links";
-$lang['link_id']				= "ID";
-$lang['link_name']				= "Link Name";
-$lang['link_address']			= "Link Address ";
-$lang['link_edit']				= "Edit&Delete";
+$lang['link_header']			= "所有友情链接";
+$lang['link_id']				= "排序";
+$lang['link_name']				= "链接名称";
+$lang['link_address']			= "链接地址";
+$lang['link_edit']				= "编辑";
 
-$lang['link_edit_header']		= "Edit Friendly Link";
-$lang['link_new_header']		= "New Friendly Link";
-$lang['link_new_tips']			= "Start with http://";
+$lang['link_edit_header']		= "编辑友情链接";
+$lang['link_new_header']		= "新增友情链接";
+$lang['link_new_tips']			= "以http://开头";
 
 
 //Tags Page
-$lang['tags_header']			= "All Tags";
-$lang['tags_title']				= "Tags Name";
-$lang['tags_delete']			= "Delete";
+$lang['tags_header']			= "所有标签";
+$lang['tags_title']				= "标签名称";
+$lang['tags_delete']			= "编辑";
 
-$lang['tags_new_header']		= "New Tag";
-$lang['tags_new_tips']			= "Please input the tag name";
+$lang['tags_new_header']		= "新增标签";
+$lang['tags_new_tips']			= "请输入标签名称";
 
 
 //Categorys Page
-$lang['cats_header']			= "All Categorys";
-$lang['cats_title']				= "Category Name";
-$lang['cats_delete']			= "Delete";
+$lang['cats_header']			= "所有类别";
+$lang['cats_title']				= "类别名称";
+$lang['cats_delete']			= "编辑";
 
-$lang['cats_new_header']		= "New Category";
-$lang['cats_new_tips']			= "Please input the category name";
+$lang['cats_new_header']		= "新增类别";
+$lang['cats_new_tips']			= "请输入类别名称";
 
 
 //Users Page
-$lang['user_edit_header']		= "Edit User";
-$lang['user_edit_pass']			= "Edit Pass";
-$lang['user_username']			= "Username";
-$lang['user_old_pass']			= "Old Password";
-$lang['user_new_pass']			= "New Password";
-$lang['user_new_confirm']		= "Confirm New Password";
-$lang['user_notice']			= "Change password success!";
+$lang['user_edit_header']		= "编辑用户";
+$lang['user_edit_pass']			= "修改密码";
+$lang['user_username']			= "用户名";
+$lang['user_old_pass']			= "旧密码";
+$lang['user_new_pass']			= "新密码";
+$lang['user_new_confirm']		= "确认新密码";
+$lang['user_notice']			= "密码修改成功!";
 
 //Articles - All Articles
-$lang['articles_header']			= "All Articles";
-$lang['articles_title']				= "Post Title";
-$lang['articles_category']			= "Category";
-$lang['articles_date']				= "Published Date";
-$lang['articles_delete']			= "Edit&Delete Article ";
-$lang['articles_new_header']		= "New Article";
-$lang['articles_edit_header']		= "Edit Article";
-$lang['articles_new_attributes']	= "Article Attributes";
-$lang['articles_new_required']		= "All fields marked with * are required!";
-$lang['articles_new_title']			= "Article Title*";
-$lang['articles_new_feature']		= "Feature Image URL*";
-$lang['articles_new_tags']			= "Article's Tags*";
-$lang['articles_tags_tips']			= "Multiple tags use , split";
-$lang['articles_new_excerpt']		= "Excerpt*";
-$lang['articles_new_category']		= "Category*";
-$lang['articles_new_date']			= "Published Date*";
-$lang['articles_title_tips']		= "Please input the title of article";
+$lang['articles_header']			= "所有文章";
+$lang['articles_title']				= "文章标题";
+$lang['articles_category']			= "文章类别";
+$lang['articles_date']				= "发布时间";
+$lang['articles_delete']			= "编辑";
+$lang['articles_new_header']		= "新建文章";
+$lang['articles_edit_header']		= "编辑文章";
+$lang['articles_new_attributes']	= "文章属性";
+$lang['articles_new_required']		= "所有带符号*的为必须填的字段!";
+$lang['articles_new_title']			= "文章标题*";
+$lang['articles_new_feature']		= "封面配图url*";
+$lang['articles_new_tags']			= "文章标签*";
+$lang['articles_tags_tips']			= "多个标签请用,分隔";
+$lang['articles_new_excerpt']		= "摘要*";
+$lang['articles_new_category']		= "文章类别*";
+$lang['articles_new_date']			= "发布日期*";
+$lang['articles_title_tips']		= "请输入文章标题";
 
 
 // COMMON BUTTONS
-$lang['btn_save']		= "Save";
-$lang['btn_cancel']		= "Cancel";
-$lang['btn_delete']		= "Delete";
-$lang['btn_next']		= "Next";
-$lang['btn_back']		= "Back";
-$lang['btn_add']		= "Add";
+$lang['btn_save']		= "保存";
+$lang['btn_cancel']		= "取消";
+$lang['btn_delete']		= "删除";
+$lang['btn_next']		= "下一步";
+$lang['btn_back']		= "返回";
+$lang['btn_add']		= "增加";
 
 
-$lang['option_yes']		= "Yes";
-$lang['option_no']		= "No";
+$lang['option_yes']		= "是";
+$lang['option_no']		= "否";
 
+//Blog page
+$lang['blog_header']			= "一款简洁、易用、跨平台自适应的Markdown博客系统.";
+$lang['blog_about']				= "关于";
+$lang['blog_aboutme']			= "关于我";
+$lang['blog_contact']			= "联系我";
+$lang['blog_tag']				= "标签云";
+$lang['blog_friendly']			= "友情链接";
+$lang['article_read']			= "阅读全文";
+$lang['blog_read']				= "阅读";
+$lang['blog_data']				= "年-月-日";
+$lang['blog_time']				= "次";
+$lang['blog_message']			= "留言板";
+$lang['mess_leave']				= "留言";
+$lang['mess_name']				= "昵称";
+$lang['mess_email']				= "邮箱";
+$lang['mess_site']				= "站点链接";
+$lang['mess_content']			= "一字千金";
+
+//Blog Menu
+$lang['menu_home']				= "主页";
+$lang['menu_cats']				= "文章分类";
+$lang['menu_about']				= "关于";
+$lang['menu_search']			= "搜索";
+$lang['menu_search_tips']		= "搜索文章";
+
+
+$lang['categorys_blog']		= "--类别归档--";
+$lang['tags_blog']			= "--标签归档--";
