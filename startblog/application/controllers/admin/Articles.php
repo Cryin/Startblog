@@ -167,26 +167,12 @@ class Articles extends Controller {
         $this->load->database();
         $this->load->helper('url');
 
-        $config['base_url'] = site_url('admin/Articles/index');
-        $config['total_rows'] = $this->db->count_all('articles');
-        $config['per_page'] = '5';
+        $config['base_url'] = site_url('admin/Friendship/index');
+        $config['total_rows'] = $this->db->count_all('friendship');
+        $config['per_page'] = '10';
         $config['num_links'] = 3 ;
-        $config['last_link'] = '末页';
-        $config['first_link'] = '首页';
-        $config['prev_link'] = false;
-        $config['next_link'] = false;
-        $config['first_tag_open'] = '<li>';
-        $config['first_tag_close'] = '</li><li><a>...</a></li>';
-        $config['last_tag_open'] = '<li><a>...</a></li><li>';
-        $config['last_tag_close'] = '</li>';
-        $config['cur_tag_open'] = '<li class="active"><a href="">';
-        $config['cur_tag_close'] = '</li></a>';
-        $config['num_tag_open'] = '<li>';
-        $config['num_tag_close'] = '</li>';
-        $config['prev_tag_open'] = '<li>';
-        $config['prev_tag_close'] = '</li>';
-        $config['next_tag_open'] = '<li>';
-        $config['next_tag_close'] = '</li>';
+        $config['last_link'] = 'Last &rsaquo;';
+        $config['first_link'] = '&lsaquo; First';
         return $config;
     }    
 
