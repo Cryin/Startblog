@@ -25,7 +25,7 @@ date_default_timezone_set("Asia/Shanghai");
 
                 <span><?php $category_id = $value['category'];$category_name = $all_category["$category_id"]['category'];?>
                 <?php echo anchor("Category/show/{$category_id}","$category_name","")?>&nbsp;</span>
-                <span><?php echo date($this->lang->line('blog_data'),strtotime($value['published_at']));?>&nbsp;</span>
+                <span><?php echo date('Y年m月d日',strtotime($value['published_at']));?>&nbsp;</span>
 
                 <span><?php echo $this->lang->line('blog_read'); ?>：<?php echo $value['pv'];?><?php echo ' '.$this->lang->line('blog_time'); ?> &nbsp;</span>
                 <h1><?php echo anchor("/Articles/article/{$value['id']}","{$value['title']}","")?></h1>

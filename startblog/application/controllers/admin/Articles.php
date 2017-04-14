@@ -167,8 +167,8 @@ class Articles extends Controller {
         $this->load->database();
         $this->load->helper('url');
 
-        $config['base_url'] = site_url('admin/Friendship/index');
-        $config['total_rows'] = $this->db->count_all('friendship');
+        $config['base_url'] = site_url('admin/Articles/index');
+        $config['total_rows'] = $this->db->count_all('articles');
         $config['per_page'] = '10';
         $config['num_links'] = 3 ;
         $config['last_link'] = 'Last &rsaquo;';

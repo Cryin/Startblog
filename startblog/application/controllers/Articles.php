@@ -100,7 +100,7 @@ class Articles extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->model('articles_model');
 
-		$data_tmp['articles'] = $this->articles_model->getArticle($id);
+		$data_tmp['articles'] = $this->articles_model->getArticle(intval($id));
 		#echo 'test'.$data_tmp['articles'].count($data_tmp['articles']);
 		if (count($data_tmp['articles'])==0)
 		{

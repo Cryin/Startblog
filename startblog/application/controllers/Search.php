@@ -27,7 +27,12 @@ class Search extends CI_Controller {
 	public function show()
 	{
         $this->load->helper('url');
-		$pattern = $_POST['pattern'];
+        if ($this->input->post('pattern', TRUE)!='') {
+			$pattern = $this->safe_replace($_POST['pattern']);
+		}else
+		{
+			redirect('/articles/index');		
+		}
 		$this->load->database();
 		$this->load->model('articles_model');
 		$articles_info = $this->articles_model->getAllArticles();
@@ -68,5 +73,24 @@ class Search extends CI_Controller {
             $this->load->view('footer');
         }
 		
+	}
+	public function safe_replace($string) 
+	{
+		$string = str_replace('%20','',$string);
+		$string = str_replace('%27','',$string);
+		$string = str_replace('%2527','',$string);
+		$string = str_replace('*','',$string);
+		$string = str_replace('"','&quot;',$string);
+		$string = str_replace("'",'',$string);
+		$string = str_replace('"','',$string);
+		$string = str_replace(';','',$string);
+		$string = str_replace('<','&lt;',$string);
+		$string = str_replace('>','&gt;',$string);
+		$string = str_replace("{",'',$string);
+		$string = str_replace('}','',$string);
+		$string = str_replace("[",'',$string);
+		$string = str_replace(']','',$string);
+		$string = str_replace('\\','',$string);
+		return $string;
 	}
 }
