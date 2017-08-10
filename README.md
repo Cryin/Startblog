@@ -6,10 +6,6 @@
 >Author: [Cryin']
 
 ![](http://i1.piimg.com/567571/6947db2521f305f1.jpg)
-
-### Live Demo
-
- [http://demo.startblog.cc](http://demo.startblog.cc/)
  
 #### Logging In
 
