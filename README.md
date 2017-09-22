@@ -80,6 +80,16 @@ $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/startblog';
 
 >管理默认用户名、密码均为startblog
 
+#### nginx系统的.htaccess文件Rewrite规则 如下：
+
+location / {
+index index.php index.html;
+ if (!-e $request_filename)
+ {
+  rewrite ^/(.*)$ /index.php last;
+ }
+}
+
 ###Screenshot
 ![](http://i2.muimg.com/567571/c5f0fac2fcde0b02.png)
 ![](http://i4.buimg.com/567571/79ae794be212b2f1.png)
