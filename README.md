@@ -82,6 +82,7 @@ $config['base_url'] = 'http://'.$_SERVER['SERVER_NAME'].'/startblog';
 
 #### nginx系统的.htaccess文件Rewrite规则 如下：
 
+```
 location / {
 index index.php index.html;
  if (!-e $request_filename)
@@ -89,6 +90,7 @@ index index.php index.html;
   rewrite ^/(.*)$ /index.php last;
  }
 }
+```
 
 ###Screenshot
 ![](http://i2.muimg.com/567571/c5f0fac2fcde0b02.png)
