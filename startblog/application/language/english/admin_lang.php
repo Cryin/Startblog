@@ -15,7 +15,7 @@ $lang['nav_users_new']		= "New User";
 $lang['nav_users_all']		= "All Users";
 $lang['nav_settings']		= "Settings";
 $lang['nav_social']			= "Social";
-$lang['nav_contact']		= "Contact";
+$lang['nav_contact']		= "About";
 $lang['nav_friendly_links']	= "Friendly links";
 $lang['nav_friendly_all']	= "All links";
 $lang['nav_friendly_new']	= "New links";
@@ -139,7 +139,7 @@ $lang['option_no']		= "No";
 
 //Blog page
 $lang['blog_header']			= "a simple Markdown blog system based on the CodeIgniter.";
-$lang['blog_about']				= "Contact";
+$lang['blog_about']				= "About";
 $lang['blog_aboutme']			= "About Me";
 $lang['blog_contact']			= "Contact Me";
 $lang['blog_tag']				= "Tags Cloud";
@@ -158,7 +158,7 @@ $lang['mess_content']			= "Message Content";
 //Blog Menu
 $lang['menu_home']				= "Home";
 $lang['menu_cats']				= "Categorys";
-$lang['menu_about']				= "Contact";
+$lang['menu_about']				= "About";
 $lang['menu_search']			= "Search";
 $lang['menu_search_tips']		= "Search article";
 
