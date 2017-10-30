@@ -19,7 +19,7 @@ $html = $Parsedown->text($about[0]['content']);
           <h1 class="am-article-title blog-text-center"><?php echo $about[0]['title'];?></h1>
           <p class="am-article-meta blog-text-center">
               <span><a href="https://github.com/Cryin" class="blog-color">Cryin &nbsp;</a></span>
-              <span><a href="https://github.com/Cryin/Startblog">@startblog.cc &nbsp;</a></span>
+              <span><a href="https://github.com/Cryin/Startblog">@Startblog &nbsp;</a></span>
               <span><a href="#">2014/8/15</a></span>
           </p>
         </div>        
