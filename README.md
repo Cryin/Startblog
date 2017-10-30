@@ -1,7 +1,6 @@
 # Startblog
 
 > Startblog is a simple Markdown blog system based on the CodeIgniter!
-> 一款基于Codeigniter、Amazeui开发的简洁、易用、跨平台自适应的Markdown博客系统.
 
 >Author: [Cryin']
 
